@@ -8,33 +8,24 @@
  * It helps to create the Java's cool
  */
 var jvs={
-		proglets:null,
-		gui:{
-			editorTabs:null,
-			homePage:null
-		},
-		fileManager:null,
-		compiler:null,
-		
 		// Global Functions
 		fadeFromShortcutsToPanel:function(){
-			ProgletsPanel.hideShortcutsDiv(function(){
+			$("#shortcuts").fadeOut(function(){
+				$("body").removeClass("shortcutsBody");
 				$("#panel").fadeIn("fast");
 			});
 		},
 		fadeFromPanelToShortcuts:function(){
 			$("#panel").fadeOut("fast",function(){
+				$("body").addClass("shortcutsBody");
 				$("#shortcuts").fadeIn("fast");
 			});
 		}
 };
 
 function initJVSObjectsAndRunAll(){
-	jvs.proglets=new Proglets();
-	//jvs.gui.editorTabs=new JVSEditorTabs();
-	jvs.gui.homePage=new JVSHomePage();
-	jvs.proglets.init();
-	jvs.gui.homePage.showShortcutsDiv();
+	ProgletsManager.init();
+	ProgletsPanel.showShortcutsDiv();
 }
 
 $(document).ready(function(){

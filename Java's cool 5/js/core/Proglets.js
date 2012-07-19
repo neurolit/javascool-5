@@ -9,7 +9,7 @@ Proglets.prototype={
 			return progletsLoaded;
 		},
 		init:function(){
-			for(var i=0;i<20;i++){
+			for(var i=0;i<19;i++){
 				this.add(new Proglet());
 			}
 		},
@@ -31,4 +31,4 @@ Proglets.prototype={
 			}
 		}
 };
-var progletsManager=new Proglets();
+var ProgletsManager=new Proglets();

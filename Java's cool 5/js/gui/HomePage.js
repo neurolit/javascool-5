@@ -49,7 +49,7 @@ JVSHomePage.prototype={
 				else
 					return;
 			}
-			progletsManager.start(i);
+			ProgletsManager.start(i);
 		}
 };
 

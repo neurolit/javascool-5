@@ -6,7 +6,7 @@ html,body {
 
 body {
 	position: relative;
-	padding-top: 106px;
+	padding-top: 40px;
 	background-color: white;
 }
 
@@ -44,8 +44,7 @@ body {
 /* Subnav */
 .subnav {
 	width: 100%;
-	height: 56px;
-	position: fixed; top : 40px; left : 0; right : 0;
+	/*position: fixed; top : 40px; left : 0; right : 0;
 	background-color: #eeeeee; /* Old browsers */
 	background-repeat: repeat-x; /* Repeat the gradient */
 	background-image: -moz-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
@@ -62,19 +61,12 @@ body {
 		endColorstr='#eeeeee', GradientType=0 ); /* IE6-9 */
 	background-image: linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
 	/* W3C */
-	border: 1px solid #e5e5e5;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	padding: 6px 3px 3px 3px;
-	top: 40px;
-	left: 0;
-	right: 0;
+	border: 0px solid #e5e5e5;
+	padding: 6px 0px 3px 0px;
 }
 
-.subnav * {
-	height: 50px;
-}
+.subnav *:FIRST-CHILD{margin-left:3px}
+
 
 /* Fixed subnav on scroll, but only for 980px and up (sorry IE!) */
 @media ( min-width : 980px) {
@@ -96,10 +88,3 @@ body {
 		/* IE6-9 */
 	}
 }
-
-.CodeMirror {
-	border: 1px solid #eee;
-}
-
-.CodeMirror-scroll {
-	height: 100%; } 

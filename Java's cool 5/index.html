@@ -9,7 +9,7 @@
 <script type="text/javascript" src="libs/jquery/jquery-1.7.2.js"></script>
 <script src="libs/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-	var scripts = [ "core/Proglet", "core/Proglets", "gui/HomePage",
+	var scripts = [ "core/Proglet", "core/Proglets", "gui/HomePage","gui/EditorTabs", "gui/Editor",
 			"javascool" ];
 	for ( var i = 0; i < scripts.length; i++) {
 		document
@@ -23,7 +23,7 @@
 			function() {
 
 				var myCodeMirror = new CodeMirror(document
-						.getElementById("leftPart"), {
+						.getElementById("home"), {
 					value : "function myScript(){return 100;}\n",
 					mode : "javascript",
 					lineNumbers : true
@@ -47,12 +47,13 @@
 		<div class="" id="shortcuts" style="display: none;"></div>
 		<div class="" id="panel" style="display: none;">
 			<div class="subnav" id="toolbar">
-				<button class="btn-blue" onClick="jvs.homeProglet.showShortcutsDiv();">Close Activity</button>
+				<button class="btn-blue" onClick="ProgletsManager.stop()">Close Activity</button>
 				<button class="btn-blue">Open File</button>
 			</div>
-			<div class="" id="leftPart"></div>
-			<div class="" id="rightPart"></div>
-			<div class="hide" id="fullPart"></div>
+			<div class="pull-left" style="width: 50%;" id="leftPart">
+				Hello, world ! No editor
+			</div>
+			<div class="pull-right"style="width: 50%;" id="rightPart"></div>
 		</div>
 	</div>
 </body>
