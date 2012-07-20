@@ -19,6 +19,7 @@ Proglets.prototype={
 		start:function(proglet){
 			try {
 				jvs.fadeFromShortcutsToPanel();
+				EditorTabsManager.setup();
 			} catch (e) {
 				console.error("Error : "+e+"Are you in a Java's Cool Environement ?");
 			}
@@ -26,6 +27,7 @@ Proglets.prototype={
 		stop:function(){
 			try {
 				jvs.fadeFromPanelToShortcuts();
+				EditorTabsManager.remove();
 			} catch (e) {
 				console.error("Error : "+e+"Are you in a Java's Cool Environement ?");
 			}

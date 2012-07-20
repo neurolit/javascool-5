@@ -9,7 +9,7 @@
 <script type="text/javascript" src="libs/jquery/jquery-1.7.2.js"></script>
 <script src="libs/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-	var scripts = [ "core/Proglet", "core/Proglets", "gui/HomePage","gui/EditorTabs", "gui/Editor",
+	var scripts = [ "core/Proglet", "core/Proglets","core/JVSFile", "gui/HomePage","gui/EditorTabs", "gui/Editor",
 			"javascool" ];
 	for ( var i = 0; i < scripts.length; i++) {
 		document
@@ -19,16 +19,7 @@
 <script src="libs/codemirror/lib/codemirror.js"></script>
 <script src="libs/codemirror/mode/javascript/javascript.js"></script>
 <script type="text/javascript">
-	$(document).ready(
-			function() {
-
-				var myCodeMirror = new CodeMirror(document
-						.getElementById("home"), {
-					value : "function myScript(){return 100;}\n",
-					mode : "javascript",
-					lineNumbers : true
-				});
-			})
+	$(document).ready(function() {})
 </script>
 </head>
 <body>
@@ -48,7 +39,8 @@
 		<div class="" id="panel" style="display: none;">
 			<div class="subnav" id="toolbar">
 				<button class="btn-blue" onClick="ProgletsManager.stop()">Close Activity</button>
-				<button class="btn-blue">Open File</button>
+				<button class="btn-blue" onclick="EditorTabsManager.openFile()">Open File</button>
+				<button class="btn-blue" onClick="$.get('file:///home/pvienne/Documents/Specs%20JVS',function(r){console.log(r)})">Load</button>
 			</div>
 			<div class="pull-left" style="width: 50%;" id="leftPart">
 				Hello, world ! No editor
