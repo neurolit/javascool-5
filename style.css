@@ -6,8 +6,8 @@ html,body {
 
 body {
 	position: relative;
-	padding-top: 40px;
 	background-color: white;
+    overflow: hidden;
 }
 
 .shortcutsBody {
@@ -41,31 +41,27 @@ body {
 	width: 120px;
 }
 
-/* Subnav */
-.subnav {
-	width: 100%;
-	/*position: fixed; top : 40px; left : 0; right : 0;
-	background-color: #eeeeee; /* Old browsers */
-	background-repeat: repeat-x; /* Repeat the gradient */
-	background-image: -moz-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
-	/* FF3.6+ */
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5),
-		color-stop(100%, #eeeeee) ); /* Chrome,Safari4+ */
-	background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
-	/* Chrome 10+,Safari 5.1+ */
-	background-image: -ms-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
-	/* IE10+ */
-	background-image: -o-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
-	/* Opera 11.10+ */
-	filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#f5f5f5',
-		endColorstr='#eeeeee', GradientType=0 ); /* IE6-9 */
-	background-image: linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
-	/* W3C */
-	border: 0px solid #e5e5e5;
-	padding: 6px 0px 3px 0px;
+#panel{
+    position: absolute;
+    top:40px;
+    left:0px;
+    bottom: 0px;
+    right: 0px;
+    height: 100%;
 }
 
-.subnav *:FIRST-CHILD{margin-left:3px}
+#leftPart, #rightPart{
+    width:49.5%;
+}
+#splitPart{
+    width:1%;
+    height: 100%;
+    position: absolute;
+    background-color: #EEE;
+    left: 49.5%;
+}
+
+
 
 
 /*****************************************************************************
@@ -75,4 +71,30 @@ body {
 #editorTabs .nav{
 	margin:0;
 	-webkit-margin:0;
+}
+
+#editorTabs .nav .close{
+    margin-left:6px;
+}
+
+/* Remove border-radius */
+#editorTabs .nav-tabs > li > a {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+#editorTabs{
+    height: 100%;
+}
+
+#tabsContent{
+    height: 100%;
+}
+
+/* CodeMirror */
+.CodeMirror {
+}
+.CodeMirror-scroll {
+    height:400px;
 }

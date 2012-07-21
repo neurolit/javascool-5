@@ -33,6 +33,7 @@ $(document).ready(function(){
 		var w=$(window).width(),h=$(window).height();
 		$("body").height((h-40)+"px");
 		$("#shortcuts").css("padding","20px "+((w%152)/2)+"px 20px "+((w%152)/2)+"px");
+
 	}
 	// Setup Resize listeners
 	$(window).resize(computeAllSizes);
