@@ -1,78 +1,133 @@
-html,body {
-	height: 100%;
-	margin: 0px;
-	padding: 0px;
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
-	position: relative;
-	padding-top: 40px;
-	background-color: white;
+    position: relative;
+    background-color: white;
+    overflow: hidden;
 }
 
 .shortcutsBody {
-	padding-top: 40px;
-	
+    padding-top: 40px;
+
 }
 
 .navbar .brand {
-	margin-left: 0
+    margin-left: 10px;
+    margin-top: 4px;
+    padding: 0;
+    background-image: url("img/jvs32.png");
+    height: 32px;
+    width: 32px;
 }
 
 #shortcuts {
 }
 
 #shortcuts .shortcut {
-	width: 120px;
-	height: 120px;
-	position: relative;
-	margin: 5px;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    margin: 5px;
 }
 
 #shortcuts .shortcut img {
-	width: 60px;
-	height: 60px;
-	margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
 }
 
 #shortcuts .shortcut .title {
-	position: absolute;
-	bottom: 5px;
-	width: 120px;
+    position: absolute;
+    bottom: 5px;
+    width: 120px;
 }
 
-/* Subnav */
-.subnav {
-	width: 100%;
-	/*position: fixed; top : 40px; left : 0; right : 0;
-	background-color: #eeeeee; /* Old browsers */
-	background-repeat: repeat-x; /* Repeat the gradient */
-	background-image: -moz-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
-	/* FF3.6+ */
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5),
-		color-stop(100%, #eeeeee) ); /* Chrome,Safari4+ */
-	background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
-	/* Chrome 10+,Safari 5.1+ */
-	background-image: -ms-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
-	/* IE10+ */
-	background-image: -o-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
-	/* Opera 11.10+ */
-	filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#f5f5f5',
-		endColorstr='#eeeeee', GradientType=0 ); /* IE6-9 */
-	background-image: linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
-	/* W3C */
-	border: 0px solid #e5e5e5;
-	padding: 6px 0px 3px 0px;
+#panel {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    height: 100%;
 }
 
-.subnav *:FIRST-CHILD{margin-left:3px}
+#leftPart, #rightPart {
+    width: 50%;
+}
 
+#splitPart {
+    width: 2px;
+    height: 100%;
+    background-color: #EEE;
+    z-index: -1;
+    margin: 0 auto;
+}
+
+/****************************************************************************
+                JVSTab Section
+****************************************************************************/
+
+.jvstabs .nav-tabs {
+    width: 100%;
+    max-height: 35px;
+    overflow: hidden;
+    margin: 0;
+    -webkit-margin: 0;
+}
+
+.jvstabs .nav-tabs .close {
+    margin-left: 6px;
+}
+
+.jvstabs .nav-tabs > li > a {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
 
 /*****************************************************************************
-				Editor Section
+                Editor Section
 ******************************************************************************/
 
-#editorTabs .nav{
-	margin:0;
-	-webkit-margin:0;
+.editors .nav {
+    margin: 0;
+    -webkit-margin: 0;
+    max-height: 35px;
+}
+
+.editors .nav .close {
+    margin-left: 6px;
+}
+
+/* Remove border-radius */
+.editors .nav-tabs > li > a {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.editors {
+    height: 100%;
+}
+
+.centerBoxInfo {
+    position: relative;
+    top: 49%;
+    height: 100%;
+}
+
+#tabsContent {
+    height: 100%;
+}
+
+/* CodeMirror */
+.CodeMirror {
+}
+
+.CodeMirror-scroll {
+    height: 400px;
 }
