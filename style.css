@@ -57,6 +57,7 @@ body {
 
 #leftPart, #rightPart {
     width: 50%;
+    overflow: hidden;
 }
 
 #splitPart {
@@ -71,12 +72,17 @@ body {
                 JVSTab Section
 ****************************************************************************/
 
-.jvstabs .nav-tabs {
-    width: 100%;
-    max-height: 35px;
-    overflow: hidden;
+.jvstabs .nav {
+    width:100%;
+    border-bottom: 2px solid #DDD;
+    background: #eeeeee;
+    padding: 4px;
     margin: 0;
     -webkit-margin: 0;
+}
+
+.jvstabs .tab-content:before{
+    clear:both;
 }
 
 .jvstabs .nav-tabs .close {
@@ -87,6 +93,16 @@ body {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
+    border-bottom: 1px solid #DDD;
+}
+
+.jvstabs .nav-pills > li > a{
+    color: #888;
+}
+
+.jvstabs .nav-pills > .active > a, .jvstabs .nav-pills > .active > a:hover {
+    color: white;
+    background-color: #AAA;
 }
 
 /*****************************************************************************
