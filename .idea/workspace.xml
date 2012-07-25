@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="302b70a3-daa0-4f0b-aa5c-813e5013918b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/javascool-5.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLinters/jslint.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/Math.uuid.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/HelloWorldTest-debug.apk" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gui/Editor.js" afterPath="$PROJECT_DIR$/js/gui/Editor.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gui/EditorTabs.js" afterPath="$PROJECT_DIR$/js/gui/EditorTabs.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gui/Tabs.js" afterPath="$PROJECT_DIR$/js/gui/Tabs.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
@@ -46,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="25" selection-start="1564" selection-end="1564" vertical-scroll-proportion="0.6253746">
+            <state line="88" column="29" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -58,7 +48,7 @@
       <file leaf-file-name="Tabs.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/gui/Tabs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="31" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
+            <state line="30" column="101" selection-start="1170" selection-end="1181" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -85,21 +75,8 @@
       <file leaf-file-name="EditorTabs.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/gui/EditorTabs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#167#223#0" expanded="false" />
-                <element signature="e#251#334#0" expanded="false" />
-                <element signature="e#1232#1467#0" expanded="false" />
-                <element signature="e#2825#2833#0" expanded="false" />
-                <element signature="e#2858#3036#0" expanded="false" />
-                <element signature="e#3042#3266#0" expanded="false" />
-                <element signature="e#3294#3761#0" expanded="false" />
-                <element signature="e#3797#4203#0" expanded="false" />
-                <element signature="e#4239#4419#0" expanded="false" />
-                <element signature="e#4464#4599#0" expanded="false" />
-                <element signature="e#4629#4672#0" expanded="false" />
-                <element signature="e#4710#4811#0" expanded="false" />
-              </folding>
+            <state line="36" column="40" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -113,10 +90,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Editor.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Editor.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/gui/Editor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="33" selection-start="1220" selection-end="1220" vertical-scroll-proportion="0.0">
+            <state line="56" column="12" selection-start="1800" selection-end="1800" vertical-scroll-proportion="0.7997947">
               <folding />
             </state>
           </provider>
@@ -147,20 +124,21 @@
       <list>
         <option value="$PROJECT_DIR$/Java's cool 5/js/gui/EditorTabs.js" />
         <option value="$PROJECT_DIR$/js/gui/WidgetTabs.js" />
-        <option value="$PROJECT_DIR$/js/gui/Editor.js" />
         <option value="$PROJECT_DIR$/js/javascool.js" />
         <option value="$PROJECT_DIR$/libs/Math.uuid.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/gui/EditorTabs.js" />
-        <option value="$PROJECT_DIR$/js/gui/Tabs.js" />
         <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/js/gui/Tabs.js" />
+        <option value="$PROJECT_DIR$/js/gui/EditorTabs.js" />
+        <option value="$PROJECT_DIR$/js/gui/Editor.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1919" />
+    <option name="y" value="26" />
     <option name="width" value="1922" />
-    <option name="height" value="1202" />
+    <option name="height" value="1176" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -210,6 +188,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -330,24 +318,14 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
@@ -394,13 +372,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1919" y="0" width="1922" height="1202" extended-state="6" />
-    <editor active="false" />
+    <frame x="1919" y="26" width="1922" height="1176" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913843" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913843" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1473851" sideWeight="0.35914811" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1473851" sideWeight="0.6340755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1473851" sideWeight="0.3638171" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1473851" sideWeight="0.62922466" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14791337" sideWeight="0.3320426" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -494,35 +472,24 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/core/Proglets.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="9" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libs/Math.uuid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="210" selection-start="712" selection-end="712" vertical-scroll-proportion="0.015182186">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/jquery/jquery-1.7.2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3102" column="53" selection-start="116443" selection-end="116443" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/javascool.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="16" selection-start="742" selection-end="742" vertical-scroll-proportion="0.0" />
+        <state line="1" column="210" selection-start="712" selection-end="712" vertical-scroll-proportion="0.015182186" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/bootstrap/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3299" column="4" selection-start="60993" selection-end="61083" vertical-scroll-proportion="1.4716599">
-          <folding />
-        </state>
+        <state line="3299" column="4" selection-start="60993" selection-end="61083" vertical-scroll-proportion="1.4716599" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/jquery/jquery-1.7.2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3102" column="53" selection-start="116443" selection-end="116443" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/core/Proglets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="9" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
@@ -532,41 +499,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/gui/Editor.js">
+    <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="33" selection-start="1220" selection-end="1220" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/gui/EditorTabs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#167#223#0" expanded="false" />
-            <element signature="e#251#334#0" expanded="false" />
-            <element signature="e#1232#1467#0" expanded="false" />
-            <element signature="e#2825#2833#0" expanded="false" />
-            <element signature="e#2858#3036#0" expanded="false" />
-            <element signature="e#3042#3266#0" expanded="false" />
-            <element signature="e#3294#3761#0" expanded="false" />
-            <element signature="e#3797#4203#0" expanded="false" />
-            <element signature="e#4239#4419#0" expanded="false" />
-            <element signature="e#4464#4599#0" expanded="false" />
-            <element signature="e#4629#4672#0" expanded="false" />
-            <element signature="e#4710#4811#0" expanded="false" />
-          </folding>
+        <state line="88" column="29" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/gui/Tabs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="31" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
+        <state line="30" column="101" selection-start="1170" selection-end="1181" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
+    <entry file="file://$PROJECT_DIR$/js/gui/EditorTabs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="25" selection-start="1564" selection-end="1564" vertical-scroll-proportion="0.6253746">
+        <state line="36" column="40" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/javascool.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="16" selection-start="742" selection-end="742" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/gui/Editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="12" selection-start="1800" selection-end="1800" vertical-scroll-proportion="0.7997947">
           <folding />
         </state>
       </provider>

@@ -53,8 +53,8 @@ JVSEditor.prototype = {
                 $(window).bind("resize", resizer);
                 resizer();
             }
-            //editor.refresh();
-            //editor.focus();
+            editor.refresh();
+            editor.focus();
             //editor.setSelection({ line:0, ch:0 }, { line:2, ch:0 });
         } catch (e) {
             console.error("Can't setup CodeMirror editor. JS Error : " + e);

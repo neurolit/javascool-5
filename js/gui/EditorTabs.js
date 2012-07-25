@@ -34,7 +34,7 @@ JVSEditorTabs.prototype = {
 
             // Création de l'onglet
             var tabTitle = editor.title == undefined ? file.name : editor.title; // Le titre de l'onglet
-            id=this.tabs.addTab(tabTitle,'The editor will go here',true);
+            id=this.tabs.addTab(tabTitle);
 
             // On les références dans les tableaux de l'objet
             this.openedFiles[id] = file;
@@ -65,7 +65,7 @@ JVSEditorTabs.prototype = {
 //            this.$.children(".tab-content").append("<div class=\"tab-pane\" id=\"" + htmlEditorId + "\"></div>");
 
             // On passe la main à l'éditeur pour sa construction
-//            editor.setup(file, htmlEditorId, id);
+            editor.setup(file, this.tabs.idForContent(id), id);
 
             // On supprime le message dissant qu'aucun fichier n'est ouvert
             this.hideNoFileMessage();

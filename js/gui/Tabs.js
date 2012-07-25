@@ -20,13 +20,20 @@ JVSTabs.prototype = {
         content=content||"";
         donotshow=donotshow==null?false:donotshow;
         var id=this.lastID++;
-        this.$.children('.nav').append('<li id="'+this.idForTab(id)+'"><a class="link">'+title+'</a><span></span></li>');
+        this.$.children('.nav').append('<li id="'+this.idForTab(id)+'"><a class="link">'+title+' <span class="icon-remove-circle closeIcon"></span></a></li>');
+        $('#'+this.idForTab(id)+' a .closeIcon').click({tabs:this,id:id},function(e){
+            e.data.tabs.propagateCloseOnTab(e.data.id);
+            return false;
+        });
         $('#'+this.idForTab(id)+' a').click({tabs:this,id:id},function(e){
             e.data.tabs.showTab(e.data.id);
         });
         this.$.children('.tab-content').append('<div id="'+this.idForContent(id)+'" class="tab-pane">'+content+'</div>');
         donotshow?null:this.showTab(id);
         return id;
+    },
+    propagateCloseOnTab:function(id){
+        $('#'+this.idForContent(id)).trigger("wantToClose",{tabs:this,id:id});
     },
     removeTab:function (id) {
         // On prévient les deux enfant que l'on ferme
@@ -59,14 +66,5 @@ JVSTabs.prototype = {
     idForContent:function(id){
         if(id==null)id=this.lastID;
         return this.idFor('content',id);
-    },
-    manageOverflow:function(){
-        var tab=this.$.children('.nav').children('li'),actualWidthOfTab=$(this.$.children('.nav')).width(),neededWidth=0;
-        for(li in tab.toArray()){
-            neededWidth+=$(tab[li]).outerWidth(true);
-        }
-        if(actualWidthOfTab<neededWidth){
-
-        }
     }
 };
