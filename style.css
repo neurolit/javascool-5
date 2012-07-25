@@ -15,6 +15,10 @@ body {
 
 }
 
+.navbar a{
+    cursor: pointer;
+}
+
 .navbar .brand {
     margin-left: 10px;
     margin-top: 4px;

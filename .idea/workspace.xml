@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="302b70a3-daa0-4f0b-aa5c-813e5013918b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gui/Editor.js" afterPath="$PROJECT_DIR$/js/gui/Editor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gui/EditorTabs.js" afterPath="$PROJECT_DIR$/js/gui/EditorTabs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gui/Tabs.js" afterPath="$PROJECT_DIR$/js/gui/Tabs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
     </list>
     <ignored path="javascool-5.iws" />
@@ -30,16 +28,16 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="83" selection-start="713" selection-end="713" vertical-scroll-proportion="-8.125">
+            <state line="9" column="73" selection-start="456" selection-end="456" vertical-scroll-proportion="-5.625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="29" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.0">
+            <state line="17" column="10" selection-start="208" selection-end="208" vertical-scroll-proportion="0.261807">
               <folding />
             </state>
           </provider>
@@ -90,10 +88,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Editor.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Editor.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/gui/Editor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="12" selection-start="1800" selection-end="1800" vertical-scroll-proportion="0.7997947">
+            <state line="56" column="12" selection-start="1800" selection-end="1800" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -126,11 +124,11 @@
         <option value="$PROJECT_DIR$/js/gui/WidgetTabs.js" />
         <option value="$PROJECT_DIR$/js/javascool.js" />
         <option value="$PROJECT_DIR$/libs/Math.uuid.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/js/gui/Tabs.js" />
         <option value="$PROJECT_DIR$/js/gui/EditorTabs.js" />
         <option value="$PROJECT_DIR$/js/gui/Editor.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/style.css" />
       </list>
     </option>
   </component>
@@ -487,25 +485,6 @@
         <state line="3102" column="53" selection-start="116443" selection-end="116443" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/core/Proglets.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="9" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="83" selection-start="713" selection-end="713" vertical-scroll-proportion="-8.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="29" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/gui/Tabs.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="101" selection-start="1170" selection-end="1181" vertical-scroll-proportion="0.0">
@@ -525,9 +504,28 @@
         <state line="29" column="16" selection-start="742" selection-end="742" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/core/Proglets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="9" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="73" selection-start="456" selection-end="456" vertical-scroll-proportion="-5.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/gui/Editor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="12" selection-start="1800" selection-end="1800" vertical-scroll-proportion="0.7997947">
+        <state line="56" column="12" selection-start="1800" selection-end="1800" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="10" selection-start="208" selection-end="208" vertical-scroll-proportion="0.261807">
           <folding />
         </state>
       </provider>
