@@ -37,7 +37,6 @@ JVSMultimediaTabs.prototype = {
      */
     open:function (multimediapane,options) {
         var pane=(typeof multimediapane=="string")?eval("new "+multimediapane+"()"):multimediapane, id=this.tabs.addTab();
-
     },
     /**
      * Ferme un MultimediaPane ouvert.

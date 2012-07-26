@@ -20,7 +20,7 @@ JVSTabs.prototype = {
         content=content||"";
         donotshow=donotshow==null?false:donotshow;
         var id=this.lastID++;
-        this.$.children('.nav').append('<li id="'+this.idForTab(id)+'"><a class="link">'+title+' <span class="icon-remove-circle closeIcon"></span></a></li>');
+        this.$.children('.nav').append('<li id="'+this.idForTab(id)+'"><a class="link"><span class="tabtitle">'+title+'</span><span class="icon-remove-circle closeIcon"></span></a></li>');
         $('#'+this.idForTab(id)+' a .closeIcon').click({tabs:this,id:id},function(e){
             e.data.tabs.propagateCloseOnTab(e.data.id);
             return false;
@@ -53,6 +53,14 @@ JVSTabs.prototype = {
         }
         $('#'+this.idForTab(id)+', #'+this.idForContent(id)).addClass('active');
         this.idOfTabShown=id;
+    },
+    /**
+     * Change le titre de l'onglet.
+     * @param id L'identifiant de l'onglet
+     * @param newTitle Le titre de l'onglet à mettre
+     */
+    changeTitle:function(id,newTitle){
+        $('#'+this.idForTab(id)).find(".tabtitle").html(newTitle);
     },
     count:function () {
         return this.$.children(".nav-tabs").children().length();

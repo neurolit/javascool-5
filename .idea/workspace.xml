@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="302b70a3-daa0-4f0b-aa5c-813e5013918b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/gui/multimediapanes/WebPage.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/gui/HomePage.js" afterPath="$PROJECT_DIR$/js/gui/Shortcuts.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/gui/WidgetTabs.js" afterPath="$PROJECT_DIR$/js/gui/MultimediaTabs.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/libs/jquery/jquery-1.7.2.js" afterPath="$PROJECT_DIR$/libs/jquery/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/core/Proglets.js" afterPath="$PROJECT_DIR$/js/core/Proglets.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gui/EditorTabs.js" afterPath="$PROJECT_DIR$/js/gui/EditorTabs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/javascool.js" afterPath="$PROJECT_DIR$/js/javascool.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gui/MultimediaTabs.js" afterPath="$PROJECT_DIR$/js/gui/MultimediaTabs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gui/Tabs.js" afterPath="$PROJECT_DIR$/js/gui/Tabs.js" />
     </list>
     <ignored path="javascool-5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,6 +52,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="EditorTabs.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/gui/EditorTabs.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="63" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Shortcuts.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/gui/Shortcuts.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -83,7 +82,7 @@
       <file leaf-file-name="MultimediaTabs.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/gui/MultimediaTabs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="979" selection-end="979" vertical-scroll-proportion="0.0">
+            <state line="38" column="122" selection-start="978" selection-end="978" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -98,19 +97,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EditorTabs.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/gui/EditorTabs.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="63" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Tabs.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/gui/Tabs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="43" selection-start="1056" selection-end="1056" vertical-scroll-proportion="0.4312115">
+            <state line="62" column="61" selection-start="2500" selection-end="2500" vertical-scroll-proportion="0.6776181">
               <folding />
             </state>
           </provider>
@@ -143,7 +133,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/libs/Math.uuid.js" />
-        <option value="$PROJECT_DIR$/js/gui/Tabs.js" />
         <option value="$PROJECT_DIR$/js/gui/Editor.js" />
         <option value="$PROJECT_DIR$/js/gui/widgets/WebPage.js" />
         <option value="$PROJECT_DIR$/test.html" />
@@ -157,6 +146,7 @@
         <option value="$PROJECT_DIR$/js/javascool.js" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/js/gui/multimediapanes/WebPage.js" />
+        <option value="$PROJECT_DIR$/js/gui/Tabs.js" />
         <option value="$PROJECT_DIR$/js/gui/MultimediaTabs.js" />
       </list>
     </option>
@@ -440,12 +430,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="26" width="1922" height="1176" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14685684" sideWeight="0.4751491" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14685684" sideWeight="0.51789266" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14685684" sideWeight="0.51789266" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14685684" sideWeight="0.38966203" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -550,20 +540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/gui/EditorTabs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="63" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/gui/multimediapanes/WebPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="28" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/javascool.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="22" selection-start="1070" selection-end="1070" vertical-scroll-proportion="0.0">
@@ -578,16 +554,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/gui/EditorTabs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="63" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/gui/multimediapanes/WebPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="28" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/gui/MultimediaTabs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="979" selection-end="979" vertical-scroll-proportion="0.0">
+        <state line="38" column="122" selection-start="978" selection-end="978" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/gui/Tabs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="43" selection-start="1056" selection-end="1056" vertical-scroll-proportion="0.4312115">
+        <state line="62" column="61" selection-start="2500" selection-end="2500" vertical-scroll-proportion="0.6776181">
           <folding />
         </state>
       </provider>
