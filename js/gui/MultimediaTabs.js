@@ -3,21 +3,25 @@
  * Date: 7/23/12
  * Time: 10:37 AM
  */
-function JVSWidgetTabs() {
+function JVSMultimediaTabs() {
 
 }
 
-JVSWidgetTabs.prototype = {
+JVSMultimediaTabs.prototype = {
+    /** Système de gestion des Tabs.
+     * @type {JVSTabs}
+     */
+    tabs:null,
     /**
-     * Tableau des Widgets ouverts.
+     * Tableau des MultimediaPanes ouverts.
      * Ils sont indexés par l'id numérique de leur div
      * @private
      */
-    openedWidgets:new Array(),
+    openedMultimediaPanes:new Array(),
     /**
      * ID de la DIV HTML alloué à l'éditeur.
      */
-    htmlID:"rightPart",
+    htmlID:"RightTabsPane",
     /**
      * Instance JQuery de la div du gestionnaire.
      * @type {jQuery}
@@ -28,55 +32,53 @@ JVSWidgetTabs.prototype = {
      */
     lastID:0,
     /**
-     * Retourne le code HTML minimal du gestionnaire
-     * @see {JVSWidgetTabs.setup}
-     * @return {String}
+     * Ouvre un MultimediaPane.
+     * @param multimediapane L'objet du MultimediaPane ou son type sous forme de {string}
      */
-    getBaseHTML:function () {
-        return  "<ul class=\"nav nav-tabs\"></ul>" +
-            "<div class=\"tab-content\"></div>";
+    open:function (multimediapane,options) {
+        var pane=(typeof multimediapane=="string")?eval("new "+multimediapane+"()"):multimediapane, id=this.tabs.addTab();
+
     },
     /**
-     * Ouvre un Widget.
-     * @param widget L'objet du widget
-     */
-    open:function (widget) {
-    },
-    /**
-     * Ferme un widget ouvert.
-     * @param widget L'objet symbolisant le Widget ou l'id de ce dernier (entre 0 et MAX_INT (L'infini informatique) )
+     * Ferme un MultimediaPane ouvert.
+     * @param multimediapane L'objet symbolisant le MultimediaPane ou l'id de ce dernier (entre 0 et MAX_INT (L'infini informatique) )
      * @return {Boolean} Vrai si l'onglet est correctement fermé
      */
-    closeTab:function (widget) {
+    closeTab:function (multimediapane) {
     },
     /**
-     * Supprime le DIV des widget de l'Ecran
+     * Supprime le DIV des MultimediaPane de l'Ecran
      */
     remove:function () {
-        // TODO: Sous forme d'assertion, demander à tous les éditeurs si le document est sauvegardé
         // On nettoie derrière nous le code HTML de la DIV
-        $('#widgetTabs').remove();
+        $('#'+this.htmlID).remove();
     },
     /**
-     * Met en place le gestionnaire de Widget.
+     * Met en place le gestionnaire de MultimediaPane.
      * Cette fonction n'est pas dans le constructeur car elle vise à manipuler le DOM de la page.
      * @param divId L'endroit où on doit installer le gestionnaire
      */
     setup:function (divId) {
-
         this.htmlID = (divId == null) ? this.htmlID : divId;
 
         // On vérifie que le gestionnaire d'éditeurs n'est pas déjà en place et que la div désigné existe
-        if (this.amIOnScreen())return;
+        //if (this.amIOnScreen())return;
 
         // On simplifie l'accesseur JQuery
         this.$ = $("#" + this.htmlID)
 
-        // Supprime tout le code qui serai dans le div et on y ajoute notre code pour la mise en place de l'éditeur
-        this.$.html(this.getBaseHTML());
+        // On précise qu nous sommes dans un MultimediaTabsPane pour le CSS
+        this.$.addClass('MultimediaTabsPane');
+
+        // On crée le gestionnaire d'onglet
+        this.tabs=new JVSTabs(this.$[0]);
 
         // On lance la configuration des écouteurs sur ce gestionnaire
         this.setupListenersOnEditorTabs();
+
+        var test=new JVSWebPage();
+        test.setup(document.getElementById(this.tabs.idForContent(this.tabs.addTab("A test"))),"http://fr.wikipedia.org/w/api.php");
+
 
     },
     setupListenersOnEditorTabs:function () {
@@ -90,7 +92,7 @@ JVSWidgetTabs.prototype = {
     },
     assertIfAmIOnScreen:function () {
         if (!this.amIOnScreen())
-            throw "WidgetTabs is not running in HTML code";
+            throw "MultimediaTabsPane is not running in HTML code";
     }
 };
-var WidgetTabsManager = new JVSEditorTabs();
+var MultimediaTabsManager = new JVSMultimediaTabs();

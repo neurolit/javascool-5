@@ -7,41 +7,46 @@
  * Javascool Core Function.
  * It helps to create the Java's cool
  */
+
 var jvs = {
     // Global Functions
     fadeFromShortcutsToPanel:function () {
-        $("#shortcuts").fadeOut(function () {
-            $("body").removeClass("shortcutsBody");
-            $("#panel").fadeIn("fast");
-            $("#toolbar").fadeIn("fast");
+        ShortcutsPaneManager.$.fadeOut(function () {
+            $("#SliderPane, #ToolBar").fadeIn("fast");
         });
     },
     fadeFromPanelToShortcuts:function () {
-        $("#toolbar").hide();
-        $("#panel").fadeOut("fast", function () {
-            $("body").addClass("shortcutsBody");
-            $("#shortcuts").fadeIn("fast");
+        $("#ToolBar, #SliderPane").fadeOut("fast", function () {
+            ShortcutsPaneManager.$.fadeIn("fast");
         });
     }
 };
 
 function initJVSObjectsAndRunAll() {
     ProgletsManager.init();
-    ProgletsPanel.showShortcutsDiv();
+    ShortcutsPaneManager.setup();
+    ShortcutsPaneManager.$.show();
 }
 
 $(document).ready(function () {
     function computeAllSizes() {
         var w = $(window).width(), h = $(window).height();
-        $("body").height((h - 40) + "px");
-        $("#shortcuts").css("padding", "20px " + ((w % 152) / 2) + "px 20px " + ((w % 152) / 2) + "px");
-
+        $("body").height(h + "px");
+        $("#RightTabsPane, #LeftTabsPane").width(((w/2)-2)+'px');
+        $("#splitPart").css({
+            position:'absolute',
+            left:((w/2)-2)+'px',
+            right:((w/2)-2)+'px',
+            bottom:0,
+            top:0+'px'
+        });
     }
 
     // Setup Resize listeners
     $(window).resize(computeAllSizes);
     // Check now
     computeAllSizes();
+
     // Start JVS
     initJVSObjectsAndRunAll();
 });

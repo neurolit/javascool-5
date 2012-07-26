@@ -21,6 +21,7 @@ Proglets.prototype = {
         try {
             jvs.fadeFromShortcutsToPanel();
             EditorTabsManager.setup();
+            MultimediaTabsManager.setup();
         } catch (e) {
             console.error("Error : " + e + "Are you in a Java's Cool Environement ?");
         }

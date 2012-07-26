@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="libs/codemirror/lib/codemirror.css">
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script src="libs/jquery/jquery.js"></script>
     <script type="text/javascript" src="libs/Math.uuid.js"></script>
-    <script type="text/javascript" src="libs/jquery/jquery-1.7.2.js"></script>
     <script src="libs/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        var scripts = [ "core/Proglet", "core/Proglets", "core/JVSFile","gui/Tabs", "gui/HomePage", "gui/EditorTabs", "gui/Editor", "gui/WidgetTabs",
+        var scripts = [ "core/Proglet", "core/Proglets", "core/JVSFile","gui/Tabs", "gui/Shortcuts", "gui/EditorTabs", "gui/Editor", "gui/MultimediaTabs", "gui/multimediapanes/WebPage",
             "javascool" ];
         for (var i = 0; i < scripts.length; i++) {
             document
@@ -27,10 +27,10 @@
     </script>
 </head>
 <body>
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-fixed-top" id="MenuBar">
     <div class="navbar-inner">
         <a class="brand" href="#"></a>
-        <ul class="nav" id="toolbar" style="display: none;">
+        <ul class="nav" id="ToolBar" style="display: none;">
             <li class="divider-vertical"></li>
             <li><a onclick="ProgletsManager.stop()">Fermer l'activité</a></li>
             <li class="divider-vertical"></li>
@@ -45,12 +45,12 @@
         </div>
     </div>
 </div>
-<div id="states">
-    <div class="" id="shortcuts" style="display: none;"></div>
-    <div class="" id="panel" style="display: none;">
-        <div class="pull-left" style="" id="leftPart"></div>
+<div id="viewport">
+    <div class="" id="ShortcutsPane" style="display: none;"></div>
+    <div class="" id="SliderPane" style="display: none;">
+        <div class="pull-left" style="" id="LeftTabsPane"></div>
         <div class="" style="" id="splitPart"></div>
-        <div class="pull-right" style="" id="rightPart"></div>
+        <div class="pull-right" style="" id="RightTabsPane"></div>
     </div>
 </div>
 </body>

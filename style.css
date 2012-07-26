@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    max-height: 100%;
     margin: 0px;
     padding: 0px;
 }
@@ -8,11 +9,6 @@ body {
     position: relative;
     background-color: white;
     overflow: hidden;
-}
-
-.shortcutsBody {
-    padding-top: 40px;
-
 }
 
 .navbar a{
@@ -28,29 +24,7 @@ body {
     width: 32px;
 }
 
-#shortcuts {
-}
-
-#shortcuts .shortcut {
-    width: 120px;
-    height: 120px;
-    position: relative;
-    margin: 5px;
-}
-
-#shortcuts .shortcut img {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto;
-}
-
-#shortcuts .shortcut .title {
-    position: absolute;
-    bottom: 5px;
-    width: 120px;
-}
-
-#panel {
+#viewport {
     position: absolute;
     top: 40px;
     left: 0px;
@@ -59,17 +33,41 @@ body {
     height: 100%;
 }
 
-#leftPart, #rightPart {
-    width: 50%;
+#ShortcutsPane {
+    overflow-y:auto;
+}
+
+#ShortcutsPane .shortcut {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    margin: 5px;
+}
+
+#ShortcutsPane .shortcut img {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+#ShortcutsPane .shortcut .title {
+    position: absolute;
+    bottom: 5px;
+    width: 120px;
+}
+
+#SliderPane{
+    height: 100%;
+}
+
+#LeftTabsPane, #RightTabsPane {
     overflow: hidden;
 }
 
 #splitPart {
-    width: 2px;
+    width: 4px;
     height: 100%;
-    background-color: #EEE;
-    z-index: -1;
-    margin: 0 auto;
+    background-color: #DDD;
 }
 
 /****************************************************************************
@@ -84,6 +82,7 @@ body {
     margin: 0;
     -webkit-margin: 0;
     cursor: pointer;
+    min-height: 35.5px;
 }
 
 .jvstabs .tab-content:before{
@@ -145,6 +144,33 @@ body {
 
 #tabsContent {
     height: 100%;
+}
+
+/*****************************************************************************
+                Widgets
+******************************************************************************/
+
+.MultimediaTabsPane .toolbar{
+    padding: 5px;
+    cursor:pointer;
+    border-bottom: 2px solid #DDD;
+    background: #eeeeee;
+}
+.MultimediaTabsPane .toolbar:after{
+    clear: both;
+}
+.MultimediaTabsPane .toolbar .btn-mini{
+    position: relative; top: -50%;
+}
+.MultimediaTabsPane .toolbar > *{
+    display: inline;
+    margin-right:5px;
+}
+.MultimediaTabsPane .toolbar .left-tools{
+
+}
+.MultimediaTabsPane .toolbar .right-tools{
+
 }
 
 /* CodeMirror */
