@@ -10,14 +10,14 @@
 
 var jvs = {
     // Global Functions
-    fadeFromShortcutsToPanel:function () {
+    fadeFromShortcutsToPanel:function (callback) {
         ShortcutsPaneManager.$.fadeOut(function () {
-            $("#SliderPane, #ToolBar").fadeIn("fast");
+            $("#SliderPane, #ToolBar").fadeIn("fast", callback);
         });
     },
-    fadeFromPanelToShortcuts:function () {
+    fadeFromPanelToShortcuts:function (callback) {
         $("#ToolBar, #SliderPane").fadeOut("fast", function () {
-            ShortcutsPaneManager.$.fadeIn("fast");
+            ShortcutsPaneManager.$.fadeIn("fast", callback);
         });
     }
 };
