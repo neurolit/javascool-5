@@ -78,7 +78,7 @@ JVSEditorTabs.prototype = {
         this.tabs = new JVSTabs(this.$[0]);
 
         // On ouvre un nouveau fichier
-        //this.openFile();
+        this.openFile();
     },
     amIOnScreen:function () {
         return this.$.html() != "";
