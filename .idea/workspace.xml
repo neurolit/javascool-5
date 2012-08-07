@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="302b70a3-daa0-4f0b-aa5c-813e5013918b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gui/MultimediaTabs.js" afterPath="$PROJECT_DIR$/js/gui/MultimediaTabs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gui/Tabs.js" afterPath="$PROJECT_DIR$/js/gui/Tabs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javascool/webjavac.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/gui/multimediapanes/Console.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javascool/jquery.webjavac.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/javascool-5.iml" afterPath="$PROJECT_DIR$/.idea/javascool-5.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gui/Editor.js" afterPath="$PROJECT_DIR$/js/gui/Editor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gui/EditorTabs.js" afterPath="$PROJECT_DIR$/js/gui/EditorTabs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/javascool.js" afterPath="$PROJECT_DIR$/js/javascool.js" />
     </list>
     <ignored path="javascool-5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,6 +28,42 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DebuggerManager">
+    <breakpoint_any>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <breakpoint_rules />
+    <ui_properties />
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="javascool-5" />
   </component>
@@ -28,16 +72,16 @@
       <file leaf-file-name="javascool.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/javascool.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="22" selection-start="1070" selection-end="1070" vertical-scroll-proportion="0.0">
+            <state line="61" column="28" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="9" selection-start="1077" selection-end="1077" vertical-scroll-proportion="-11.875">
+            <state line="44" column="211" selection-start="2100" selection-end="2100" vertical-scroll-proportion="0.68041235">
               <folding />
             </state>
           </provider>
@@ -55,16 +99,25 @@
       <file leaf-file-name="EditorTabs.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/gui/EditorTabs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="63" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.0">
+            <state line="88" column="35" selection-start="2929" selection-end="2929" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Shortcuts.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/gui/Shortcuts.js">
+      <file leaf-file-name="Console.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/gui/multimediapanes/Console.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="27" selection-start="3109" selection-end="3109" vertical-scroll-proportion="0.0">
+            <state line="23" column="88" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Editor.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/gui/Editor.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="67" column="37" selection-start="2136" selection-end="2136" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -73,7 +126,7 @@
       <file leaf-file-name="Proglets.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/core/Proglets.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="42" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
+            <state line="23" column="42" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -97,10 +150,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tabs.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Tabs.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/gui/Tabs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="61" selection-start="2500" selection-end="2500" vertical-scroll-proportion="0.6776181">
+            <state line="62" column="61" selection-start="2500" selection-end="2500" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -132,25 +185,26 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/libs/Math.uuid.js" />
-        <option value="$PROJECT_DIR$/js/gui/Editor.js" />
         <option value="$PROJECT_DIR$/js/gui/widgets/WebPage.js" />
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/js/gui/Shortcut.js" />
         <option value="$PROJECT_DIR$/js/gui/Shortcuts.js" />
         <option value="$PROJECT_DIR$/js/gui/WidgetTabs.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/gui/EditorTabs.js" />
         <option value="$PROJECT_DIR$/js/core/Proglets.js" />
-        <option value="$PROJECT_DIR$/js/javascool.js" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/js/gui/multimediapanes/WebPage.js" />
         <option value="$PROJECT_DIR$/js/gui/Tabs.js" />
         <option value="$PROJECT_DIR$/js/gui/MultimediaTabs.js" />
+        <option value="$PROJECT_DIR$/js/javascool.js" />
+        <option value="$PROJECT_DIR$/js/gui/Editor.js" />
+        <option value="$PROJECT_DIR$/js/gui/EditorTabs.js" />
+        <option value="$PROJECT_DIR$/js/gui/multimediapanes/Console.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="1919" />
     <option name="y" value="26" />
@@ -186,6 +240,8 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
+    <OptionsSetting value="true" id="Undo Check Out" />
+    <OptionsSetting value="true" id="Get Latest Version" />
     <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
@@ -205,6 +261,17 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -251,7 +318,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="jquery" />
+              <option name="myItemId" value="javascool" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -343,16 +410,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -381,6 +438,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/js/gui/multimediapanes" />
       <recent name="$PROJECT_DIR$/libs/jquery" />
     </key>
   </component>
@@ -390,7 +448,10 @@
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
-      <method />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+      </method>
     </configuration>
     <list size="0" />
   </component>
@@ -432,25 +493,30 @@
     <frame x="1919" y="26" width="1922" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14685684" sideWeight="0.4751491" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14685684" sideWeight="0.51789266" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14685684" sideWeight="0.38966203" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14685684" sideWeight="0.38966203" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1456777" sideWeight="0.48333332" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="JSON Formatter" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1456777" sideWeight="0.50980395" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="2019" y="100" width="1722" height="1002" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913843" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -521,63 +587,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/gui/Shortcuts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="27" selection-start="3109" selection-end="3109" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="89" column="27" selection-start="3109" selection-end="3109" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/core/Proglets.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="42" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
+        <state line="23" column="42" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/gui/MultimediaTabs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="122" selection-start="978" selection-end="978" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/gui/multimediapanes/WebPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="28" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/javascool.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="28" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="21" selection-start="2971" selection-end="2971" vertical-scroll-proportion="0.0">
+        <state line="166" column="21" selection-start="2971" selection-end="2971" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/gui/Tabs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="61" selection-start="2500" selection-end="2500" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/javascool.js">
+    <entry file="file://$PROJECT_DIR$/js/gui/Editor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="22" selection-start="1070" selection-end="1070" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="9" selection-start="1077" selection-end="1077" vertical-scroll-proportion="-11.875">
+        <state line="67" column="37" selection-start="2136" selection-end="2136" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/gui/EditorTabs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="63" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.0">
+        <state line="88" column="35" selection-start="2929" selection-end="2929" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/gui/multimediapanes/WebPage.js">
+    <entry file="file://$PROJECT_DIR$/js/gui/multimediapanes/Console.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="28" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
+        <state line="23" column="88" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/gui/MultimediaTabs.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="122" selection-start="978" selection-end="978" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/gui/Tabs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="61" selection-start="2500" selection-end="2500" vertical-scroll-proportion="0.6776181">
+        <state line="44" column="211" selection-start="2100" selection-end="2100" vertical-scroll-proportion="0.68041235">
           <folding />
         </state>
       </provider>

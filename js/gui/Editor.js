@@ -60,5 +60,11 @@ JVSEditor.prototype = {
             console.error("Can't setup CodeMirror editor. JS Error : " + e);
         }
         this.editor = editor;
+    },
+    /**
+     * Getter for the editor text
+     */
+    get text(){
+        return this.editor.getValue();
     }
 };

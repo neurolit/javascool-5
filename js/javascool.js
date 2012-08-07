@@ -47,6 +47,21 @@ $(document).ready(function () {
     // Check now
     computeAllSizes();
 
+    // Add WebJavac for JVS Compilation
+    $.webjavac({
+        jar:"libs/javascool/webjavac.jar"
+    });
+
+    // Setup Listeners from Java
+    $(document).bind("java.System.out",function(event,data){
+        console.log(data);
+    });
+
+    $(document).bind("javascool.compiled",function(event,result){
+        console.log("Compilation result");
+        console.log(result);
+    });
+
     // Start JVS
     initJVSObjectsAndRunAll();
 });

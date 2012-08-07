@@ -80,6 +80,14 @@ JVSEditorTabs.prototype = {
         // On ouvre un nouveau fichier
         this.openFile();
     },
+    /**
+     * Lance la compilation du code contenu dans l'éditeur courant.
+     * Le résultat est redonné par Java par l'événement javascool.compiled sur le document
+     */
+     compileCurrentFile:function(){
+        var id=this.tabs.idOfTabShown, code=this.openedEditors[id].text;
+        $.webjavac("compile",code);
+    },
     amIOnScreen:function () {
         return this.$.html() != "";
     },
