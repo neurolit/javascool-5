@@ -3,24 +3,26 @@
 <head>
     <title>Java's cool - Developer Preview</title>
     <link rel="stylesheet" type="text/css"
-          href="libs/bootstrap/css/bootstrap.css"/>
+          href="lib/bootstrap/css/bootstrap.css"/>
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
-    <link rel="stylesheet" href="libs/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="lib/codemirror/lib/codemirror.css">
     <link rel="stylesheet" type="text/css" href="style.css"/>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 </head>
 <body>
 <div class="navbar navbar-fixed-top" id="MenuBar">
     <div class="navbar-inner">
-        <a class="brand" href="#"></a>
+        <a class="brand" href="index.html"></a>
         <ul class="nav" id="ToolBar" style="display: none;">
-            <li class="divider-vertical"></li>
-            <li><a onclick="ProgletsManager.stop()">Fermer l'activité</a></li>
-            <li class="divider-vertical"></li>
-            <li><a onclick="EditorTabsManager.openFile();">Nouveau Fichier</a></li>
-            <li><a onclick="alert('Non disponible pour le moment')">Ouvrir Fichier</a></li>
-            <li class="divider-vertical"></li>
-            <li><a onclick="EditorTabsManager.compileCurrentFile();">Compiler</a></li>
+            <li><div class="btn-group"><button class="btn btn-inverse" onclick="ProgletsManager.stop()">Fermer l'activité</button></div></li>
+            <li><div class="btn-group"> <button class="btn btn-inverse" onclick="EditorTabsManager.openFile();">Nouveau Fichier</button>
+                <button class="btn btn-inverse" onclick="alert('Non disponible pour le moment')">Ouvrir Fichier</button></div></li>
+            <li><div class="btn-group">
+                <button class="btn btn-inverse" onclick="jvs.compileUserCode();" id="compileButton">Compiler</button>
+                <button disabled class="btn btn-inverse" onclick="jvs.execUserCode();" id="runButton">Lancer</button>
+                <button disabled class="btn btn-inverse" onclick="jvs.haltUserCode();" id="stopButton">Arrêter</button>
+            </div>
+            </li>
         </ul>
         <div class="pull-right">
             <ul class="nav">
@@ -38,19 +40,21 @@
         <div class="pull-right" style="" id="RightTabsPane"></div>
     </div>
 </div>
-<script src="libs/jquery/jquery.js"></script>
-<script src="libs/Math.uuid.js"></script>
-<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/jquery/jquery.js"></script>
+<script src="lib/jquery/jquery.resize.min.js"></script>
+<script src="lib/Math.uuid.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-    var scripts = [ "core/Proglet", "core/Proglets", "core/JVSFile","gui/Tabs", "gui/Shortcuts", "gui/EditorTabs", "gui/Editor", "gui/MultimediaTabs", "gui/multimediapanes/WebPage",  "gui/multimediapanes/Console",
+    var scripts = [ "core/Proglet", "core/Proglets", "core/JVSFile", "gui/Tabs", "gui/Shortcuts", "gui/EditorTabs",
+        "gui/Editor", "gui/MultimediaTabs", "gui/multimediapanes/WebPage", "gui/multimediapanes/Console",
         "javascool" ];
     for (var i = 0; i < scripts.length; i++) {
         document
                 .write("<script type=\"text/javascript\" src=\"js/" + scripts[i] + ".js\"><\/script>");
     }
 </script>
-<script src="libs/codemirror/lib/codemirror.js"></script>
-<script src="libs/codemirror/mode/javascript/javascript.js"></script>
-<script src="libs/javascool/jquery.webjavac.js"></script>
+<script src="lib/codemirror/lib/codemirror.js"></script>
+<script src="lib/codemirror/mode/javascript/javascript.js"></script>
+<script src="lib/javascool/jquery.webjavac.js"></script>
 </body>
 </html>

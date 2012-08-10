@@ -86,6 +86,7 @@ JVSEditorTabs.prototype = {
      */
      compileCurrentFile:function(){
         var id=this.tabs.idOfTabShown, code=this.openedEditors[id].text;
+        webconsole.clear();
         $.webjavac("compile",code);
     },
     amIOnScreen:function () {

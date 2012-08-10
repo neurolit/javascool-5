@@ -7,6 +7,11 @@ function JVSTabs(domElem) {
     this.$ = $(domElem);
     this.id=Math.uuid(5,16);
     this.$.addClass("jvstabs");
+    this.$.resize({tabs:this},function(e){
+        var tabs= e.data.tabs;
+        tabs.$.children('.tab-content').height((tabs.$.height()-tabs.$.children('.nav').outerHeight()))
+        console.log((tabs.$.height()));
+    });
     this.$.html('<ul class="nav nav-pills"></ul><div class="tab-content"></div>');
 }
 JVSTabs.prototype = {
@@ -15,20 +20,24 @@ JVSTabs.prototype = {
      */
     lastID:0,
     idOfTabShown:null,
-    addTab:function (title, content, donotshow) {
+    addTab:function (title, content, donotshow, canbeclosed) {
         title=title||"Onglet";
         content=content||"";
-        donotshow=donotshow==null?false:donotshow;
+        donotshow=donotshow||false;
+        if(canbeclosed===true||canbeclosed===undefined||canbeclosed===null){canbeclosed=true;}else{canbeclosed=false;}
         var id=this.lastID++;
-        this.$.children('.nav').append('<li id="'+this.idForTab(id)+'"><a class="link"><span class="tabtitle">'+title+'</span><span class="icon-remove-circle closeIcon"></span></a></li>');
-        $('#'+this.idForTab(id)+' a .closeIcon').click({tabs:this,id:id},function(e){
-            e.data.tabs.propagateCloseOnTab(e.data.id);
-            return false;
-        });
+        this.$.children('.nav').append('<li id="'+this.idForTab(id)+'"><a class="link"><span class="tabtitle">'+title+'</span>'+(canbeclosed?'<span class="icon-remove-circle closeIcon"></span>':'')+'</a></li>');
+        if(canbeclosed){
+            $('#'+this.idForTab(id)+' a .closeIcon').click({tabs:this,id:id},function(e){
+                e.data.tabs.propagateCloseOnTab(e.data.id);
+                return false;
+            });
+        }
         $('#'+this.idForTab(id)+' a').click({tabs:this,id:id},function(e){
             e.data.tabs.showTab(e.data.id);
         });
         this.$.children('.tab-content').append('<div id="'+this.idForContent(id)+'" class="tab-pane">'+content+'</div>');
+        this.$.trigger("resize");
         donotshow?null:this.showTab(id);
         return id;
     },
@@ -59,7 +68,7 @@ JVSTabs.prototype = {
      * @param id L'identifiant de l'onglet
      * @param newTitle Le titre de l'onglet à mettre
      */
-    changeTitle:function(id,newTitle){
+    setTitle:function(id,newTitle){
         $('#'+this.idForTab(id)).find(".tabtitle").html(newTitle);
     },
     count:function () {

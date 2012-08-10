@@ -33,6 +33,14 @@ body {
     height: 100%;
 }
 
+/********************************************************
+                 Toolbar
+********************************************************/
+
+#ToolBar li{
+    margin-left: 5px;
+}
+
 #ShortcutsPane {
     overflow-y:auto;
 }
@@ -74,6 +82,15 @@ body {
                 JVSTab Section
 ****************************************************************************/
 
+.jvstabs{
+    height:100%;
+}
+
+.jvstabs .tab-content, .jvstabs .tab-pane{
+    height:100%;
+}
+
+
 .jvstabs .nav {
     width:100%;
     border-bottom: 2px solid #DDD;
@@ -89,7 +106,7 @@ body {
     clear:both;
 }
 
-.jvstabs .nav-tabs .closeIcon {
+.jvstabs .nav-pills .closeIcon {
     margin-left: 6px;
     cursor: pointer;
 }
@@ -171,6 +188,26 @@ body {
 }
 .MultimediaTabsPane .toolbar .right-tools{
 
+}
+
+.MultimediaTabsPane .console{
+    height: 100%;
+    width:100%;
+    padding: 0;
+    margin:0;
+    overflow-x:auto;
+    overflow-y:auto;
+    color: #adff2f;
+    background-color: #000000;
+}
+.MultimediaTabsPane .console pre{
+    margin:5px;
+    padding: 0;
+    border-radius: 0;
+    color: #adff2f;
+    background-color: #000000;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
 }
 
 /* CodeMirror */

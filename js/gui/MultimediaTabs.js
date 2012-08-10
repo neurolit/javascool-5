@@ -75,10 +75,19 @@ JVSMultimediaTabs.prototype = {
         // On lance la configuration des écouteurs sur ce gestionnaire
         this.setupListenersOnEditorTabs();
 
-        var test=new JVSWebPage();
-        test.setup(document.getElementById(this.tabs.idForContent(this.tabs.addTab("A test"))),"http://fr.wikipedia.org/w/api.php");
 
-
+    },
+    /**
+     * Ajoute au MultimediaTabs les Widgets de base.
+     * Widget de base ;
+     *      Une console
+     *      Une webpage ouvert sur le mémo
+     *      Un Proglet Panel s'il est disponible
+     */
+    addDefaultWidgets:function(){
+        var console=new JVSConsole(), consoleId=this.tabs.addTab(null,null,null,false);
+        console.setup(document.getElementById(this.tabs.idForContent(consoleId)));
+        this.tabs.setTitle(consoleId,console.title)
     },
     setupListenersOnEditorTabs:function () {
         this.assertIfAmIOnScreen();

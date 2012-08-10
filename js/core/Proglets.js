@@ -22,6 +22,7 @@ Proglets.prototype = {
             jvs.fadeFromShortcutsToPanel(function(){
                EditorTabsManager.setup();
                MultimediaTabsManager.setup();
+               MultimediaTabsManager.addDefaultWidgets();
             });
         } catch (e) {
             console.error("Error : " + e + "Are you in a Java's Cool Environement ?");

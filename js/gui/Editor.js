@@ -48,7 +48,7 @@ JVSEditor.prototype = {
                     editor.refresh();
                 });
                 var resizer = function () {
-                    editor.setSize(null, $(window).height() - 77);
+                    editor.setSize(null, EditorTabsManager.tabs.$.children(".tab-content").height());
                 }
                 $(window).bind("resize", resizer);
                 resizer();
