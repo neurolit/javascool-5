@@ -37,6 +37,9 @@ JVSTabs.prototype = {
             e.data.tabs.showTab(e.data.id);
         });
         this.$.children('.tab-content').append('<div id="'+this.idForContent(id)+'" class="tab-pane">'+content+'</div>');
+        this.$("#"+this.idForContent(id)).bind("setTitle",{tabs:this,id:id},function(e){
+            e.data.tabs.setTitle(e.data.id,e.data.title);
+        })
         this.$.trigger("resize");
         donotshow?null:this.showTab(id);
         return id;

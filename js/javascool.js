@@ -43,6 +43,9 @@ var jvs = {
         $.webjavac("execStop");
         $("#compileButton, #runButton").attr("disabled",false);
         $("#stopButton").attr("disabled",true);
+    },
+    openFile:function(){
+        var file=
     }
 };
 
@@ -73,7 +76,11 @@ $(document).ready(function () {
 
     // Add WebJavac for JVS Compilation
     $.webjavac({
-        jar:"lib/javascool/webjavac.jar"
+        jar:"lib/javascool/javascool.jar"
+    });
+
+    $.polyfilewriter({
+        jar:"lib/javascool/javascool.jar"
     });
 
     // Setup Listeners from Java

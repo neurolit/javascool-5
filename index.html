@@ -16,7 +16,7 @@
         <ul class="nav" id="ToolBar" style="display: none;">
             <li><div class="btn-group"><button class="btn btn-inverse" onclick="ProgletsManager.stop()">Fermer l'activité</button></div></li>
             <li><div class="btn-group"> <button class="btn btn-inverse" onclick="EditorTabsManager.openFile();">Nouveau Fichier</button>
-                <button class="btn btn-inverse" onclick="alert('Non disponible pour le moment')">Ouvrir Fichier</button></div></li>
+                <button class="btn btn-inverse" onclick="jvs.openFile()">Ouvrir Fichier</button></div></li>
             <li><div class="btn-group">
                 <button class="btn btn-inverse" onclick="jvs.compileUserCode();" id="compileButton">Compiler</button>
                 <button disabled class="btn btn-inverse" onclick="jvs.execUserCode();" id="runButton">Lancer</button>
@@ -44,6 +44,7 @@
 <script src="lib/jquery/jquery.resize.min.js"></script>
 <script src="lib/Math.uuid.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap/js/bootbox.min.js"></script>
 <script type="text/javascript">
     var scripts = [ "core/Proglet", "core/Proglets", "core/JVSFile", "gui/Tabs", "gui/Shortcuts", "gui/EditorTabs",
         "gui/Editor", "gui/MultimediaTabs", "gui/multimediapanes/WebPage", "gui/multimediapanes/Console",
@@ -56,5 +57,6 @@
 <script src="lib/codemirror/lib/codemirror.js"></script>
 <script src="lib/codemirror/mode/javascript/javascript.js"></script>
 <script src="lib/javascool/jquery.webjavac.js"></script>
+<script src="lib/javascool/jquery.polyfilewriter.js"></script>
 </body>
 </html>

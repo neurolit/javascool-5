@@ -1,49 +1,53 @@
 function JVSEditor() {
-}
-
-
-JVSEditor.prototype = {
+    /**
+     * @type {JVSEditor}
+     */
+    var that=this;
     /**
      * Le fichier en cours d'édition dans cette instance de cet éditeur
-     * @type JVSFile (recommended)
+     * @type  JVSFile
      */
-    file:null,
+    var file=null;
     /**
      * L'id de la div html alloué à l'éditeur
      */
-    htmlID:"",
+    var htmlID="";
     /**
      * L'id de l'éditeur dans le gestionnaire de Tab d'édition
      */
-    idInTabManager:-1,
-    /** L'instance de CodeMirror (interne, ne pas éditer depuis l'extérieur de la classe) */
-    editor:null,
+    var idInTabManager=-1;
+    /** L'instance de CodeMirror (interne, ne pas éditer depuis l'extérieur de la classe)
+     * @type {CodeMirror}*/
+    var editor=null;
     /**
      * Création et de mise en place de l'éditeur
-     * @param file Le fichier à éditer
+     * @param f Le fichier à éditer
      * @param htmlId L'ID de la div HTML allouée
      * @param id La référance dans le gestionnaire des onglets d'édition. Peut être égal à -1 si l'éditeur est instancié en dehors
      */
-    setup:function (file, htmlId, id) {
+    this.setup=function (fileObject, DivID, RefID) {
 
         // On assigne les valeurs
-        this.file = file;
-        this.htmlID = htmlId;
-        this.idInTabManager = (id > -1 && id != undefined) ? id : -1;
+        file = fileObject;
+        htmlID = DivID;
+        idInTabManager = (RefID > -1 && id != undefined) ? RefID : -1;
+
+        this.file.$.bind("nameUpdate",function(){
+            $("#" + htmlID).trigger("setTitle",{title:file.name});
+        })
 
         // Création de l'instance de CodeMirror
-        var editor = null;
         try {
-            editor = CodeMirror(document.getElementById(this.htmlID), {
-                //value:"function myScript(){return 100;}\n",
+            editor = CodeMirror(document.getElementById(htmlID), {
+                value:file.content,
                 mode:"javascript",
                 lineNumbers:true,
-                //fixedGutter:true,
+                fixedGutter:true,
                 gutter:true
             });
 
-            if (this.idInTabManager > -1) {
-                $("#" + this.htmlID).bind("visible", function () {
+            if (idInTabManager > -1) {
+                $("#" + htmlID).bind("visible", function () {
                     resizer();
                     editor.refresh();
                 });
@@ -55,16 +59,11 @@ JVSEditor.prototype = {
             }
             editor.refresh();
             editor.focus();
-            //editor.setSelection({ line:0, ch:0 }, { line:2, ch:0 });
         } catch (e) {
             console.error("Can't setup CodeMirror editor. JS Error : " + e);
         }
-        this.editor = editor;
-    },
-    /**
-     * Getter for the editor text
-     */
-    get text(){
-        return this.editor.getValue();
+    };
+    this.getText=function(){
+        return editor.getValue();
     }
 };

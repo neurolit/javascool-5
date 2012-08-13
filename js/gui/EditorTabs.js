@@ -1,5 +1,4 @@
 function JVSEditorTabs() {
-
 }
 
 JVSEditorTabs.prototype = {
@@ -18,31 +17,35 @@ JVSEditorTabs.prototype = {
     $:null,
 
     openFile:function (fileUrl) {
-        var id=null;
-        if (typeof fileUrl == "string") { // Open a file by url
-            Console.log("Not implemented");
-        } else { // Open a new File
-
-            // Création de l'instance du nouveau fichier et celle de l'editeur
+        var id = null;
+        // Création de l'instance du nouveau fichier et celle de l'editeur
+        var file = new JVSFile();
+        if(typeof fileUrl === "JVSFile"){ // Le fichier est déjà en argument
+            file=fileUrl;
+            if(file.url=="")
+                return;
+        }else if (typeof fileUrl == "string") { // Open a file by url
             var file = new JVSFile();
-            var editor = new JVSEditor();
-
-            // Création de l'onglet
-            var tabTitle = editor.title == undefined ? file.name : editor.title; // Le titre de l'onglet
-            id=this.tabs.addTab(tabTitle);
-
-            // On les références dans les tableaux de l'objet
-            this.openedFiles[id] = file;
-            this.openedEditors[id] = editor;
-
-            // On ajoute les listeners sur la fermeture du fichier
-            $('#'+this.tabs.idForContent(id)).bind('wantToClose',{manager:this,file:file},function (e){
-                e.data.manager.closeFile(e.data.file);
-            });
-
-            // On passe la main à l'éditeur pour sa construction
-            editor.setup(file, this.tabs.idForContent(id), id);
+            file.url = fileUrl;
+            file.load();
         }
+        var editor = new JVSEditor();
+
+        // Création de l'onglet
+        var tabTitle = editor.title == undefined ? file.name : editor.title; // Le titre de l'onglet
+        id = this.tabs.addTab(tabTitle);
+
+        // On les références dans les tableaux de l'objet
+        this.openedFiles[id] = file;
+        this.openedEditors[id] = editor;
+
+        // On ajoute les listeners sur la fermeture du fichier
+        $('#' + this.tabs.idForContent(id)).bind('wantToClose', {manager:this, file:file}, function (e) {
+            e.data.manager.closeFile(e.data.file);
+        });
+
+        // On passe la main à l'éditeur pour sa construction
+        editor.setup(file, this.tabs.idForContent(id), id);
         return id;
 
     },
@@ -53,8 +56,8 @@ JVSEditorTabs.prototype = {
     closeFile:function (file) {
         // TODO: Demander la sauvegarde du fichier
         // On ferme l'onglet
-        var i=0;
-        for(i=0;i<this.openedFiles.length&&this.openedFiles[i]!=file;i++);
+        var i = 0;
+        for (i = 0; i < this.openedFiles.length && this.openedFiles[i] != file; i++);
         this.tabs.removeTab(i);
     },
     remove:function () {
@@ -84,10 +87,10 @@ JVSEditorTabs.prototype = {
      * Lance la compilation du code contenu dans l'éditeur courant.
      * Le résultat est redonné par Java par l'événement javascool.compiled sur le document
      */
-     compileCurrentFile:function(){
-        var id=this.tabs.idOfTabShown, code=this.openedEditors[id].text;
+    compileCurrentFile:function () {
+        var id = this.tabs.idOfTabShown, code = this.openedEditors[id].text;
         webconsole.clear();
-        $.webjavac("compile",code);
+        $.webjavac("compile", code);
     },
     amIOnScreen:function () {
         return this.$.html() != "";
@@ -97,6 +100,4 @@ JVSEditorTabs.prototype = {
             throw "Editor Tabs is not running in HTML code";
     }
 };
-if (gui == undefined)
-    var gui = new Object();
 var EditorTabsManager = new JVSEditorTabs();
