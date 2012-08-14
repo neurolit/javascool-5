@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="302b70a3-daa0-4f0b-aa5c-813e5013918b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/javascool/webjavac.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/javascool/javascool.jar" afterPath="$PROJECT_DIR$/lib/javascool/javascool.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/core/JVSFile.js" afterPath="$PROJECT_DIR$/js/core/JVSFile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gui/Editor.js" afterPath="$PROJECT_DIR$/js/gui/Editor.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gui/EditorTabs.js" afterPath="$PROJECT_DIR$/js/gui/EditorTabs.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gui/Tabs.js" afterPath="$PROJECT_DIR$/js/gui/Tabs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/gui/multimediapanes/Console.js" afterPath="$PROJECT_DIR$/js/gui/multimediapanes/Console.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/javascool.js" afterPath="$PROJECT_DIR$/js/javascool.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/javascool/jquery.polyfilewriter.js" afterPath="$PROJECT_DIR$/lib/javascool/jquery.polyfilewriter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/javascool/jquery.webjavac.js" afterPath="$PROJECT_DIR$/lib/javascool/jquery.webjavac.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/jquery/jquery.js" afterPath="$PROJECT_DIR$/lib/jquery/jquery.js" />
     </list>
     <ignored path="javascool-5.iws" />
@@ -72,28 +70,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="javascool.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/javascool.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="17" selection-start="1353" selection-end="1353" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tabs.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/gui/Tabs.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="33" selection-start="1759" selection-end="1759" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="69" selection-start="1000" selection-end="1008" vertical-scroll-proportion="-11.25">
+            <state line="18" column="96" selection-start="1035" selection-end="1035" vertical-scroll-proportion="-9.166667">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="javascool.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/javascool.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="116" column="38" selection-start="3521" selection-end="3521" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Console.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/gui/multimediapanes/Console.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="98" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.49798793">
               <folding />
             </state>
           </provider>
@@ -102,7 +100,25 @@
       <file leaf-file-name="EditorTabs.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/gui/EditorTabs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="76" selection-start="593" selection-end="593" vertical-scroll-proportion="-13.2">
+            <state line="45" column="73" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tabs.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/gui/Tabs.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="42" selection-start="2330" selection-end="2330" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/jquery/jquery.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3131" column="42" selection-start="117556" selection-end="117556" vertical-scroll-proportion="30.28">
               <folding />
             </state>
           </provider>
@@ -111,39 +127,17 @@
       <file leaf-file-name="Editor.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/gui/Editor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="8" selection-start="1158" selection-end="1158" vertical-scroll-proportion="0.0">
+            <state line="72" column="20" selection-start="2226" selection-end="2226" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JVSFile.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/core/JVSFile.js">
+      <file leaf-file-name="EcmaScript5.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="65" selection-start="2204" selection-end="2204" vertical-scroll-proportion="0.0">
+            <state line="54" column="7" selection-start="940" selection-end="940" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/jquery/jquery.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1719" column="62" selection-start="65803" selection-end="65803" vertical-scroll-proportion="0.45717233">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#36243#36490#0" expanded="false" />
-                <element signature="e#37359#45037#0" expanded="false" />
-                <element signature="e#45131#50905#0" expanded="false" />
-                <element signature="e#50944#63594#0" expanded="false" />
-                <element signature="e#75131#76112#0" expanded="false" />
-                <element signature="e#76189#76530#0" expanded="false" />
-                <element signature="e#76584#77366#0" expanded="false" />
-                <element signature="e#77386#79834#0" expanded="false" />
-                <element signature="e#79859#82650#0" expanded="false" />
-                <element signature="e#83145#90442#0" expanded="false" />
-                <element signature="e#90464#100421#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -192,7 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/js/gui/Shortcuts.js" />
         <option value="$PROJECT_DIR$/js/gui/WidgetTabs.js" />
         <option value="$PROJECT_DIR$/js/gui/multimediapanes/WebPage.js" />
         <option value="$PROJECT_DIR$/js/core/Proglets.js" />
@@ -200,20 +193,21 @@
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/js/gui/MultimediaTabs.js" />
         <option value="$PROJECT_DIR$/lib/javascool/jquery.webjavac.js" />
-        <option value="$PROJECT_DIR$/js/gui/multimediapanes/Console.js" />
-        <option value="$PROJECT_DIR$/js/gui/Tabs.js" />
         <option value="$PROJECT_DIR$/lib/jquery/jquery.js" />
-        <option value="$PROJECT_DIR$/js/gui/Editor.js" />
-        <option value="$PROJECT_DIR$/js/gui/EditorTabs.js" />
+        <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/javascool.js" />
+        <option value="$PROJECT_DIR$/js/gui/Editor.js" />
         <option value="$PROJECT_DIR$/js/core/JVSFile.js" />
+        <option value="$PROJECT_DIR$/js/gui/Tabs.js" />
+        <option value="$PROJECT_DIR$/js/gui/EditorTabs.js" />
+        <option value="$PROJECT_DIR$/js/javascool.js" />
+        <option value="$PROJECT_DIR$/js/gui/multimediapanes/Console.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
+    <option name="x" value="1919" />
     <option name="y" value="26" />
     <option name="width" value="1922" />
     <option name="height" value="1176" />
@@ -268,6 +262,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -277,9 +274,6 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane />
       </pane>
       <pane id="ProjectPane">
         <subPane>
@@ -452,16 +446,24 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="277" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1057" />
-    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1057" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1057" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="277" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="271" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <PyConsoleSettings />
+    </option>
+    <option name="myDjangoConsoleState">
+      <PyConsoleSettings />
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -483,6 +485,24 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="302b70a3-daa0-4f0b-aa5c-813e5013918b" name="Default" comment="" />
@@ -517,10 +537,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="26" width="1922" height="1176" extended-state="7" />
+    <frame x="1919" y="26" width="1922" height="1176" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -531,15 +550,16 @@
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14354323" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14209402" sideWeight="0.6784314" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="JSON Formatter" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14354323" sideWeight="0.49313724" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14209402" sideWeight="0.31470588" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="2019" y="100" width="1722" height="1002" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913843" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -598,15 +618,48 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Create a JVSTabs&#10;Create a WidgetTabs&#10;Solve bugs in EditorTabs&#10;Update CodeMirror Library" />
   </component>
+  <component name="VssConfiguration">
+    <option name="CLIENT_PATH" value="" />
+    <option name="SRCSAFEINI_PATH" value="" />
+    <option name="USER_NAME" value="" />
+    <option name="PWD" value="" />
+    <CheckoutOptions>
+      <option name="COMMENT" value="" />
+      <option name="DO_NOT_GET_LATEST_VERSION" value="false" />
+      <option name="REPLACE_WRITABLE" value="false" />
+      <option name="RECURSIVE" value="false" />
+    </CheckoutOptions>
+    <CheckinOptions>
+      <option name="COMMENT" value="" />
+      <option name="KEEP_CHECKED_OUT" value="false" />
+      <option name="RECURSIVE" value="false" />
+    </CheckinOptions>
+    <AddOptions>
+      <option name="STORE_ONLY_LATEST_VERSION" value="false" />
+      <option name="CHECK_OUT_IMMEDIATELY" value="false" />
+    </AddOptions>
+    <UndocheckoutOptions>
+      <option name="MAKE_WRITABLE" value="false" />
+      <option name="REPLACE_LOCAL_COPY" value="2" />
+      <option name="RECURSIVE" value="false" />
+    </UndocheckoutOptions>
+    <GetOptions>
+      <option name="REPLACE_WRITABLE" value="0" />
+      <option name="MAKE_WRITABLE" value="false" />
+      <option name="ANSWER_NEGATIVELY" value="false" />
+      <option name="ANSWER_POSITIVELY" value="false" />
+      <option name="RECURSIVE" value="false" />
+      <option name="VERSION" />
+    </GetOptions>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/jquery/jquery.resize.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="863" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/javascool/jquery.webjavac.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="116" selection-start="1369" selection-end="1369" vertical-scroll-proportion="0.41811848" />
@@ -617,23 +670,60 @@
         <state line="108" column="19" selection-start="1719" selection-end="1719" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/gui/multimediapanes/Console.js">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/ECMAScript.js2">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="56" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="15" column="29" selection-start="733" selection-end="733" vertical-scroll-proportion="0.22635815" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/codemirror/lib/codemirror.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="458" column="17" selection-start="21173" selection-end="21173" vertical-scroll-proportion="0.33299798" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="15" column="47" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="7" selection-start="940" selection-end="940" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/gui/MultimediaTabs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="85" selection-start="2705" selection-end="2705" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/jquery/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3131" column="42" selection-start="117556" selection-end="117556" vertical-scroll-proportion="30.28">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/core/JVSFile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="9" selection-start="4081" selection-end="4081" vertical-scroll-proportion="0.33299798">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/gui/Editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="20" selection-start="2226" selection-end="2226" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/gui/Tabs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="33" selection-start="1759" selection-end="1759" vertical-scroll-proportion="0.0">
+        <state line="57" column="42" selection-start="2330" selection-end="2330" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/gui/EditorTabs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="73" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -643,77 +733,24 @@
         <state line="24" column="57" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/ECMAScript.js2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="29" selection-start="733" selection-end="733" vertical-scroll-proportion="0.22635815">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/gui/MultimediaTabs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="85" selection-start="2705" selection-end="2705" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/codemirror/lib/codemirror.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="460" column="14" selection-start="21234" selection-end="21234" vertical-scroll-proportion="4.4819403">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/gui/Editor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="8" selection-start="1158" selection-end="1158" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/gui/EditorTabs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="76" selection-start="593" selection-end="593" vertical-scroll-proportion="-13.2">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="69" selection-start="1000" selection-end="1008" vertical-scroll-proportion="-11.25">
+        <state line="18" column="96" selection-start="1035" selection-end="1035" vertical-scroll-proportion="-9.166667">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/javascool.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="17" selection-start="1353" selection-end="1353" vertical-scroll-proportion="0.0">
+        <state line="116" column="38" selection-start="3521" selection-end="3521" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/core/JVSFile.js">
+    <entry file="file://$PROJECT_DIR$/js/gui/multimediapanes/Console.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="65" selection-start="2204" selection-end="2204" vertical-scroll-proportion="0.0">
+        <state line="33" column="98" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.49798793">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/jquery/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1719" column="62" selection-start="65803" selection-end="65803" vertical-scroll-proportion="0.45717233">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#36243#36490#0" expanded="false" />
-            <element signature="e#37359#45037#0" expanded="false" />
-            <element signature="e#45131#50905#0" expanded="false" />
-            <element signature="e#50944#63594#0" expanded="false" />
-            <element signature="e#75131#76112#0" expanded="false" />
-            <element signature="e#76189#76530#0" expanded="false" />
-            <element signature="e#76584#77366#0" expanded="false" />
-            <element signature="e#77386#79834#0" expanded="false" />
-            <element signature="e#79859#82650#0" expanded="false" />
-            <element signature="e#83145#90442#0" expanded="false" />
-            <element signature="e#90464#100421#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>

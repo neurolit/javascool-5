@@ -13,6 +13,10 @@ function JVSTabs(domElem) {
         console.log((tabs.$.height()));
     });
     this.$.html('<ul class="nav nav-pills"></ul><div class="tab-content"></div>');
+
+    this.events={
+        CLOSE_BUTTON_CLICK:"wantToClose"
+    };
 }
 JVSTabs.prototype = {
     /**
@@ -37,7 +41,7 @@ JVSTabs.prototype = {
             e.data.tabs.showTab(e.data.id);
         });
         this.$.children('.tab-content').append('<div id="'+this.idForContent(id)+'" class="tab-pane">'+content+'</div>');
-        this.$("#"+this.idForContent(id)).bind("setTitle",{tabs:this,id:id},function(e){
+        $("#"+this.idForContent(id)).bind("setTitle",{tabs:this,id:id},function(e){
             e.data.tabs.setTitle(e.data.id,e.data.title);
         })
         this.$.trigger("resize");
@@ -50,19 +54,19 @@ JVSTabs.prototype = {
     removeTab:function (id) {
         // On prévient les deux enfant que l'on ferme
         var event = jQuery.Event("closing");
-        $('#'+this.idForTab(id)).triggerHandler(event);
-        $('#'+this.idForContent(id)).triggerHandler(event);
-        // Todo: Annuler la fermeture si la propagation a été arrêté de force
-//        if ( event.isDefaultPrevented() ) { // S'ils sont tous d'accord, alors on ferme
+        $('#'+this.idForTab(id)+', #'+this.idForContent(id)).trigger(event);
+        if ( !event.isPropagationStopped() ) { // S'ils sont tous d'accord, alors on ferme
             // On ferme
             $('#'+this.idForTab(id)+', #'+this.idForContent(id)).remove();
-//        }
+        }
 
     },
     showTab:function(id){
         if(this.idOfTabShown!=null){
+            // On masque l'onglet actif
             $('#'+this.idForTab(this.idOfTabShown)+', #'+this.idForContent(this.idOfTabShown)).removeClass('active');
         }
+        // On affiche l'onglet #id
         $('#'+this.idForTab(id)+', #'+this.idForContent(id)).addClass('active');
         this.idOfTabShown=id;
     },

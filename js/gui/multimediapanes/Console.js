@@ -21,6 +21,7 @@ JVSConsole.prototype={
         });
     },
     setup:function(dom,donotregisterasglobal){
+        if(this.$!==null)return;
         this.$=$(dom);
         this.$.html('<div class="console"><pre class=""></pre></div> ');
         this.$console=this.$.children(".console").children("pre");
@@ -30,7 +31,7 @@ JVSConsole.prototype={
     print:function(what) {
         this.$console.append(what);
         var consoleDiv=this.$.children(".console");
-        consoleDiv.animate({ scrollTop: consoleDiv.prop("scrollHeight") - consoleDiv.height() }, 100);
+        consoleDiv.animate({ scrollTop: consoleDiv.prop("scrollHeight") - consoleDiv.height() }, 0);
     },
     clear:function(){
         this.$console.html("");

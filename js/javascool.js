@@ -45,7 +45,20 @@ var jvs = {
         $("#stopButton").attr("disabled",true);
     },
     openFile:function(){
-        var file=
+        var file=new JVSFile();
+        file.$.one(file.events.OPEN,function(){
+            EditorTabsManager.openFile(file);
+        });
+        file.open();
+    },
+    saveFile:function(){
+        /**
+         * @type {JVSFile}
+         */
+        var file=EditorTabsManager.openedFiles[EditorTabsManager.tabs.idOfTabShown];
+        if(file==null||typeof file!="object")
+            throw "Hum the file is not a file";
+        file.save();
     }
 };
 
@@ -85,8 +98,8 @@ $(document).ready(function () {
 
     // Setup Listeners from Java
     $(document).bind("java.System.out",function(event,data){
-        console.log(data);
         webconsole.print(data);
+        return false;
     });
 
     $(document).bind("javascool.compiled",function(event,result){
@@ -101,6 +114,7 @@ $(document).ready(function () {
             $("#runButton, #stopButton").attr("disabled",true);
             webconsole.print("\n--------\n<i class='icon-remove icon-white'></i>  Echec de la compilation (Voir les erreurs affichées ci dessus)");
         }
+        webconsole.print("\n--------\n")
     });
 
     $(document).bind("javascool.user.exec.ended",function(event){
