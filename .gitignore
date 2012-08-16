@@ -1,2 +1,5 @@
 .tmp
+# Utilisé pour la documentation
 .doc
+# Utilisé pour la mise a jour du site du projet
+.gh-pages

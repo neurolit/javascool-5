@@ -54,3 +54,13 @@ ${DOC_FOLDER}/doc: ${DOC_FOLDER}/jsdoc
 doc:${DOC_FOLDER}/doc
 	@firefox $</index.html
 
+gh_pages_GIT_REF=origin gh-pages
+
+.gh-pages:
+	@git clone -q git@github.com:javascool/javascool-5.git $@; cd $@; git checkout --orphan gh-pages; git rm -q -rf .; git pull ${gh_pages_GIT_REF};
+
+publishDoc: .gh-pages ${DOC_FOLDER}/doc
+	@cd ${JAVASCOOL_5}/.gh-pages; git pull ${gh_pages_GIT_REF};
+	@cp -r ${DOC_FOLDER}/doc ${JAVASCOOL_5}/.gh-pages
+	@cd ${JAVASCOOL_5}/.gh-pages; git add -A; git commit -m "Mise à jour de la documentation"; git push ${gh_pages_GIT_REF};
+
