@@ -12,7 +12,7 @@ JAVASCOOL_5 = ${PWD}
 # Lancement de l'application Java's Cool
 
 fweb: lib/javascool/javascool.jar
-	CLASSPATH += lib/javascool/javascool.jar ; firefox index.html
+	CLASSPATH+=lib/javascool/javascool.jar ; firefox index.html
 
 BROWSER_PROFILE ?= ${PWD}/.tmp
 
