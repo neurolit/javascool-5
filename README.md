@@ -6,7 +6,7 @@ différents répertoires :
 * img : Il est chargé de conserver les images necessaire à l'application (hormis ceux des librairies)
 * libs : Il contient toutes les librairies CSS et JS necessaire à l'application.
 * js : Ce dossier est le point le plus important car il contient tous le code JavaScript de JVS.
-    * core : Contient des partie de l'application necessaire mais non graphiques (ex.: Gestion des proglets, Accès aux fichiers ...)
-    * gui : Contient tous les codes à visé graphique (ex.: Gestionnaire des Onglets d'Edition)
+    * Les partie de l'application necessaire mais non graphiques (ex.: Gestion des proglets, Accès aux fichiers ...)
+    * Tous les codes à visé graphique (ex.: Gestionnaire des Onglets d'Edition)
 
 ## L'organisation du code HTML

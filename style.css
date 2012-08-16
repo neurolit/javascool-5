@@ -43,6 +43,7 @@ body {
 
 #ShortcutsPane {
     overflow-y:auto;
+    width:100%;
 }
 
 #ShortcutsPane .shortcut {

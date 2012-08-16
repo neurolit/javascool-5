@@ -1,9 +1,12 @@
+// On ajoute les variables javascool si le document est en StandAlone
+if(javascool==undefined){
+    javascool={};
+}
+
 /**
- * User: pvienne
- * Date: 7/23/12
- * Time: 4:30 PM
+ *@class
  */
-function JVSTabs(domElem) {
+javascool.Tabs=function(domElem) {
     this.$ = $(domElem);
     this.id=Math.uuid(5,16);
     this.$.addClass("jvstabs");
@@ -17,14 +20,12 @@ function JVSTabs(domElem) {
     this.events={
         CLOSE_BUTTON_CLICK:"wantToClose"
     };
-}
-JVSTabs.prototype = {
     /**
      * Le lastID est utilisé pour numéroter de façon incrémental les div.
      */
-    lastID:0,
-    idOfTabShown:null,
-    addTab:function (title, content, donotshow, canbeclosed) {
+    this.lastID=0;
+    this.idOfTabShown=null;
+        this.addTab=function (title, content, donotshow, canbeclosed) {
         title=title||"Onglet";
         content=content||"";
         donotshow=donotshow||false;
@@ -47,11 +48,11 @@ JVSTabs.prototype = {
         this.$.trigger("resize");
         donotshow?null:this.showTab(id);
         return id;
-    },
-    propagateCloseOnTab:function(id){
+    };
+    this.propagateCloseOnTab=function(id){
         $('#'+this.idForContent(id)).trigger("wantToClose",{tabs:this,id:id});
-    },
-    removeTab:function (id) {
+    };
+    this.removeTab=function (id) {
         // On prévient les deux enfant que l'on ferme
         var event = jQuery.Event("closing");
         $('#'+this.idForTab(id)+', #'+this.idForContent(id)).trigger(event);
@@ -60,8 +61,8 @@ JVSTabs.prototype = {
             $('#'+this.idForTab(id)+', #'+this.idForContent(id)).remove();
         }
 
-    },
-    showTab:function(id){
+    };
+    this.showTab=function(id){
         if(this.idOfTabShown!=null){
             // On masque l'onglet actif
             $('#'+this.idForTab(this.idOfTabShown)+', #'+this.idForContent(this.idOfTabShown)).removeClass('active');
@@ -69,25 +70,25 @@ JVSTabs.prototype = {
         // On affiche l'onglet #id
         $('#'+this.idForTab(id)+', #'+this.idForContent(id)).addClass('active');
         this.idOfTabShown=id;
-    },
+    };
     /**
      * Change le titre de l'onglet.
      * @param id L'identifiant de l'onglet
      * @param newTitle Le titre de l'onglet à mettre
      */
-    setTitle:function(id,newTitle){
+    this.setTitle=function(id,newTitle){
         $('#'+this.idForTab(id)).find(".tabtitle").html(newTitle);
-    },
-    count:function () {
+    };
+    this.count=function () {
         return this.$.children(".nav-tabs").children().length();
-    },
-    idFor:function(element,id){
+    };
+    this.idFor=function(element,id){
         return this.id+'-'+element+'-'+id
-    },
-    idForTab:function(id){
+    };
+    this.idForTab=function(id){
         return this.idFor('tab',id);
-    },
-    idForContent:function(id){
+    };
+    this.idForContent=function(id){
         if(id==null)id=this.lastID;
         return this.idFor('content',id);
     }

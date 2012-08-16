@@ -4,81 +4,116 @@
  */
 
 /**
- * Javascool Core Function.
- * It helps to create the Java's cool
+ * Le point d'entrée de l'application Java's Cool
+ * @namespace Java's Cool
+ * @author Philippe Vienne &gt;PhilippeGeek@gmail.com&lt;
  */
+var javascool = function () {
 
-var jvs = {
-    /**
-     * Dernier résultat de compilation
-     */
-    lastCompileResult:null,
-    // Global Functions
-    fadeFromShortcutsToPanel:function (callback) {
-        ShortcutsPaneManager.$.fadeOut(function () {
-            $("#SliderPane, #ToolBar").fadeIn("fast", callback);
-        });
-    },
-    fadeFromPanelToShortcuts:function (callback) {
-        $("#ToolBar, #SliderPane").fadeOut("fast", function () {
-            ShortcutsPaneManager.$.fadeIn("fast", callback);
-        });
-    },
-    compileUserCode:function(){
-        EditorTabsManager.compileCurrentFile();
-    },
-    execUserCode:function(){
-        if(this.lastCompileResult==null){
-            return;
-        }
-        if(!this.lastCompileResult.success){
-            return;
-        }
-        var classToRun=this.lastCompileResult.compiledClass;
-        $.webjavac("exec",classToRun);
-        $("#compileButton, #runButton").attr("disabled",true);
-        $("#stopButton").attr("disabled",false);
-    },
-    haltUserCode:function(){
-        $.webjavac("execStop");
-        $("#compileButton, #runButton").attr("disabled",false);
-        $("#stopButton").attr("disabled",true);
-    },
-    openFile:function(){
-        var file=new JVSFile();
-        file.$.one(file.events.OPEN,function(){
-            EditorTabsManager.openFile(file);
-        });
-        file.open();
-    },
-    saveFile:function(){
-        /**
-         * @type {JVSFile}
-         */
-        var file=EditorTabsManager.openedFiles[EditorTabsManager.tabs.idOfTabShown];
-        if(file==null||typeof file!="object")
-            throw "Hum the file is not a file";
-        file.save();
-    }
+}
+/**
+ * Dernier résultat de compilation
+ * @inner
+ */
+javascool._lastCompileResult = null;
+
+/**
+ * Tableau des classes de Widgets de Java's Cool;
+ * Tous les classes des MultimediaPane doivents être déclaré à l'intérieur de ce package
+ * @type {Object}
+ * @namespace Java's Cool Multimedia Panes
+ */
+javascool.multimediaPanes = {};
+
+/**
+ * Effectue une transition graphique entre le panneau de raccourci et le panneau principal.
+ * @param {Function} callback La fonction à executer après la transition
+ */
+javascool.fadeFromShortcutsToPanel = function (callback) {
+    javascool.ShortcutsPaneManager.$.fadeOut(function () {
+        $("#SliderPane, #ToolBar").fadeIn("fast", callback);
+    });
 };
 
-function initJVSObjectsAndRunAll() {
-    ProgletsManager.init();
-    ShortcutsPaneManager.setup();
-    ShortcutsPaneManager.$.show();
-}
+/**
+ * Effectue une transition graphique entre le panneau principal et le panneau de raccourci.
+ * @param {Function} callback La fonction à executer après la transition
+ */
+javascool.fadeFromPanelToShortcuts = function (callback) {
+    $("#ToolBar, #SliderPane").fadeOut("fast", function () {
+        javascool.ShortcutsPaneManager.$.fadeIn("fast", callback);
+    });
+};
 
-$(document).ready(function () {
+/**
+ * Lance la compilation du fichier en cours d'édition.
+ */
+javascool.compileUserCode = function () {
+    javascool.EditorTabsManager.compileCurrentFile();
+};
+
+/**
+ * Execute le dernier programme compilé.
+ */
+javascool.execUserCode = function () {
+    if (this._lastCompileResult == null && !this._lastCompileResult.success) {
+        return;
+    }
+    var classToRun = this._lastCompileResult.compiledClass;
+    $.webjavac("exec", classToRun);
+    $("#compileButton, #runButton").attr("disabled", true);
+    $("#stopButton").attr("disabled", false);
+};
+
+/**
+ * Arrête d'urgence l'execution du code.
+ */
+javascool.haltUserCode = function () {
+    $.webjavac("execStop");
+    $("#compileButton, #runButton").attr("disabled", false);
+    $("#stopButton").attr("disabled", true);
+};
+
+/**
+ * Demande à l'utilisateur d'ouvrir un fichier et lance l'édition
+ */
+javascool.openFile = function () {
+    var file = new javascool.File();
+    file.$.one(file.events.OPEN, function () {
+        javascool.EditorTabsManager.openFile(file);
+    });
+    file.open();
+};
+
+/**
+ * Sauvegarde le fichier en cours d'edition.
+ */
+javascool.saveFile = function () {
+    /**
+     * @type {javascool.File}
+     */
+    var file = javascool.EditorTabsManager.openedFiles[javascool.EditorTabsManager.tabs.idOfTabShown];
+    if (file == null || typeof file != "object")
+        throw "Hum the file is not a file";
+    file.save();
+};
+
+/**
+ * Fonction de démarrage de Java's Cool.
+ * Elle doit être appelé lorsque le document est entièrement chargé
+ */
+javascool.init = function () {
+
     function computeAllSizes() {
         var w = $(window).width(), h = $(window).height();
         $("body").height(h - $("#MenuBar").outerHeight() + "px");
-        $("#RightTabsPane, #LeftTabsPane").width(((w/2)-2)+'px');
+        $("#RightTabsPane, #LeftTabsPane").width(((w / 2) - 2) + 'px');
         $("#splitPart").css({
             position:'absolute',
-            left:((w/2)-2)+'px',
-            right:((w/2)-2)+'px',
+            left:((w / 2) - 2) + 'px',
+            right:((w / 2) - 2) + 'px',
             bottom:0,
-            top:0+'px'
+            top:0 + 'px'
         });
     }
 
@@ -97,52 +132,34 @@ $(document).ready(function () {
     });
 
     // Setup Listeners from Java
-    $(document).bind("java.System.out",function(event,data){
-        webconsole.print(data);
+    $(document).bind("java.System.out", function (event, data) {
+        javascool.Webconsole.print(data);
         return false;
     });
 
-    $(document).bind("javascool.compiled",function(event,result){
-        console.warn("Java's Cool compilation result (debug use)");
-        console.warn(result);
-        jvs.lastCompileResult=result;
-        if(result.success){
-            webconsole.print("<i class='icon-ok icon-white'></i> Compilation Réussie");
-            $("#runButton").attr("disabled",false);
-            $("#stopButton").attr("disabled",true);
-        }else{
-            $("#runButton, #stopButton").attr("disabled",true);
-            webconsole.print("\n--------\n<i class='icon-remove icon-white'></i>  Echec de la compilation (Voir les erreurs affichées ci dessus)");
+    $(document).bind("javascool.compiled", function (event, result) {
+        console.log("Java's Cool compilation result (debug use)");
+        console.log(result);
+        javascool._lastCompileResult = result;
+        if (result.success) {
+            javascool.Webconsole.print("<i class='icon-ok icon-white'></i> Compilation Réussie");
+            $("#runButton").attr("disabled", false);
+            $("#stopButton").attr("disabled", true);
+        } else {
+            $("#runButton, #stopButton").attr("disabled", true);
+            javascool.Webconsole.print("\n--------\n<i class='icon-remove icon-white'></i>  Echec de la compilation (Voir les erreurs affichées ci dessus)");
         }
-        webconsole.print("\n--------\n")
+        javascool.Webconsole.print("\n--------\n")
     });
 
-    $(document).bind("javascool.user.exec.ended",function(event){
-        $("#runButton, #compileButton").attr("disabled",false);
-        $("#stopButton").attr("disabled",true);
+    $(document).bind("javascool.user.exec.ended", function (event) {
+        $("#runButton, #compileButton").attr("disabled", false);
+        $("#stopButton").attr("disabled", true);
     });
 
-    // Start JVS
-    initJVSObjectsAndRunAll();
-});
+    javascool.ProgletsManager.init();
+    javascool.ShortcutsPaneManager.setup();
+    javascool.ShortcutsPaneManager.$.show();
+}
 
-/*
- var jvs=new Object();
-
-
-
- function jvs(){
- jvs.proglets=new Proglets();
- jvs.homePage=new JVSHomePage();
- }
-
- $(document).ready(function(){
- jvs();
- function computeAllSizes() {
- var w=$(window).width(),h=$(window).height();
- $("body").height((h-40)+"px");
- $("#shortcuts").css("padding","20px "+((w%152)/2)+"px 20px "+((w%152)/2)+"px");
- }
- // Setup Resize listeners
- $(window).resize(computeAllSizes);computeAllSizes();
- });*/
+$(document).ready(javascool.init);

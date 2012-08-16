@@ -1,7 +1,16 @@
-function JVSEditorTabs() {
+// On ajoute les variables javascool si le document est en StandAlone
+if(javascool==undefined){
+    javascool={};
+}
+
+/**
+ *
+ * @class
+ */
+javascool.EditorTabs=function() {
 
     /**
-     * @type {JVSEditorTabs}
+     * @type {javascool.EditorTabs}
      */
     var that=this;
 
@@ -11,7 +20,7 @@ function JVSEditorTabs() {
 
     /**
      * Gestionnaire des tabs
-     * @type JVSTabs
+     * @type {javascool.Tabs}
      */
     this.tabs=null;
 
@@ -29,14 +38,13 @@ function JVSEditorTabs() {
     this.openFile=function (fileUrl) {
         var id = null;
         // Création de l'instance du nouveau fichier et celle de l'editeur
-        var file = new JVSFile();
+        var file = new javascool.File();
         if(typeof fileUrl == "object"){ // Le fichier est déjà en argument
             console.log("OK")
             file=fileUrl;
             if(file.url=="")
                 return;
         }else if (typeof fileUrl == "string") { // Open a file by url
-            var file = new JVSFile();
             file.url = fileUrl;
             file.load();
         }
@@ -51,7 +59,7 @@ function JVSEditorTabs() {
             }
         }
 
-        var editor = new JVSEditor();
+        var editor = new javascool.Editor();
 
         // Création de l'onglet
         var tabTitle = editor.title == undefined ? file.name : editor.title; // Le titre de l'onglet
@@ -75,7 +83,7 @@ function JVSEditorTabs() {
     /**
      * Effectue les actions necessaires à la fermeture d'un fichier.
      *
-     * @param {JVSFile} file Le fichier à fermer ou le tab à fermer
+     * @param {javascool.File} file Le fichier à fermer ou le tab à fermer
      */
     this.closeFile=function (file) {
         var close=function(){
@@ -112,7 +120,7 @@ function JVSEditorTabs() {
         this.$ = $("#" + this.htmlID);
 
         // On initialise le système d'onglets
-        this.tabs = new JVSTabs(this.$[0]);
+        this.tabs = new javascool.Tabs(this.$[0]);
 
         // On ouvre un nouveau fichier
         //this.openFile();
@@ -124,7 +132,7 @@ function JVSEditorTabs() {
      */
     this.compileCurrentFile=function () {
         var id = this.tabs.idOfTabShown, code = this.openedEditors[id].getText();
-        webconsole.clear();
+        javascool.Webconsole.clear();
         $.webjavac("compile", code);
     };
     var amIOnScreen=function () {
@@ -141,6 +149,6 @@ function JVSEditorTabs() {
 };
 /**
  * Instance global du gestionnaire des editeurs
- * @type {JVSEditorTabs}
+ * @type {javascool.EditorTabs}
  */
-var EditorTabsManager = new JVSEditorTabs();
+javascool.EditorTabsManager = new javascool.EditorTabs();

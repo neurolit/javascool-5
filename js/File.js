@@ -1,16 +1,20 @@
+// On ajoute les variables javascool si le document est en StandAlone
+if(javascool==undefined){
+    javascool={};
+}
+
 /**
- * Symbolisation d'un fichier texte (code, donnés non-binaires ...).
+ * Symbolisation d'un fichier texte (code, donnés non-binaires etc).
  *
- * Cette classe permet une gestion facilité d'un fichier contenant que du texte. L'objet peut refléter plusieurs
- * fichiers différents au cous de son existance.
+ * <p>Cette classe permet une gestion facilité d'un fichier contenant que du texte. L'objet peut refléter plusieurs
+ * fichiers différents au cous de son existance.</p>
  *
- * Elle est principalement utilisé par l'Editeur de Java's Cool pour gérer tout ce qui est attenant au fichier.
+ * <p>Elle est principalement utilisé par l'Editeur de Java's Cool pour gérer tout ce qui est attenant au fichier.</p>
  *
- * @namespace javascool.gui
- * @constructor
- * @author Philippe Vienne <PhilippeGeek@gmail.com>
+ * @class
+ * @author Philippe Vienne
  */
-function JVSFile() {
+javascool.File=function() {
 
     /** Mot suplémentaire pour this.
      * Cela est obligatoir pour référencer cette classe au sein des fonctions annonymes.

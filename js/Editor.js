@@ -1,12 +1,20 @@
-function JVSEditor() {
+// On ajoute les variables javascool si le document est en StandAlone
+if(javascool==undefined){
+    javascool={};
+}
+
+/**
+ * @class
+ */
+javascool.Editor=function() {
     /**
-     * @type {JVSEditor}
+     * @type {javascool.Editor}
      */
     var that=this;
 
     /**
      * Le fichier en cours d'édition dans cette instance de cet éditeur.
-     * @type  JVSFile
+     * @type  {javascool.File}
      */
     var file=null;
 
@@ -27,7 +35,7 @@ function JVSEditor() {
     var editor=null;
     /**
      * Création et de mise en place de l'éditeur
-     * @param {JVSFile} fileObject Le fichier à éditer
+     * @param {javascool.File} fileObject Le fichier à éditer
      * @param {String} DivID L'ID de la div HTML allouée
      * @param {Number} [RefID=-1] La référance dans le gestionnaire des onglets d'édition. Peut être égal à -1 si l'éditeur est instancié en dehors
      */
@@ -61,7 +69,7 @@ function JVSEditor() {
                     editor.refresh();
                 });
                 var resizer = function () {
-                    editor.setSize(null, EditorTabsManager.tabs.$.children(".tab-content").height());
+                    editor.setSize(null, javascool.EditorTabsManager.tabs.$.children(".tab-content").height());
                 }
                 $(window).bind("resize", resizer);
                 resizer();
