@@ -26,7 +26,7 @@ lib/javascool/javascool.jar : $(wildcard ../javascool-framework/js/*.js) $(wildc
 	@cp  $(JAVASCOOL_Framework_Folder)/{*.jar,js/jquery.*.js} ./lib/javascool
 
 clean:
-	@rm -f lib/javascool/* ${DOC_FOLDER} .gh-pages
+	@rm -rf lib/javascool/* ${DOC_FOLDER} .gh-pages
 	@$(MAKE) -C $(JAVASCOOL_Framework_Folder) clean
 
 # Construction des docs javascript de l'application Web
