@@ -12,7 +12,7 @@ JAVASCOOL_5 = ${PWD}
 # Lancement de l'application Java's Cool
 
 fweb: lib/javascool/javascool.jar
-	CLASSPATH += lib/javascool/javascool.jar ; firefox index.html
+	firefox index.html
 
 BROWSER_PROFILE ?= ${PWD}/.tmp
 
@@ -26,16 +26,14 @@ lib/javascool/javascool.jar : $(wildcard ../javascool-framework/js/*.js) $(wildc
 	@cp  $(JAVASCOOL_Framework_Folder)/{*.jar,js/jquery.*.js} ./lib/javascool
 
 clean:
-	@rm -f lib/javascool/*
+	@rm -f lib/javascool/* ${DOC_FOLDER} .gh-pages
+	@$(MAKE) -C $(JAVASCOOL_Framework_Folder) clean
 
 # Construction des docs javascript de l'application Web
 
 DOC_FOLDER ?= .doc
 
 JS_SOURCE ?= ${PWD}/js
-
-clean_docs :
-	@rm -rf ${DOC_FOLDER}
 
 ${DOC_FOLDER} :
 	@mkdir -p ${DOC_FOLDER}
