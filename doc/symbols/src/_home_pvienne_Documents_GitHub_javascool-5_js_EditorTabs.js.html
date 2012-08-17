@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Source - /home/pvienne/Documents/GitHub/javascool-5/js/EditorTabs.js</title>
+	<meta name="generator" content="JsDoc Toolkit" />
+	
+	<link media="all" rel="stylesheet" href="../../css/common.css" type="text/css" />
+	<link media="all" rel="stylesheet" href="../../css/bootstrap.min.css" type="text/css" />
+	<link media="all" rel="stylesheet" href="../../css/prettify.css" type="text/css" />
+	<style type="text/css">
+		.icon-jsdoc {
+			background: url("../../img/classicons.png") no-repeat;
+		}
+	</style>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="../../js/prettify.js" type="text/javascript"></script>
+	<script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body><div class="container-fluid">
+<!-- ============================== header ================================= -->	
+	<!-- begin static/header.html -->
+	<header class="header navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="brand" href="#"><strong>JsDoc</strong> Reference</a>
+				<ul id="class-file-selector" class="nav">
+					<li><a href="../../index.html">Class Index</a></li>
+					<li><a href="../../files.html">File Index</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- end static/header.html -->
+
+<!-- ============================== classes index ============================ -->
+	<div class="row-fluid">
+		<div id="index" class="span3">
+			<!-- begin publish.classesIndex -->
+			<div class="well" id="class-list">
+	<ul class="nav nav-list">
+		<li class="nav-header">Classes</li>
+		
+			<li><a href="../../symbols/_global_.html"><span class="indent" style="padding-left:0px;"><i class="icon-jsdoc icon-jsdoc-namespace"></i><span class="jsdoc-class-index">_global_</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.html"><span class="indent" style="padding-left:0px;"><i class="icon-jsdoc icon-jsdoc-namespace"></i><span class="jsdoc-class-index">javascool</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.Editor.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">Editor</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.EditorTabs.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">EditorTabs</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.File.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">File</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.MultimediaTabs.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">MultimediaTabs</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.PolyFileWriter.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">PolyFileWriter</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.Proglet.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">Proglet</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.Proglets.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">Proglets</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.ShortcutsPane.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">ShortcutsPane</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.Tabs.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">Tabs</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.WebJavac.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">WebJavac</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.Webconsole.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">Webconsole</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.multimediaPanes.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-namespace"></i><span class="jsdoc-class-index">multimediaPanes</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.multimediaPanes.Console.html"><span class="indent" style="padding-left:28px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">Console</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.multimediaPanes.WebPage.html"><span class="indent" style="padding-left:28px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">WebPage</span></span></a></li>
+		
+	</ul>
+</div>
+
+			<!-- end publish.classesIndex -->
+		</div>
+		
+		<div id="content" class="span9">
+<!-- ============================== source code ============================ -->
+
+			<pre id="source-code" class="prettyprint linenums">
+				// On ajoute les variables javascool si le document est en StandAlone
+if(javascool==undefined){
+    javascool={};
+}
+
+/**
+ *
+ * @class
+ */
+javascool.EditorTabs=function() {
+
+    /**
+     * @type {javascool.EditorTabs}
+     */
+    var that=this;
+
+    this.editorClass="JVSEditor";
+    this.openedFiles=new Array();
+    this.openedEditors=new Array();
+
+    /**
+     * Gestionnaire des tabs
+     * @type {javascool.Tabs}
+     */
+    this.tabs=null;
+
+    /**
+     * ID de la DIV HTML alloué à l'éditeur.
+     */
+    this.htmlID="LeftTabsPane";
+
+    /**
+     * Instance JQuery de la div du gestionnaire.
+     * @type {jQuery}
+     */
+    this.$=window.jQuery;
+
+    this.openFile=function (fileUrl) {
+        var id = null;
+        // Création de l'instance du nouveau fichier et celle de l'editeur
+        var file = new javascool.File();
+        if(typeof fileUrl == "object"){ // Le fichier est déjà en argument
+            console.log("OK")
+            file=fileUrl;
+            if(file.url=="")
+                return;
+        }else if (typeof fileUrl == "string") { // Open a file by url
+            file.url = fileUrl;
+            file.load();
+        }
+        // On s'assure que le fichier n'est pas ouvert
+        for (i = 0;
+             i &lt; that.openedFiles.length
+                 &amp;&amp; file.url!="" /* On ne vérifie pas les fichiers tmp */
+             ; i++){
+            if(that.openedFiles[i]!=null&amp;&amp;that.openedFiles[i].url == file.url){
+                that.tabs.showTab(i);
+                return i;
+            }
+        }
+
+        var editor = new javascool.Editor();
+
+        // Création de l'onglet
+        var tabTitle = editor.title == undefined ? file.name : editor.title; // Le titre de l'onglet
+        id = this.tabs.addTab(tabTitle);
+
+        // On les références dans les tableaux de l'objet
+        this.openedFiles[id] = file;
+        this.openedEditors[id] = editor;
+
+        // On ajoute les listeners sur la fermeture du fichier
+        $('#' + this.tabs.idForContent(id)).bind('wantToClose', function (e) {
+            that.closeFile(file);
+        });
+
+        // On passe la main à l'éditeur pour sa construction
+        editor.setup(file, this.tabs.idForContent(id), id);
+        return id;
+
+    };
+
+    /**
+     * Effectue les actions necessaires à la fermeture d'un fichier.
+     *
+     * @param {javascool.File} file Le fichier à fermer ou le tab à fermer
+     */
+    this.closeFile=function (file) {
+        var close=function(){
+            var i = 0;
+            // On cherche l'id correspondant au fichier
+            for (i = 0; i &lt; that.openedFiles.length &amp;&amp; that.openedFiles[i] != file; i++);
+            delete that.openedFiles[i];
+            delete that.openedEditors[i];
+            that.tabs.removeTab(i);
+        }
+        if(file.isModified()){
+            file.$.one(file.events.SAVE,close)
+            file.save(true);
+        }else{
+            close();
+        }
+    };
+    this.remove=function () {
+        // TODO: Sous forme d'assertion, demander à tous les éditeurs si le document est sauvegardé
+        // On nettoie derrière nous
+        //$('#leftPart').html('');
+    };
+
+    /**
+     * Met en place le gestionnaire d'éditeurs.
+     * Cette fonction n'est pas dans le constructeur car elle vise à manipuler le DOM de la page.
+     * @param divId L'endroit où on doit installer le gestionnaire
+     */
+    this.setup=function (divId) {
+        if(amIOnScreen())return;
+        this.htmlID = (divId == null) ? this.htmlID : divId;
+
+        // On simplifie l'accesseur JQuery
+        this.$ = $("#" + this.htmlID);
+
+        // On initialise le système d'onglets
+        this.tabs = new javascool.Tabs(this.$[0]);
+
+        // On ouvre un nouveau fichier
+        //this.openFile();
+    };
+
+    /**
+     * Lance la compilation du code contenu dans l'éditeur courant.
+     * Le résultat est redonné par Java par l'événement javascool.compiled sur le document
+     */
+    this.compileCurrentFile=function () {
+        var id = this.tabs.idOfTabShown, code = this.openedEditors[id].getText();
+        javascool.Webconsole.clear();
+        javascool.WebJavac.compile(code);
+    };
+    var amIOnScreen=function () {
+        try{
+            return that.$.html() != "";
+        }catch(e){
+            return false;
+        }
+    };
+    var assertIfAmIOnScreen=function () {
+        if (!amIOnScreen())
+            throw "Editor Tabs is not running in HTML code";
+    };
+};
+/**
+ * Instance global du gestionnaire des editeurs
+ * @type {javascool.EditorTabs}
+ */
+javascool.EditorTabsManager = new javascool.EditorTabs();
+
+			</pre>
+		</div>
+	</div>
+	
+<!-- ============================== footer ================================= -->
+	<footer class="footer">
+		
+		<p>Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blankt">JsDoc Toolkit</a> 2.4.0 on Fri Aug 17 2012 17:50:22 GMT+0200 (CEST)</p>
+	</footer>
+</div>
+<script type="text/javascript">
+	prettyPrint();
+	var i = 1;
+	$('#source-code li').each(function() {
+		$(this).attr({ id: 'line' + (i++) });
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Source - /home/pvienne/Documents/GitHub/javascool-5/js/Tabs.js</title>
+	<meta name="generator" content="JsDoc Toolkit" />
+	
+	<link media="all" rel="stylesheet" href="../../css/common.css" type="text/css" />
+	<link media="all" rel="stylesheet" href="../../css/bootstrap.min.css" type="text/css" />
+	<link media="all" rel="stylesheet" href="../../css/prettify.css" type="text/css" />
+	<style type="text/css">
+		.icon-jsdoc {
+			background: url("../../img/classicons.png") no-repeat;
+		}
+	</style>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="../../js/prettify.js" type="text/javascript"></script>
+	<script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body><div class="container-fluid">
+<!-- ============================== header ================================= -->	
+	<!-- begin static/header.html -->
+	<header class="header navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="brand" href="#"><strong>JsDoc</strong> Reference</a>
+				<ul id="class-file-selector" class="nav">
+					<li><a href="../../index.html">Class Index</a></li>
+					<li><a href="../../files.html">File Index</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- end static/header.html -->
+
+<!-- ============================== classes index ============================ -->
+	<div class="row-fluid">
+		<div id="index" class="span3">
+			<!-- begin publish.classesIndex -->
+			<div class="well" id="class-list">
+	<ul class="nav nav-list">
+		<li class="nav-header">Classes</li>
+		
+			<li><a href="../../symbols/_global_.html"><span class="indent" style="padding-left:0px;"><i class="icon-jsdoc icon-jsdoc-namespace"></i><span class="jsdoc-class-index">_global_</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.html"><span class="indent" style="padding-left:0px;"><i class="icon-jsdoc icon-jsdoc-namespace"></i><span class="jsdoc-class-index">javascool</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.Editor.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">Editor</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.EditorTabs.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">EditorTabs</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.File.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">File</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.MultimediaTabs.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">MultimediaTabs</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.PolyFileWriter.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">PolyFileWriter</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.Proglet.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">Proglet</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.Proglets.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">Proglets</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.ShortcutsPane.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">ShortcutsPane</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.Tabs.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">Tabs</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.WebJavac.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">WebJavac</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.Webconsole.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">Webconsole</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.multimediaPanes.html"><span class="indent" style="padding-left:14px;"><i class="icon-jsdoc icon-jsdoc-namespace"></i><span class="jsdoc-class-index">multimediaPanes</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.multimediaPanes.Console.html"><span class="indent" style="padding-left:28px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">Console</span></span></a></li>
+		
+			<li><a href="../../symbols/javascool.multimediaPanes.WebPage.html"><span class="indent" style="padding-left:28px;"><i class="icon-jsdoc icon-jsdoc-class"></i><span class="jsdoc-class-index">WebPage</span></span></a></li>
+		
+	</ul>
+</div>
+
+			<!-- end publish.classesIndex -->
+		</div>
+		
+		<div id="content" class="span9">
+<!-- ============================== source code ============================ -->
+
+			<pre id="source-code" class="prettyprint linenums">
+				// On ajoute les variables javascool si le document est en StandAlone
+if(javascool==undefined){
+    javascool={};
+}
+
+/**
+ * @class
+ */
+javascool.Tabs=function(domElem) {
+    this.$ = $(domElem);
+    this.id=Math.uuid(5,16);
+    this.$.addClass("jvstabs");
+    $(document).resize(this._reformatDivSizes);
+
+    this._reformatDivSizes=function(){
+        this.$.children('.tab-content').height((this.$.height()-this.$.children('.nav').outerHeight()))
+    }
+    
+    this.$.html('&lt;ul class="nav nav-pills"&gt;&lt;/ul&gt;&lt;div class="tab-content"&gt;&lt;/div&gt;');
+
+    this.events={
+        CLOSE_BUTTON_CLICK:"wantToClose",
+        CLOSING:"closing"
+    };
+    /**
+     * Le lastID est utilisé pour numéroter de façon incrémental les div.
+     */
+    this.lastID=0;
+    
+    /**
+     * L'ID de l'onglet actuellement affiché à l'écran.
+     * Il peut ne pas correspondre à la réalité dans le cas où tous les onglets ont déjà été fermés.
+     */
+    this.idOfTabShown=null;
+    
+    /**
+    * Ajoute un onglet au gestionnaire.
+    * @param {string} [title="Onglet"] Le titre de l'onglet.
+    * @param {string} [content=""] Le contenu à ajouter par défaut.
+    * @param {boolean} [donotshow=false] Indique si on ne doit pas montrer cet onglet après sa création.
+    * @param {boolean} [canbeclosed=true] Indique si l'onglet peut être fermer.
+    */
+    this.addTab=function (title, content, donotshow, canbeclosed) {
+        title=title||"Onglet";
+        content=content||"";
+        donotshow=donotshow||false;
+        if(canbeclosed===true||canbeclosed===undefined||canbeclosed===null){canbeclosed=true;}else{canbeclosed=false;}
+        var id=this.lastID++;
+        this.$.children('.nav').append('&lt;li id="'+this.idForTab(id)+'"&gt;&lt;a class="link"&gt;&lt;span class="tabtitle"&gt;'+title+'&lt;/span&gt;'+(canbeclosed?'&lt;span class="icon-remove-circle closeIcon"&gt;&lt;/span&gt;':'')+'&lt;/a&gt;&lt;/li&gt;');
+        if(canbeclosed){
+            $('#'+this.idForTab(id)+' a .closeIcon').click({tabs:this,id:id},function(e){
+                e.data.tabs.propagateCloseOnTab(e.data.id);
+                return false;
+            });
+        }
+        $('#'+this.idForTab(id)+' a').click({tabs:this,id:id},function(e){
+            e.data.tabs.showTab(e.data.id);
+        });
+        this.$.children('.tab-content').append('&lt;div id="'+this.idForContent(id)+'" class="tab-pane"&gt;'+content+'&lt;/div&gt;');
+        $("#"+this.idForContent(id)).bind("setTitle",{tabs:this,id:id},function(e){
+            e.data.tabs.setTitle(e.data.id,e.data.title);
+        })
+        this._reformatDivSizes();
+        donotshow?null:this.showTab(id);
+        return id;
+    };
+    /**
+     * Propage la demande de fermeture de l'utilsateur (clique sur la croix).
+     * Cette fonction permet d'installer des listeners sur la div enfant de contenu ({@link javascool.Tabs#idForContent}) afin
+     * de les laisser faire les actions necessaire pour la fermeture. (ex.: Enregistrer un fichier ...).
+     * @param {number} id L'ID de l'onglet à fermer.
+     */
+    this.propagateCloseOnTab=function(id){
+        $('#'+this.idForContent(id)).trigger("wantToClose",{tabs:this,id:id});
+    };
+    /**
+     * Supprime un onglet du gestionnaire.
+     * La fonction propage tout d'abord l'événement {@link javascool.Tabs#events.CLOSING} sur tous les enfants.
+     * Si l'événement n'a pas été stopé, alors on ferme. Sinon on laisse tout en place.
+     * @param {number} id L'ID de l'onglet à supprimer.
+     */
+    this.removeTab=function (id) {
+        // On prévient les deux enfant que l'on ferme
+        var event = jQuery.Event(this.events.CLOSING);
+        $('#'+this.idForTab(id)+', #'+this.idForContent(id)).trigger(event);
+        if ( !event.isPropagationStopped() ) { // S'ils sont tous d'accord, alors on ferme
+            // On ferme
+            $('#'+this.idForTab(id)+', #'+this.idForContent(id)).remove();
+        }
+        this._reformatDivSizes();
+    };
+    /**
+     * Affiche un onglet à l'écran.
+     * @param {number} id L'ID de l'onglet à afficher.
+     */
+    this.showTab=function(id){
+        if(this.idOfTabShown!=null){
+            // On masque l'onglet actif
+            $('#'+this.idForTab(this.idOfTabShown)+', #'+this.idForContent(this.idOfTabShown)).removeClass('active');
+        }
+        // On affiche l'onglet #id
+        $('#'+this.idForTab(id)+', #'+this.idForContent(id)).addClass('active');
+        this.idOfTabShown=id;
+        this._reformatDivSizes();
+    };
+    /**
+     * Change le titre de l'onglet.
+     * @param id L'identifiant de l'onglet
+     * @param newTitle Le titre de l'onglet à mettre
+     */
+    this.setTitle=function(id,newTitle){
+        $('#'+this.idForTab(id)).find(".tabtitle").html(newTitle);
+    };
+    this.idFor=function(element,id){
+        return this.id+'-'+element+'-'+id
+    };
+    this.idForTab=function(id){
+        return this.idFor('tab',id);
+    };
+    this.idForContent=function(id){
+        if(id==null)id=this.lastID;
+        return this.idFor('content',id);
+    }
+};
+
+			</pre>
+		</div>
+	</div>
+	
+<!-- ============================== footer ================================= -->
+	<footer class="footer">
+		
+		<p>Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blankt">JsDoc Toolkit</a> 2.4.0 on Fri Aug 17 2012 17:50:22 GMT+0200 (CEST)</p>
+	</footer>
+</div>
+<script type="text/javascript">
+	prettyPrint();
+	var i = 1;
+	$('#source-code li').each(function() {
+		$(this).attr({ id: 'line' + (i++) });
+	});
+</script>
+</body>
+</html>

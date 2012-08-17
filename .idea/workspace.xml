@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9007fa89-e713-48d0-86f0-760a526dbe0a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/PolyFileWriter.js" afterPath="$PROJECT_DIR$/js/PolyFileWriter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/WebJavac.js" afterPath="$PROJECT_DIR$/js/WebJavac.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ls2var.sh" afterPath="$PROJECT_DIR$/js/ls2var.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/javascool/javascool.jar" afterPath="$PROJECT_DIR$/lib/javascool/javascool.jar" />
     </list>
     <ignored path="javascool-5.iws" />
     <ignored path=".idea/workspace.xml" />
