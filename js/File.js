@@ -96,11 +96,11 @@ javascool.File=function() {
      * @return {String|Boolean} Le contenu du fichier ou Faux en cas d'erreur.
      */
     this.load=function(){
-        if($.polyfilewriter==null){ // Il nous faut la librarie PolyFileWriter pour lire un fichier
+        if(javascool.PolyFileWriter==null){ // Il nous faut la librarie PolyFileWriter pour lire un fichier
             return false;
         }
         try{
-            var data=$.polyfilewriter("load",this.url);
+            var data=javascool.PolyFileWriter.load(this.url);
             setNameFromURL();
             this.contentAtOpen=this.content=data;
             return data;
@@ -128,7 +128,7 @@ javascool.File=function() {
      */
     this.save=function(confirm){
         confirm=confirm===undefined?false:confirm;
-        if($.polyfilewriter==null){ // Il nous faut la librarie PolyFileWriter pour sauvegarder
+        if(javascool.PolyFileWriter==null){ // Il nous faut la librarie PolyFileWriter pour sauvegarder
             return false;
         }
         if((this.url==""||this.url.substr(0,4)=="http")&&!confirm){ // Si le fichier est sur le web ou temporaire, alors
@@ -140,7 +140,7 @@ javascool.File=function() {
                 }
             })
         }else{ // En dernier recours, on enregistre juste le fichier.
-            $.polyfilewriter("save",this.url,this.content)
+            javascool.PolyFileWriter.save(this.url,this.content)
             this.contentAtOpen=this.content;
             setNameFromURL();
             trigger(that.events.SAVE);
@@ -158,7 +158,7 @@ javascool.File=function() {
      * Cette méthode est asynchrone car elle demande une action de la part de l'utilisateur.
      */
     this.saveAs=function(){
-        $.polyfilewriter("askFile",true,null,null,polyfilewriterSaveAsEventName);
+        javascool.PolyFileWriter.askFile(true,null,null,polyfilewriterSaveAsEventName);
     }
 
     // Se réfère à la methode {JVSFile.saveAs}
@@ -183,7 +183,7 @@ javascool.File=function() {
      * Pour obtenir le résultat de cette méthode, il faut écouter l'événement {JVSFile.events.OPEN}.
      */
     this.open=function(){
-        $.polyfilewriter("askFile",false,null,null,polyfilewriterOpenEventName);
+        javascool.PolyFileWriter.askFile(false,null,null,polyfilewriterOpenEventName);
     }
     $(document).bind(polyfilewriterOpenEventName,function(e,selectedFile){
         if(selectedFile===null){

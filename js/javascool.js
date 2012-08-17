@@ -60,7 +60,7 @@ javascool.execUserCode = function () {
         return;
     }
     var classToRun = this._lastCompileResult.compiledClass;
-    $.webjavac("exec", classToRun);
+    javascool.WebJavac.exec(classToRun);
     $("#compileButton, #runButton").attr("disabled", true);
     $("#stopButton").attr("disabled", false);
 };
@@ -69,7 +69,7 @@ javascool.execUserCode = function () {
  * Arrête d'urgence l'execution du code.
  */
 javascool.haltUserCode = function () {
-    $.webjavac("execStop");
+    javascool.WebJavac.execStop();
     $("#compileButton, #runButton").attr("disabled", false);
     $("#stopButton").attr("disabled", true);
 };
@@ -121,15 +121,6 @@ javascool.init = function () {
     $(window).resize(computeAllSizes);
     // Check now
     computeAllSizes();
-
-    // Add WebJavac for JVS Compilation
-    $.webjavac({
-        jar:"lib/javascool/javascool.jar"
-    });
-
-    $.polyfilewriter({
-        jar:"lib/javascool/javascool.jar"
-    });
 
     // Setup Listeners from Java
     $(document).bind("java.System.out", function (event, data) {

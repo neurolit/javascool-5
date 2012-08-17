@@ -4,28 +4,43 @@ if(javascool==undefined){
 }
 
 /**
- *@class
+ * @class
  */
 javascool.Tabs=function(domElem) {
     this.$ = $(domElem);
     this.id=Math.uuid(5,16);
     this.$.addClass("jvstabs");
-    this.$.resize({tabs:this},function(e){
-        var tabs= e.data.tabs;
-        tabs.$.children('.tab-content').height((tabs.$.height()-tabs.$.children('.nav').outerHeight()))
-        console.log((tabs.$.height()));
-    });
+    $(document).resize(this._reformatDivSizes);
+
+    this._reformatDivSizes=function(){
+        this.$.children('.tab-content').height((this.$.height()-this.$.children('.nav').outerHeight()))
+    }
+    
     this.$.html('<ul class="nav nav-pills"></ul><div class="tab-content"></div>');
 
     this.events={
-        CLOSE_BUTTON_CLICK:"wantToClose"
+        CLOSE_BUTTON_CLICK:"wantToClose",
+        CLOSING:"closing"
     };
     /**
      * Le lastID est utilisé pour numéroter de façon incrémental les div.
      */
     this.lastID=0;
+    
+    /**
+     * L'ID de l'onglet actuellement affiché à l'écran.
+     * Il peut ne pas correspondre à la réalité dans le cas où tous les onglets ont déjà été fermés.
+     */
     this.idOfTabShown=null;
-        this.addTab=function (title, content, donotshow, canbeclosed) {
+    
+    /**
+    * Ajoute un onglet au gestionnaire.
+    * @param {string} [title="Onglet"] Le titre de l'onglet.
+    * @param {string} [content=""] Le contenu à ajouter par défaut.
+    * @param {boolean} [donotshow=false] Indique si on ne doit pas montrer cet onglet après sa création.
+    * @param {boolean} [canbeclosed=true] Indique si l'onglet peut être fermer.
+    */
+    this.addTab=function (title, content, donotshow, canbeclosed) {
         title=title||"Onglet";
         content=content||"";
         donotshow=donotshow||false;
@@ -45,23 +60,39 @@ javascool.Tabs=function(domElem) {
         $("#"+this.idForContent(id)).bind("setTitle",{tabs:this,id:id},function(e){
             e.data.tabs.setTitle(e.data.id,e.data.title);
         })
-        this.$.trigger("resize");
+        this._reformatDivSizes();
         donotshow?null:this.showTab(id);
         return id;
     };
+    /**
+     * Propage la demande de fermeture de l'utilsateur (clique sur la croix).
+     * Cette fonction permet d'installer des listeners sur la div enfant de contenu ({@link javascool.Tabs#idForContent}) afin
+     * de les laisser faire les actions necessaire pour la fermeture. (ex.: Enregistrer un fichier ...).
+     * @param {number} id L'ID de l'onglet à fermer.
+     */
     this.propagateCloseOnTab=function(id){
         $('#'+this.idForContent(id)).trigger("wantToClose",{tabs:this,id:id});
     };
+    /**
+     * Supprime un onglet du gestionnaire.
+     * La fonction propage tout d'abord l'événement {@link javascool.Tabs#events.CLOSING} sur tous les enfants.
+     * Si l'événement n'a pas été stopé, alors on ferme. Sinon on laisse tout en place.
+     * @param {number} id L'ID de l'onglet à supprimer.
+     */
     this.removeTab=function (id) {
         // On prévient les deux enfant que l'on ferme
-        var event = jQuery.Event("closing");
+        var event = jQuery.Event(this.events.CLOSING);
         $('#'+this.idForTab(id)+', #'+this.idForContent(id)).trigger(event);
         if ( !event.isPropagationStopped() ) { // S'ils sont tous d'accord, alors on ferme
             // On ferme
             $('#'+this.idForTab(id)+', #'+this.idForContent(id)).remove();
         }
-
+        this._reformatDivSizes();
     };
+    /**
+     * Affiche un onglet à l'écran.
+     * @param {number} id L'ID de l'onglet à afficher.
+     */
     this.showTab=function(id){
         if(this.idOfTabShown!=null){
             // On masque l'onglet actif
@@ -70,6 +101,7 @@ javascool.Tabs=function(domElem) {
         // On affiche l'onglet #id
         $('#'+this.idForTab(id)+', #'+this.idForContent(id)).addClass('active');
         this.idOfTabShown=id;
+        this._reformatDivSizes();
     };
     /**
      * Change le titre de l'onglet.
@@ -78,9 +110,6 @@ javascool.Tabs=function(domElem) {
      */
     this.setTitle=function(id,newTitle){
         $('#'+this.idForTab(id)).find(".tabtitle").html(newTitle);
-    };
-    this.count=function () {
-        return this.$.children(".nav-tabs").children().length();
     };
     this.idFor=function(element,id){
         return this.id+'-'+element+'-'+id

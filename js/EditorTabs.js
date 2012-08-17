@@ -133,7 +133,7 @@ javascool.EditorTabs=function() {
     this.compileCurrentFile=function () {
         var id = this.tabs.idOfTabShown, code = this.openedEditors[id].getText();
         javascool.Webconsole.clear();
-        $.webjavac("compile", code);
+        javascool.WebJavac.compile(code);
     };
     var amIOnScreen=function () {
         try{
