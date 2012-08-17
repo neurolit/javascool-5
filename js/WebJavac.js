@@ -5,7 +5,7 @@ if (javascool == undefined) {
 /**
  * Instance de l'applet compilateur WebJavac.
  * Il permet d'appeler directement les fonctions de la classe de l'applet. Leur liste est disponible à l'adresse :
- * {@link http://javascool.github.com/javascool-framework/doc/org/javascool/webjavac/WebJavac.html}
+ * <a href="http://javascool.github.com/javascool-framework/doc/org/javascool/core/WebJavac.html">org.javascool.core.WebJavac</a>
  * @class
  */
 javascool.WebJavac = function(){
@@ -31,7 +31,7 @@ javascool.WebJavac = function(){
 	// On deploie l'Applet
 	deployJava.runApplet({
 		codebase : codeBase,
-		code : 'org.javascool.webjavac.WebJavac',
+		code : 'org.javascool.core.WebJavac',
 		archive : jarName,
 		id : id,
 		width : 1, height : 1, style:"position:absolute;top:-1000px;height:1px;width:1px"

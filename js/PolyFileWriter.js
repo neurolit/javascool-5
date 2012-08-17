@@ -5,7 +5,7 @@ if (javascool == undefined) {
 /**
  * Instance de l'applet compilateur PolyFileWriter.
  * Il permet d'appeler directement les fonctions de la classe de l'applet. Leur liste est disponible à l'adresse :
- * {@link http://javascool.github.com/javascool-framework/doc/org/javascool/polyfilewriter/PolyFileWriter.html}
+ * <a href="http://javascool.github.com/javascool-framework/doc/org/javascool/core/PolyFileWriter.html">org.javascool.core.PolyFileWriter</a>
  * @class
  */
 javascool.PolyFileWriter = function(){
@@ -31,7 +31,7 @@ javascool.PolyFileWriter = function(){
 	// On deploie l'Applet
 	deployJava.runApplet({
 		codebase : codeBase,
-		code : 'org.javascool.polyfilewriter.PolyFileWriter',
+		code : 'org.javascool.core.PolyFileWriter',
 		archive : jarName,
 		id : id,
 		width : 1, height : 1, style:"position:absolute;top:-1000px;height:1px;width:1px"

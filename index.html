@@ -92,11 +92,11 @@
 <!-- Ajout des autres classes de Java's Cool -->
 <script type="text/javascript">
     var scripts = [
-        // Liste des fichiers Java's Cool 
-/*%files%*/ "Editor", "EditorTabs", "File", "javascool", "Console", "WebPage", "MultimediaTabs", "PolyFileWriter", "Proglet", "Proglets", "ShortcutsPane", "Tabs", "WebJavac"
+        // Liste des fichiers Java's Cool {Mise à jour automatique par un scripte}
+/*%files%*/ "Editor", "EditorTabs", "File", "multimediapanes.Console", "multimediapanes.WebPage", "MultimediaTabs", "PolyFileWriter", "Proglet", "Proglets", "ShortcutsPane", "Tabs", "WebJavac"
     ];
     for (var i = 0; i < scripts.length; i++) {
-        document.write("<script type=\"text/javascript\" src=\"js/" + scripts[i] + ".js\"><\/script>");
+        document.write("<script type=\"text/javascript\" src=\"js/" + scripts[i].replace('.','/') + ".js\"><\/script>");
     }
 </script>
 </body>

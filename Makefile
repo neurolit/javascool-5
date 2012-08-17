@@ -14,7 +14,7 @@ gweb: lib/javascool/javascool.jar
 
 lib/javascool/javascool.jar : $(wildcard ../javascool-framework/js/*.js) $(wildcard ../javascool-framework/src/org/javascool/*/*.java)
 	@$(MAKE) -C ../javascool-framework jar
-	@cp  $(JAVASCOOL_Framework_Folder)/*.jar ./lib/javascool
+	@cp  ../javascool-framework/*.jar ./lib/javascool
 
 clean:
 	@rm -rf lib/javascool/javascool.jar doc
@@ -24,7 +24,7 @@ clean:
 gh_url = $(shell grep 'url =' .git/config | sed 's/[ \t]*url = //')
 
 doc :
-	@../javascool-framework/lib/jsdoc-builder.sh src ${PWD}/js $@
+	@../javascool-framework/lib/jsdoc-builder.sh ${PWD}/js ${PWD}/$@
 	@../javascool-framework/lib/gh-pages-publish.sh $@ ${gh_url}
 	@firefox http://javascool.github.com/javascool-5/doc
 
