@@ -14,15 +14,30 @@
     <div class="navbar-inner">
         <a class="brand" href="index.html"></a>
         <ul class="nav" id="ToolBar" style="display: none;">
-            <li><div class="btn-group"><button class="btn btn-inverse" onclick="javascool.ProgletsManager.stop()">Fermer l'activité</button></div></li>
-            <li><div class="btn-group"> <button class="btn btn-inverse" onclick="javascool.EditorTabsManager.openFile();">Nouveau Fichier</button>
-                <button class="btn btn-inverse" onclick="javascool.openFile()">Ouvrir Fichier</button>
-            <button class="btn btn-inverse" onclick="javascool.saveFile()">Enregistrer Fichier</button></div></li>
-            <li><div class="btn-group">
-                <button class="btn btn-inverse" onclick="javascool.compileUserCode();" id="compileButton">Compiler</button>
-                <button disabled class="btn btn-inverse" onclick="javascool.execUserCode();" id="runButton">Lancer</button>
-                <button disabled class="btn btn-inverse" onclick="javascool.haltUserCode();" id="stopButton">Arrêter</button>
-            </div>
+            <li>
+                <div class="btn-group">
+                    <button class="btn btn-inverse" onclick="javascool.ProgletsManager.stop()">Fermer l'activité
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="btn-group">
+                    <button class="btn btn-inverse" onclick="javascool.EditorTabsManager.openFile();">Nouveau Fichier
+                    </button>
+                    <button class="btn btn-inverse" onclick="javascool.openFile()">Ouvrir Fichier</button>
+                    <button class="btn btn-inverse" onclick="javascool.saveFile()">Enregistrer Fichier</button>
+                </div>
+            </li>
+            <li>
+                <div class="btn-group">
+                    <button class="btn btn-inverse" onclick="javascool.compileUserCode();" id="compileButton">Compiler
+                    </button>
+                    <button disabled class="btn btn-inverse" onclick="javascool.execUserCode();" id="runButton">Lancer
+                    </button>
+                    <button disabled class="btn btn-inverse" onclick="javascool.haltUserCode();" id="stopButton">
+                        Arrêter
+                    </button>
+                </div>
             </li>
         </ul>
         <div class="pull-right">
@@ -43,19 +58,33 @@
 </div>
 
 <!-- Chargement des librairies JavaScript -->
+
+
+<script src="lib/java/deployJava.min.js"></script>
+<!-- Librairie de déploiment de Java -->
+
 <script src="lib/jquery/jquery.js"></script>
+<!-- jQuery pour tout ce qui manipulation DOM et événements -->
+
 <script src="lib/jquery/jquery.resize.min.js"></script>
+<!-- Un événement pour le redimentionnement -->
 
 <script src="lib/Math.uuid.js"></script>
+<!-- Un générateur d'UUID : http://fr.wikipedia.org/wiki/Universal_Unique_Identifier -->
 
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<!-- Les scripts fournits par bootstrap -->
+
 <script src="lib/bootstrap/js/bootbox.min.js"></script>
+<!-- Encapsulateur pour les Alertes de Bootstrap : http://goo.gl/6y7uX -->
 
 <script src="lib/codemirror/lib/codemirror.js"></script>
-<script src="lib/codemirror/mode/javascript/javascript.js"></script>
+<!-- L'editeur de Code : http://codemirror.net -->
 
-<script src="lib/javascool/jquery.webjavac.js"></script>
-<script src="lib/javascool/jquery.polyfilewriter.js"></script>
+<script src="lib/codemirror/mode/javascript/javascript.js"></script>
+<!-- Le mode de coloration syntaxique -->
+
+
 
 <!-- Ajout du fichier principal de Java's Cool -->
 <script src="js/javascool.js"></script>
@@ -63,18 +92,20 @@
 <!-- Ajout des autres classes de Java's Cool -->
 <script type="text/javascript">
     var scripts = [
-    // Liste des fichiers Java's Cool %files%
+        // Liste des fichiers Java's Cool %files%
         'multimediapanes/Console',
-            'multimediapanes/WebPage',
-            'Editor',
-            'EditorTabs',
-            'File',
-            'MultimediaTabs',
-            'Proglet',
-            'Proglets',
-            'ShortcutsPane',
-            'Tabs'
-    // %files%
+        'multimediapanes/WebPage',
+        'Editor',
+        'EditorTabs',
+        'File',
+        'MultimediaTabs',
+        'Proglet',
+        'Proglets',
+        'ShortcutsPane',
+        'Tabs',
+        'WebJavac',
+        'PolyFileWriter'
+        // %files%
     ];
     for (var i = 0; i < scripts.length; i++) {
         document.write("<script type=\"text/javascript\" src=\"js/" + scripts[i] + ".js\"><\/script>");
