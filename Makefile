@@ -1,6 +1,10 @@
-
-###    Makefile pour Java's Cool 5
-
+############################################################################################################################
+#		Makefile for Java's Cool 5
+############################################################################################################################
+## Usage :
+##  make fweb          : lance l'appli pour firefox
+##  make gweb          : lance l'appli pour google-chrome
+##  make doc           : crée, publie et affiche la documentation du logiciel en local sous firefox
 
 # Lancement de l'application Java's Cool
 
