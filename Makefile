@@ -35,7 +35,7 @@ gweb: lib/javascool/javascool.jar
 # Construction des librairies de Java's Cool 
 
 lib/javascool/javascool.jar : $(wildcard ../javascool-framework/js/*.js) $(wildcard ../javascool-framework/src/org/javascool/*/*.java)
-	@$(MAKE) -C $(JAVASCOOL_Framework_Folder) all
+	@$(MAKE) -C $(JAVASCOOL_Framework_Folder) jar
 	@cp  $(JAVASCOOL_Framework_Folder)/{*.jar,js/jquery.*.js} ./lib/javascool
 
 clean:
