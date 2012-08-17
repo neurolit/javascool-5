@@ -56,14 +56,24 @@ ${DOC_FOLDER}/doc : ${DOC_FOLDER}/jsdoc
 doc : ${DOC_FOLDER}/doc
 	@firefox $</index.html
 
-gh_pages_GIT_REF = origin gh-pages
+gh_url = $(shell grep 'url =' .git/config | sed 's/[ \t]*url = //')
 
-.gh-pages :
-	@git clone -q git@github.com:javascool/javascool-5.git $@; cd $@; git checkout --orphan gh-pages; git rm -q -rf .; git pull ${gh_pages_GIT_REF}
+#.gh-pages :
+#	@git clone -q git@github.com:javascool/javascool-5.git $@; cd $@; git checkout --orphan gh-pages; git rm -q -rf .; git pull ${gh_pages_GIT_REF}
 
-publishDoc : .gh-pages ${DOC_FOLDER}/doc
-	@cd ${JAVASCOOL_5}/.gh-pages; git pull ${gh_pages_GIT_REF}
-	@cp -r ${DOC_FOLDER}/doc ${JAVASCOOL_5}/.gh-pages
-	@cd ${JAVASCOOL_5}/.gh-pages ; git add -A ; git commit -m "Mise à jour de la documentation" ; git push ${gh_pages_GIT_REF}
+#publishDoc : .gh-pages ${DOC_FOLDER}/doc
+#	@cd ${JAVASCOOL_5}/.gh-pages; git pull ${gh_pages_GIT_REF}
+#	@cp -r ${DOC_FOLDER}/doc ${JAVASCOOL_5}/.gh-pages
+#	@cd ${JAVASCOOL_5}/.gh-pages ; git add -A ; git commit -m "Mise à jour de la documentation" ; git push ${gh_pages_GIT_REF}
+
+publishDoc : ${DOC_FOLDER}/doc
+	$(call publishGitHubPage,${gh_url},.gh_page,$<)
 
 
+define publishGitHubPage
+	@test -d $2/.git || $(git clone -q $1 $2; cd $2; git checkout --orphan gh-pages ; git rm -q -rf . ; git pull origin gh-pages)
+	@cd $2; git pull origin gh-pages
+	@cp -r $3 $2
+	@cd $2 ; git add -A ; git commit -m "Mise à jour du site du projet" ; git push origin gh-pages
+	@rm -rf $2
+endef
