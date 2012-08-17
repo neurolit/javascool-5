@@ -71,6 +71,7 @@ publishDoc : ${DOC_FOLDER}/doc
 
 
 define publishGitHubPage
+github-url tmp-dir source
 	@test -d $2/.git || $(git clone -q $1 $2; cd $2; git checkout --orphan gh-pages ; git rm -q -rf . ; git pull origin gh-pages)
 	@cd $2; git pull origin gh-pages
 	@cp -r $3 $2
