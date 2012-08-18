@@ -11,4 +11,5 @@ if(javascool==undefined){
 javascool.Proglet=function(namespace) { // Create an object Proglet
     this.name = "ABCDAlgo";
     this.logo = "img/proglet.png";
+
 }
