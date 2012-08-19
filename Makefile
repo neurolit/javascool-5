@@ -18,6 +18,7 @@ gweb: lib/javascool/javascool.jar
 
 lib/javascool/javascool.jar : $(wildcard ../javascool-framework/js/*.js) $(wildcard ../javascool-framework/src/org/javascool/*/*.java)
 	@$(MAKE) -C ../javascool-framework jar
+	@mkdir -p lib/javascool
 	@cp  ../javascool-framework/*.jar ./lib/javascool
 
 clean:
