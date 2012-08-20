@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9007fa89-e713-48d0-86f0-760a526dbe0a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Proglet.js" afterPath="$PROJECT_DIR$/js/Proglet.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="javascool-5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -108,7 +108,7 @@
       <file leaf-file-name="Proglet.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/Proglet.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="1" selection-start="632" selection-end="632" vertical-scroll-proportion="0.25">
+            <state line="15" column="47" selection-start="567" selection-end="567" vertical-scroll-proportion="0.22058824">
               <folding />
             </state>
           </provider>
@@ -117,7 +117,7 @@
       <file leaf-file-name="Proglets.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Proglets.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="52" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0">
+            <state line="17" column="56" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -177,8 +177,8 @@
         <option value="$PROJECT_DIR$/js/WebJavac.js" />
         <option value="$PROJECT_DIR$/js/PolyFileWriter.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/js/Proglets.js" />
         <option value="$PROJECT_DIR$/js/Proglet.js" />
+        <option value="$PROJECT_DIR$/js/Proglets.js" />
       </list>
     </option>
   </component>
@@ -317,7 +317,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1919" y="0" width="1922" height="1202" extended-state="7" />
+    <frame x="1919" y="0" width="1922" height="1202" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -453,11 +453,6 @@
         <state line="7" column="0" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Proglets.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="52" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="8" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0" />
@@ -473,9 +468,16 @@
         <state line="31" column="7" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/Proglets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="56" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/Proglet.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="1" selection-start="632" selection-end="632" vertical-scroll-proportion="0.25">
+        <state line="15" column="47" selection-start="567" selection-end="567" vertical-scroll-proportion="0.22058824">
           <folding />
         </state>
       </provider>
