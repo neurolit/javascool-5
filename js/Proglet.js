@@ -12,7 +12,7 @@ javascool.Proglet=function(namespace) {
     this.namespace=namespace;
     this.name = "ABCDAlgo";
     this.logo = "img/proglet.png";
-    $.getJSON("proglets/"+namespace+"/proglet.json",function(data){
+    $.getJSON("proglets/"+namespace+"/config.json",function(data){
         console.log("Data from proglet "+name);
     }).error(function(){console.log("Can't load "+namespace)})
 }
