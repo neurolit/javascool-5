@@ -15,7 +15,7 @@ javascool.Proglets=function() {
     };
     this.init=function () {
         for (var i = 0; i < this.count(); i++) {
-            this.add(new javascool.Proglet());
+            this.add(new javascool.Proglet("abcdAlgo"));
         }
     };
     this.add=function (proglet) {
