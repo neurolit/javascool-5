@@ -11,6 +11,14 @@
 var javascool = function () {
 
 }
+
+/**
+ * Emplacement de Java's Cool sur le Disque Dur de l'élève.
+ * @type {string}
+ * @public
+ */
+javascool.location=window.location.pathname.replace("/index.html","");
+
 /**
  * Dernier résultat de compilation
  * @inner
@@ -100,7 +108,7 @@ javascool.saveFile = function () {
 
 /**
  * Fonction de démarrage de Java's Cool.
- * Elle doit être appelé lorsque le document est entièrement chargé
+ * Elle doit être appelé lorsque le document est entièrement chargé.
  */
 javascool.init = function () {
 
@@ -148,9 +156,73 @@ javascool.init = function () {
         $("#stopButton").attr("disabled", true);
     });
 
-    javascool.ProgletsManager.init();
-    javascool.ShortcutsPaneManager.setup();
-    javascool.ShortcutsPaneManager.$.show();
+    function runOnlyWhenAppletsAreReady() {
+        try{
+            if ( javascool.PolyFileWriter.isActive() && javascool.WebJavac.isActive() ) {
+                javascool.GUI.loading.update(30,"Chargement des proglets ...")
+                javascool.ProgletsManager.init();
+                javascool.ShortcutsPaneManager.setup();
+                javascool.GUI.loading.update(80,"Lançement du panneau des Proglets")
+                javascool.GUI.loading.hide(function(){
+                    javascool.ShortcutsPaneManager.$.show();
+                });
+            } else {
+                throw 0;
+            }
+        }catch(E){
+            if(E==0){
+                console.log("Applets not ready");
+                setTimeout(runOnlyWhenAppletsAreReady,100);
+            } else {
+                throw E;
+            }
+        }
+    }
+    javascool.GUI.loading.update(20,"Recherche des librairies Java")
+    runOnlyWhenAppletsAreReady();
 }
+
+/**
+ * Fonctions et utilitaires pour l' interface utilisateur.
+ * @namespace
+ */
+javascool.GUI={
+    /**
+     * Gestion simplifié du panneau de chargement.
+     * @class
+     */
+    loading:{
+        id:"LoadingPane",
+        /**
+         * Affiche le composant de chargement.
+         * @param callback La fonction à appeler à la fin de l'animation
+         */
+        show:function(callback){
+            if(typeof callback != "function"){
+                callback=function(){};
+            }
+            $("#"+javascool.GUI.loading.id).fadeIn("fast",callback);
+        },
+        /**
+         * Masque le composant de chargement.
+         * @param callback La fonction à appeler à la fin de l'animation
+         */
+        hide:function(callback){
+            if(typeof callback != "function"){
+                callback=function(){};
+            }
+            $("#"+javascool.GUI.loading.id).fadeOut("fast",callback);
+        },
+        /**
+         * Met à jour le statut de la progression.
+         * @param {Number} progress Pourcentage de la progression (0-100)
+         * @param {string} [message="Chargement en cours ..."] Message de progression à destination de l'utilisateur
+         */
+        update:function(progress,message){
+            $("#"+javascool.GUI.loading.id+" .bar").width(progress+"%");
+            $("#"+javascool.GUI.loading.id+" .foo").html(message);
+        }
+    }
+};
 
 $(document).ready(javascool.init);

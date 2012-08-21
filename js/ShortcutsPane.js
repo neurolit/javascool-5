@@ -43,7 +43,7 @@ javascool.ShortcutsPane=function(){
         this.createShortcutsDiv();
     };
     var formatDiv=function(){
-        var w = that.$.outerWidth();
+        var w = $(window).width();
         that.$.css("padding", "20px " + ((w % 152) / 2) + "px 20px " + ((w % 152) / 2) + "px");
     };
     /**
@@ -59,9 +59,10 @@ javascool.ShortcutsPane=function(){
                 "<div class=\"shortcut btn\" id=\"proglet-" + i
                     + "-shortcut\" onClick=\"javascool.ShortcutsPaneManager.clickEventOnShortcut(" + i
                     + ")\"><div class=\"logo\"><img src=\"" +
-                    proglets[i].logo + "\"/></div><div class=\"title\"><h3>" +
-                    proglets[i].name + "</h3></div></div>");
+                    proglets[i].logo + "\"/></div><div class=\"title\"><h4>" +
+                    proglets[i].title + "</h4></div></div>");
         }
+        that.$.css("overflow-x","always")
         formatDiv();
     };
     /**

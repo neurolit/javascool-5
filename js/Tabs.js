@@ -13,7 +13,7 @@ javascool.Tabs=function(domElem) {
     $(document).resize(this._reformatDivSizes);
 
     this._reformatDivSizes=function(){
-        this.$.children('.tab-content').height((this.$.height()-this.$.children('.nav').outerHeight()))
+        //this.$.children('.tab-content').height((this.$.height()-this.$.children('.nav').outerHeight()))
     }
     
     this.$.html('<ul class="nav nav-pills"></ul><div class="tab-content"></div>');

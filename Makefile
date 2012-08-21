@@ -33,4 +33,5 @@ doc :
 	@../javascool-framework/lib/gh-pages-publish.sh $@ ${gh_url}
 	@firefox http://javascool.github.com/javascool-5/doc
 
+proglets : $(wildcard ../proglet-*/applet/config.json)
 

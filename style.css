@@ -8,7 +8,8 @@ html, body {
 body {
     position: relative;
     background-color: white;
-    overflow: hidden;
+    /* Propriété pour les futur navigateur pour éviter la scrollbar */
+    overflow-style: move;
 }
 
 .navbar a{
@@ -42,8 +43,6 @@ body {
 }
 
 #ShortcutsPane {
-    overflow-y:auto;
-    width:100%;
 }
 
 #ShortcutsPane .shortcut {

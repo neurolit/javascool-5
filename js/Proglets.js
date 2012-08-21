@@ -4,6 +4,14 @@ if(javascool==undefined){
 }
 
 /**
+ * Gestionnaire des proglets de Java's Cool.
+ * <p>Cette classe permet la gestion des différentes proglets de Java's Cool. Lors de son lancement, la classe va
+ * charger le fichier `./proglets/proglets.json` dans lequel les noms des proglets installés sont écrits.</p>
+ * <p>Il va lancer la création d'instance de {@link javascool.Proglet} pour tenter le chargement. C'est à la charge de
+ * la proglet de venir ensuite s'enregistrer dans le gestionnaire. Il va ensuite l'ajouter au
+ * {@link javascool.ShortcutsPane} si il est disponible.</p>
+ * <p><i>NB : La fonction utilisé pour le chargement est {@link jQuery.getJSON}, ce qui fait que cette classe est
+ * prête pour tourner sur un site web en ligne</i></p>
  * @class
  */
 javascool.Proglets=function() {
@@ -14,9 +22,15 @@ javascool.Proglets=function() {
         return javascool.Proglets.cache;
     };
     this.init=function () {
-        for (var i = 0; i < this.count(); i++) {
-            this.add(new javascool.Proglet("abcdAlgo"));
+        var progletsToLoad= $.parseJSON(javascool.PolyFileWriter.load(javascool.location+"/proglets/proglets.json"));
+        for (var i=0;i<progletsToLoad.length;i++){
+            var p=new javascool.Proglet(progletsToLoad[i]);
+            console.log(p);
+            this.add(p);
         }
+//        for (var i = 0; i < this.count(); i++) {
+//            this.add(new javascool.Proglet("abcdAlgo"));
+//        }
     };
     this.add=function (proglet) {
         javascool.Proglets.cache[javascool.Proglets.cache.length] = proglet;
@@ -47,7 +61,7 @@ javascool.Proglets=function() {
 javascool.Proglets.cache=new Array();
 
 /**
- * Gestionnaire principale des proglets de Java's Cool.
- * @type {javascool.proglets}
+ * Instance du gestionnaire des proglets de Java's Cool {@link javascool.Proglets}.
+ * @type {javascool.Proglets}
  */
 javascool.ProgletsManager = new javascool.Proglets();

@@ -4,4 +4,4 @@
 # Utilisé pour la mise a jour du site du projet
 .gh-pages
 lib/javascool/javascool.jar
-proglets
+proglets/*
