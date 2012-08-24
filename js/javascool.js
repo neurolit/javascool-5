@@ -109,6 +109,13 @@ javascool.saveFile = function () {
 };
 
 /**
+ * Envoie un message de Debug à la console du navigateur
+ */
+javascool.debug=function(){
+    //console.log.apply(window,arguments);
+}
+
+/**
  * Fonction de démarrage de Java's Cool.
  * Elle doit être appelé lorsque le document est entièrement chargé.
  */

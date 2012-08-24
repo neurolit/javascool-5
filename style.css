@@ -209,11 +209,3 @@ body {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
 }
-
-/* CodeMirror */
-.CodeMirror {
-}
-
-.CodeMirror-scroll {
-    height: 400px;
-}

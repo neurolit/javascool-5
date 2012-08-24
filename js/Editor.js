@@ -56,7 +56,7 @@ javascool.Editor=function() {
                 value:file.content,
                 mode:"javascript",
                 lineNumbers:true,
-                fixedGutter:true,
+                fixedGutter:false,
                 gutter:true,
                 onChange:function(editor){
                     file.content=editor.getValue();
@@ -69,7 +69,10 @@ javascool.Editor=function() {
                     editor.refresh();
                 });
                 var resizer = function () {
-                    editor.setSize(null, parseInt(javascool.EditorTabsManager.tabs.$.children(".tab-content").height()-javascool.EditorTabsManager.tabs.$.children(".nav").height())-5);
+                    var availibleHeight=$("body").height()-javascool.EditorTabsManager.tabs.$.children(".nav").outerHeight();
+                    $(editor.getScrollerElement()).height(availibleHeight);
+                    javascool.debug("Taille de la div ",availibleHeight);
+                    editor.refresh();
                 };
                 $(window).bind("resize", resizer);
                 resizer();
