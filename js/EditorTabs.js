@@ -49,7 +49,7 @@ javascool.EditorTabs=function() {
             file.load();
         }
         // On s'assure que le fichier n'est pas ouvert
-        for (i = 0;
+        for (var i = 0;
              i < that.openedFiles.length
                  && file.url!="" /* On ne vérifie pas les fichiers tmp */
              ; i++){
@@ -93,6 +93,7 @@ javascool.EditorTabs=function() {
             delete that.openedFiles[i];
             delete that.openedEditors[i];
             that.tabs.removeTab(i);
+            keepNotEmpty();
         }
         if(file.isModified()){
             file.$.one(file.events.SAVE,close)
@@ -101,11 +102,10 @@ javascool.EditorTabs=function() {
             close();
         }
     };
-    this.remove=function () {
-        // TODO: Sous forme d'assertion, demander à tous les éditeurs si le document est sauvegardé
-        // On nettoie derrière nous
-        //$('#leftPart').html('');
-    };
+    /**
+     * @deprecated
+     */
+    this.remove=function () {};
 
     /**
      * Met en place le gestionnaire d'éditeurs.
@@ -113,7 +113,9 @@ javascool.EditorTabs=function() {
      * @param divId L'endroit où on doit installer le gestionnaire
      */
     this.setup=function (divId) {
-        if(amIOnScreen())return;
+        if(amIOnScreen())return; // Si le gestionnaire est déjà paramettré, alors on ne fait rien
+
+        // On vérifie l'ID sur lequel on doit installer le gestionnaire
         this.htmlID = (divId == null) ? this.htmlID : divId;
 
         // On simplifie l'accesseur JQuery
@@ -123,7 +125,7 @@ javascool.EditorTabs=function() {
         this.tabs = new javascool.Tabs(this.$[0]);
 
         // On ouvre un nouveau fichier
-        //this.openFile();
+        this.openFile();
     };
 
     /**
@@ -133,7 +135,10 @@ javascool.EditorTabs=function() {
     this.compileCurrentFile=function () {
         var id = this.tabs.idOfTabShown, code = this.openedEditors[id].getText();
         javascool.Webconsole.clear();
-        javascool.WebJavac.compile(code);
+        javascool.ProgletsManager.currentProglet.compile(code);
+//        var progletJar=javascool.location+"/proglets/"+javascool.ProgletsManager.currentProglet.namespace;
+//        progletJar+="/"+javascool.ProgletsManager.currentProglet.namespace+".jar";
+//        javascool.WebJavac.compile(code,"[\""+progletJar.replace('"','\\"')+"\"]",javascool.ProgletsManager.currentProglet.namespace);
     };
     var amIOnScreen=function () {
         try{
@@ -146,6 +151,14 @@ javascool.EditorTabs=function() {
         if (!amIOnScreen())
             throw "Editor Tabs is not running in HTML code";
     };
+    /**
+     * Permet de vérifier que le gestionnaire n'est pas vide, si c'est le cas, alors on ouvre un nouveau fichier
+     */
+    var keepNotEmpty=function(){
+        if(that.tabs.count()<=0){
+            that.openFile();
+        }
+    }
 };
 /**
  * Instance global du gestionnaire des editeurs

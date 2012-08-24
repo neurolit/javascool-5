@@ -69,8 +69,8 @@ javascool.Editor=function() {
                     editor.refresh();
                 });
                 var resizer = function () {
-                    editor.setSize(null, javascool.EditorTabsManager.tabs.$.children(".tab-content").height());
-                }
+                    editor.setSize(null, parseInt(javascool.EditorTabsManager.tabs.$.children(".tab-content").height()-javascool.EditorTabsManager.tabs.$.children(".nav").height())-5);
+                };
                 $(window).bind("resize", resizer);
                 resizer();
             }
@@ -85,6 +85,6 @@ javascool.Editor=function() {
         return editor.getValue();
     };
     this.getFile=function(){
-        return file;
-    }
+		return file;
+    };
 };

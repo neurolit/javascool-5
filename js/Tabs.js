@@ -121,4 +121,11 @@ javascool.Tabs=function(domElem) {
         if(id==null)id=this.lastID;
         return this.idFor('content',id);
     }
+
+    /**
+     * Permet de connaître le nombre actuel d'onglets ouverts
+     */
+    this.count=function(){
+        return this.$.children().size();
+    }
 };

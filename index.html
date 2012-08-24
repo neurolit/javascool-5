@@ -78,6 +78,10 @@
 <script src="lib/Math.uuid.js"></script>
 <!-- Un générateur d'UUID : http://fr.wikipedia.org/wiki/Universal_Unique_Identifier -->
 
+
+<script src="lib/json.js"></script>
+<!-- Parser et Rédacteur JSON pour les vieux navigateurs (IE6, Firefox 3.6 ...) n'intégrant pas ECMA5 -->
+
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <!-- Les scripts fournits par bootstrap -->
 
@@ -99,7 +103,7 @@
 <script type="text/javascript">
     var scripts = [
         // Liste des fichiers Java's Cool {Mise à jour automatique par un scripte}
-/*%files%*/ "Editor", "EditorTabs", "File", "multimediapanes.Console", "multimediapanes.WebPage", "MultimediaTabs", "PolyFileWriter", "Proglet", "Proglets", "ShortcutsPane", "Tabs", "WebJavac"
+/*%files%*/ "Editor", "EditorTabs", "File", "multimediapanes.Console", "multimediapanes.WebPage", "MultimediaTabs", "PolyFileWriter", "ProgletApplet", "Proglet", "Proglets", "ShortcutsPane", "Tabs", "WebJavac"
     ];
     for (var i = 0; i < scripts.length; i++) {
         document.write("<script type=\"text/javascript\" src=\"js/" + scripts[i].replace('.','/') + ".js\"><\/script>");

@@ -18,6 +18,11 @@ javascool.Proglets=function() {
     this.count=function () {
         return 3;
     };
+    /**
+     * La proglet en cours d'éxecution. La valeur est null si il n'y en a pas.
+     * @type {javascool.Proglet}
+     */
+    this.currentProglet=null;
     this.getArray=function () {
         return javascool.Proglets.cache;
     };
@@ -42,15 +47,17 @@ javascool.Proglets=function() {
                javascool.MultimediaTabsManager.setup();
                javascool.MultimediaTabsManager.addDefaultWidgets();
             });
+            this.currentProglet=proglet;
         } catch (e) {
-            console.error("Error : " + e + "Are you in a Java's Cool Environement ?");
+            console.error("Error : " + e + ". Are you in a Java's Cool Environement ?");
         }
     };
     this.stop=function () {
         try {
             javascool.fadeFromPanelToShortcuts(function(){});
+            this.currentProglet=null;
         } catch (e) {
-            console.error("Error : " + e + "Are you in a Java's Cool Environement ?");
+            console.error("Error : " + e + ". Are you in a Java's Cool Environement ?");
         }
     };
 };

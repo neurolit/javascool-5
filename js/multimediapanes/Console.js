@@ -36,7 +36,7 @@ javascool.multimediaPanes.Console=function(){
     };
     this.clear=function(){
         this.$console.html("");
-    }
+    };
 };
 /**
  *

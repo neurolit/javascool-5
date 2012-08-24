@@ -68,9 +68,11 @@ javascool.execUserCode = function () {
         return;
     }
     var classToRun = this._lastCompileResult.compiledClass;
-    javascool.WebJavac.exec(classToRun);
-    $("#compileButton, #runButton").attr("disabled", true);
-    $("#stopButton").attr("disabled", false);
+    var popup=new javascool.ProgletApplet(javascool.ProgletsManager.currentProglet);
+    popup.openUserProgram(classToRun);
+    //javascool.WebJavac.exec(classToRun);
+//    $("#compileButton, #runButton").attr("disabled", true);
+//    $("#stopButton").attr("disabled", false);
 };
 
 /**

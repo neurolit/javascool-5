@@ -21,7 +21,6 @@ javascool.Proglet=function(namespace) {
      * <p>C'est une sorte d'identifiant respectant les règles de nommage des packages Java. Il permet de différentier
      * deux proglets ayant le même titre.</p>
      * @type {String}
-     * @private
      */
     this.namespace=namespace;
     /**
@@ -44,8 +43,30 @@ javascool.Proglet=function(namespace) {
 
     {
         // Chargement de la Proglet
-        var proglet=($.parseJSON(javascool.PolyFileWriter.load(location+"/proglet.json")));
+        var config=($.parseJSON(javascool.PolyFileWriter.load(location+"/config.json")));
+        var proglet=config.proglet;
         this.logo="proglets/"+namespace+"/"+proglet.icon;
         this.title=proglet.name||this.namespace;
     }
+    
+    /**
+     * Compile le code JVS avec les librairies de la proglet
+     */
+    this.compile=function(code){
+        var compiler=javascool.WebJavac;
+        if(compiler==null)return;
+        var code=code||"",
+            libs=[
+                javascool.location+"/lib/javascool/javascool.jar",
+                javascool.location+"/proglets/"+this.namespace+"/"+this.namespace+".jar"
+            ],
+            progletConf={
+                name:this.namespace,
+                jar:libs[1],
+                hasFunctions: config.hasFunctions,
+                hasTranslator: config.hasTranslator
+            };
+        console.log("Start compile : ",libs,progletConf)
+        compiler.compile(code,JSON.stringify(libs),JSON.stringify(progletConf));
+    };
 }
