@@ -116,6 +116,79 @@ javascool.debug=function(){
 }
 
 /**
+ * Ajoute un fichier JS à la page pour le charger
+ * @param {string} file L'addresse du fichier dans le dossier lib
+ */
+javascool.addJSLibrary=function(file){
+    var code='<script type="text/javascript" src="lib/'+file+'"></script>';
+    if (document.readyState == "complete") {
+        $("body").append(code);
+    } else {
+        document.write(code);
+    }
+}
+
+/**
+ * C'est une petite librairie pour gérer l'inclusion de fichier JS et CSS
+ * @namespace
+ */
+javascool.RessourceLoader={
+    /**
+     * Ajoute le noeud pour charger le fichier.
+     * @param filename Le fichier à inclure
+     * @param filetype Le type du fichier "js" ou "css"
+     * @private
+     */
+    _loadjscssfile:function(filename, filetype){
+        if(this._checkIfItWasLoaded(filename))
+            return;
+        var fileref=null;
+        if (filetype=="js"){ //if filename is a external JavaScript file
+            fileref=document.createElement('script')
+            fileref.setAttribute("type","text/javascript")
+            fileref.setAttribute("src", filename)
+        }
+        else if (filetype=="css"){ //if filename is an external CSS file
+            fileref=document.createElement("link")
+            fileref.setAttribute("rel", "stylesheet")
+            fileref.setAttribute("type", "text/css")
+            fileref.setAttribute("href", filename)
+        }
+        if (fileref!==null){
+            if (document.readyState == "complete") {
+                $("body").append(fileref);
+            } else {
+                document.getElementsByTagName("head")[0].appendChild(fileref)
+            }
+        }
+    },
+    _loaded:[],
+    /**
+     * Ajoute un fichier JS à la page pour le charger
+     * @param {string} file L'addresse du fichier dans le dossier lib
+     */
+    addJSLibrary:function(file){
+        javascool.RessourceLoader._loadjscssfile("lib/"+file,"js");
+    },
+    /**
+     * Ajoute un fichier CSS à la page pour le charger
+     * @param {string} file L'addresse du fichier dans le dossier lib
+     */
+    addCSSLibrary:function(file){
+        javascool.RessourceLoader._loadjscssfile("lib/"+file,"css");
+    },
+    _checkIfItWasLoaded:function(file){
+        for(var i=0;i<this._loaded.length;i++){
+            if(file==this._loaded[i])
+                return true;
+        }
+        return false;
+    }
+}
+
+
+
+/**
  * Fonction de démarrage de Java's Cool.
  * Elle doit être appelé lorsque le document est entièrement chargé.
  */

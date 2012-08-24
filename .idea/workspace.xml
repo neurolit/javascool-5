@@ -2,84 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9007fa89-e713-48d0-86f0-760a526dbe0a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/keymap/emacs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/keymap/vim.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/lib/codemirror.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/lib/codemirror.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/lib/util/closetag.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/lib/util/dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/lib/util/dialog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/lib/util/foldcode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/lib/util/formatting.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/lib/util/javascript-hint.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/lib/util/loadmode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/lib/util/match-highlighter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/lib/util/multiplex.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/lib/util/overlay.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/lib/util/pig-hint.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/lib/util/runmode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/lib/util/search.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/lib/util/searchcursor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/lib/util/simple-hint.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/lib/util/simple-hint.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/lib/util/xml-hint.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/codemirror/mode/javascool/javascool.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Editor.js" afterPath="$PROJECT_DIR$/js/Editor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/MultimediaTabs.js" afterPath="$PROJECT_DIR$/js/MultimediaTabs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ProgletApplet.html" afterPath="$PROJECT_DIR$/js/ProgletApplet.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Proglets.js" afterPath="$PROJECT_DIR$/js/Proglets.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/javascool.js" afterPath="$PROJECT_DIR$/js/javascool.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/clike/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/clike/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/clike/scala.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/clike/scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/clojure/clojure.js" afterPath="$PROJECT_DIR$/lib/codemirror/mode/clojure/clojure.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/clojure/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/clojure/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/css/css.js" afterPath="$PROJECT_DIR$/lib/codemirror/mode/css/css.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/css/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/css/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/diff/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/diff/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/ecl/ecl.js" afterPath="$PROJECT_DIR$/lib/codemirror/mode/ecl/ecl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/erlang/erlang.js" afterPath="$PROJECT_DIR$/lib/codemirror/mode/erlang/erlang.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/erlang/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/erlang/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/groovy/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/groovy/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/haskell/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/haskell/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/haxe/haxe.js" afterPath="$PROJECT_DIR$/lib/codemirror/mode/haxe/haxe.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/haxe/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/haxe/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/htmlembedded/htmlembedded.js" afterPath="$PROJECT_DIR$/lib/codemirror/mode/htmlembedded/htmlembedded.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/htmlembedded/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/htmlembedded/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/htmlmixed/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/htmlmixed/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/javascript/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/javascript/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/javascript/javascript.js" afterPath="$PROJECT_DIR$/lib/codemirror/mode/javascript/javascript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/less/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/less/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/lua/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/lua/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/mysql/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/mysql/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/mysql/mysql.js" afterPath="$PROJECT_DIR$/lib/codemirror/mode/mysql/mysql.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/ntriples/ntriples.js" afterPath="$PROJECT_DIR$/lib/codemirror/mode/ntriples/ntriples.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/ocaml/ocaml.js" afterPath="$PROJECT_DIR$/lib/codemirror/mode/ocaml/ocaml.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/pascal/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/pascal/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/pascal/pascal.js" afterPath="$PROJECT_DIR$/lib/codemirror/mode/pascal/pascal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/perl/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/perl/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/perl/perl.js" afterPath="$PROJECT_DIR$/lib/codemirror/mode/perl/perl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/php/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/php/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/plsql/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/plsql/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/properties/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/properties/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/properties/properties.js" afterPath="$PROJECT_DIR$/lib/codemirror/mode/properties/properties.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/rpm/spec/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/rpm/spec/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/rst/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/rst/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/ruby/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/ruby/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/scheme/scheme.js" afterPath="$PROJECT_DIR$/lib/codemirror/mode/scheme/scheme.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/shell/shell.js" afterPath="$PROJECT_DIR$/lib/codemirror/mode/shell/shell.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/smalltalk/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/smalltalk/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/smalltalk/smalltalk.js" afterPath="$PROJECT_DIR$/lib/codemirror/mode/smalltalk/smalltalk.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/sparql/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/sparql/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/stex/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/stex/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/stex/test.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/stex/test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/tiddlywiki/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/tiddlywiki/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/tiki/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/tiki/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/tiki/tiki.js" afterPath="$PROJECT_DIR$/lib/codemirror/mode/tiki/tiki.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/vb/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/vb/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/vbscript/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/vbscript/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/xml/xml.js" afterPath="$PROJECT_DIR$/lib/codemirror/mode/xml/xml.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/xquery/index.html" afterPath="$PROJECT_DIR$/lib/codemirror/mode/xquery/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/mode/xquery/xquery.js" afterPath="$PROJECT_DIR$/lib/codemirror/mode/xquery/xquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codemirror/theme/vibrant-ink.css" afterPath="$PROJECT_DIR$/lib/codemirror/theme/vibrant-ink.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/multimediapanes/WebPage.js" afterPath="$PROJECT_DIR$/js/multimediapanes/WebPage.js" />
     </list>
     <ignored path="javascool-5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -140,25 +71,34 @@
       <file leaf-file-name="Editor.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Editor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="32" selection-start="2237" selection-end="2237" vertical-scroll-proportion="0.0">
+            <state line="96" column="18" selection-start="2854" selection-end="2854" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tabs.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/Tabs.js">
+      <file leaf-file-name="MultimediaTabs.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/MultimediaTabs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="10" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
+            <state line="97" column="129" selection-start="3298" selection-end="3298" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/style.css">
+      <file leaf-file-name="_applet.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proglets/abcdAlgos/_applet.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="211" column="0" selection-start="3782" selection-end="3782" vertical-scroll-proportion="0.0">
+            <state line="37" column="21" selection-start="1951" selection-end="1960" vertical-scroll-proportion="-23.125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="boucles.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proglets/abcdAlgos/boucles.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="5.625">
               <folding />
             </state>
           </provider>
@@ -167,7 +107,16 @@
       <file leaf-file-name="ProgletApplet.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/ProgletApplet.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="14" selection-start="663" selection-end="663" vertical-scroll-proportion="-18.125">
+            <state line="30" column="15" selection-start="657" selection-end="657" vertical-scroll-proportion="-16.875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebPage.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/multimediapanes/WebPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="55" column="32" selection-start="1585" selection-end="1585" vertical-scroll-proportion="0.8299799">
               <folding />
             </state>
           </provider>
@@ -185,16 +134,7 @@
       <file leaf-file-name="javascool.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/javascool.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="6" selection-start="3134" selection-end="3134" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="35" selection-start="3695" selection-end="3695" vertical-scroll-proportion="0.54545456">
+            <state line="171" column="6" selection-start="5043" selection-end="5043" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -203,7 +143,7 @@
       <file leaf-file-name="Proglets.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Proglets.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="25" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.0">
+            <state line="31" column="59" selection-start="1427" selection-end="1427" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -231,22 +171,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/proglets/ProgletsLS.sh" />
-        <option value="$PROJECT_DIR$/js/ShortcutsPane.js" />
         <option value="$PROJECT_DIR$/js/Tabs.js" />
-        <option value="$PROJECT_DIR$/js/Proglets.js" />
         <option value="$PROJECT_DIR$/lib/json.js" />
         <option value="$PROJECT_DIR$/js/EditorTabs.js" />
         <option value="$PROJECT_DIR$/js/Proglet.js" />
         <option value="$PROJECT_DIR$/js/Java.js" />
         <option value="$PROJECT_DIR$/js/ProgletApplet.js" />
-        <option value="$PROJECT_DIR$/js/ProgletApplet.html" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/lib/codemirror/lib/codemirror.js" />
-        <option value="$PROJECT_DIR$/js/Editor.js" />
-        <option value="$PROJECT_DIR$/js/javascool.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/Proglets.js" />
+        <option value="$PROJECT_DIR$/lib/codemirror/mode/javascool/javascool.js" />
+        <option value="$PROJECT_DIR$/js/javascool.js" />
+        <option value="$PROJECT_DIR$/js/Editor.js" />
+        <option value="$PROJECT_DIR$/js/ProgletApplet.html" />
+        <option value="$PROJECT_DIR$/js/MultimediaTabs.js" />
+        <option value="$PROJECT_DIR$/js/multimediapanes/WebPage.js" />
       </list>
     </option>
   </component>
@@ -340,7 +280,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="algoDeMaths" />
+              <option name="myItemId" value="abcdAlgos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -372,7 +312,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="codemirror" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascool-5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascool-5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codemirror" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -387,6 +349,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascool-5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascool-5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="multimediapanes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -413,6 +393,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/codemirror/mode" />
       <recent name="$PROJECT_DIR$/proglets" />
       <recent name="$PROJECT_DIR$/js" />
     </key>
@@ -555,48 +536,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/json.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="155" selection-start="2805" selection-end="2805" vertical-scroll-proportion="0.10452962" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/EditorTabs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="25" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proglets/algoDeMaths/JeuSimon.jvs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="2591" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Proglet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="36" selection-start="2697" selection-end="2697" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/ProgletApplet.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="7" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proglets/abcdAlgos/_applet.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="55" selection-start="2202" selection-end="2225" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Proglets.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="25" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/ProgletApplet.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="14" selection-start="663" selection-end="663" vertical-scroll-proportion="-18.125">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
@@ -606,35 +548,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/WebJavac.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="17" selection-start="633" selection-end="649" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/java/deployJava.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="191" column="28" selection-start="7712" selection-end="7736" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/Tabs.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="10" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Editor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="32" selection-start="2237" selection-end="2237" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/javascool.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="6" selection-start="3134" selection-end="3134" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/codemirror/codemirror.js">
@@ -648,7 +564,82 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="35" selection-start="3695" selection-end="3695" vertical-scroll-proportion="0.54545456">
+        <state line="7" column="47" selection-start="297" selection-end="297" vertical-scroll-proportion="-4.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/java/deployJava.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="191" column="28" selection-start="7712" selection-end="7736" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/codemirror/theme/eclipse.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/javascool.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="171" column="6" selection-start="5043" selection-end="5043" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Proglets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="59" selection-start="1427" selection-end="1427" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/WebJavac.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="17" selection-start="633" selection-end="649" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proglets/abcdAlgos/boucles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="5.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proglets/abcdAlgos/_applet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="21" selection-start="1951" selection-end="1960" vertical-scroll-proportion="-23.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="18" selection-start="2854" selection-end="2854" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/MultimediaTabs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="129" selection-start="3298" selection-end="3298" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ProgletApplet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="15" selection-start="657" selection-end="657" vertical-scroll-proportion="-16.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/multimediapanes/WebPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="32" selection-start="1585" selection-end="1585" vertical-scroll-proportion="0.8299799">
           <folding />
         </state>
       </provider>

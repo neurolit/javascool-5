@@ -4,53 +4,65 @@
     <title>Java's Cool</title>
 </head>
 <style>
-    *{
-        margin:0;
-        padding: 0;
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    html, body {
+        height: 100%;
+        overflow: hidden;
     }
 </style>
-<body onresize="resize()" onload="resize()" >
+<body style="padding: 0; margin:0"
+      onResize="resize()" onLoad="resize()">
 <script src="lib/java/deployJava.min.js"></script>
 <script>
     var attributes = {
         code:'org.javascool.core.ProgletApplet',
         codebase:".",
         archive:"lib/javascool/javascool.jar, @jars",
-        id:'@id'
+        id:'@id',
+        style:"width:100%;height:100%"
     };
     var parameters = {
         label:'@label',
         proglet:'@proglet',
-        runnable:'@runnable'
+        program:'@runnable'
     };
-    deployJava.runApplet(attributes, parameters, '1.6');
-</script>
-<script type="text/javascript">
     function resize() {
-        var applet=document.getElementById('@id');
-        var w_newWidth,w_newHeight;
-        var w_maxWidth=1600, w_maxHeight=1200;
-        if (navigator.appName.indexOf("Microsoft") != -1)
-        {
-            w_newWidth=document.body.clientWidth;
-            w_newHeight=document.body.clientHeight;
-        }else{
-            var netscapeScrollWidth=15;
-            w_newWidth=window.innerWidth-netscapeScrollWidth;
-            w_newHeight=window.innerHeight-netscapeScrollWidth;
+        if (navigator.appName.indexOf("Microsoft") != -1) {
+            // 100% works fine on object tag with IE
+            return;
         }
-        if (w_newWidth>w_maxWidth)
-            w_newWidth=w_maxWidth;
-        if (w_newHeight>w_maxHeight)
-            w_newHeight=w_maxHeight;
-        /*applet.style.height= w_newHeight;
-        applet.style.width= w_newWidth;*/
-        //console.log(w_newHeight,w_newWidth);
-        try{
-        applet.setSize(w_newWidth,w_newHeight);
-        }catch(e){}
-        window.scroll(0,0);
+        var w_newWidth, w_newHeight;
+        var w_maxWidth = 1600, w_maxHeight = 1200;
+
+        var netscapeScrollWidth = 0;
+        w_newWidth = window.innerWidth - netscapeScrollWidth;
+        w_newHeight = window.innerHeight - netscapeScrollWidth;
+
+        if (w_newWidth > w_maxWidth)
+            w_newWidth = w_maxWidth;
+        if (w_newHeight > w_maxHeight)
+            w_newHeight = w_maxHeight;
+
+        var appletDiv = document.getElementById('appletDiv');
+        if (appletDiv != null) {
+            appletDiv.style.width = w_newWidth + "px";
+            appletDiv.style.height = w_newHeight + "px";
+
+            window.scroll(0, 0);
+        }
     }
+    window.onResize = resize;
+    window.onLoad = resize;
 </script>
+
+<div id="appletDiv" style="padding: 0; margin:0">
+    <script>
+        deployJava.runApplet(attributes, parameters, '1.6');
+    </script>
+</div>
 </body>
 </html>

@@ -94,6 +94,9 @@ javascool.MultimediaTabs=function() {
         var console=new javascool.multimediaPanes.Console(), consoleId=this.tabs.addTab(null,null,null,false);
         console.setup(document.getElementById(this.tabs.idForContent(consoleId)));
         this.tabs.setTitle(consoleId,console.title)
+        var webDemo=new javascool.multimediaPanes.WebPage(), webId=this.tabs.addTab(null,null,null,false);
+        webDemo.setup.apply(webDemo,[document.getElementById(this.tabs.idForContent(webId)),"proglet://abcdAlgos/tutoriel.html"])
+        this.tabs.setTitle(webId,webDemo.title)
     };
     var setupListenersOnEditorTabs=function () {
         assertIfAmIOnScreen();

@@ -30,12 +30,8 @@ javascool.Proglets=function() {
         var progletsToLoad= $.parseJSON(javascool.PolyFileWriter.load(javascool.location+"/proglets/proglets.json"));
         for (var i=0;i<progletsToLoad.length;i++){
             var p=new javascool.Proglet(progletsToLoad[i]);
-            console.log(p);
             this.add(p);
         }
-//        for (var i = 0; i < this.count(); i++) {
-//            this.add(new javascool.Proglet("abcdAlgo"));
-//        }
     };
     this.add=function (proglet) {
         javascool.Proglets.cache[javascool.Proglets.cache.length] = proglet;

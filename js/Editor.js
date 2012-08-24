@@ -54,7 +54,8 @@ javascool.Editor=function() {
         try {
             editor = CodeMirror(document.getElementById(htmlID), {
                 value:file.content,
-                mode:"javascript",
+                mode:"text/x-javascool",
+                theme:"eclipse",
                 lineNumbers:true,
                 fixedGutter:false,
                 gutter:true,
@@ -91,3 +92,34 @@ javascool.Editor=function() {
 		return file;
     };
 };
+
+if(typeof javascool.RessourceLoader!=undefined){
+    javascool.RessourceLoader.addJSLibrary("codemirror/mode/clike/clike.js");
+    javascool.RessourceLoader.addCSSLibrary("codemirror/theme/eclipse.css");
+}
+
+(function(){
+
+    function words(str) {
+        var obj = {}, words = str.split(" ");
+        for (var i = 0; i < words.length; ++i) obj[words[i]] = true;
+        return obj;
+    }
+    CodeMirror.defineMIME("text/x-javascool", {
+        name: "clike",
+        keywords: words("abstract assert boolean break byte case catch char class const continue default " +
+            "do double else enum extends final finally float for goto if implements import " +
+            "instanceof int interface long native new package private protected public " +
+            "return short static strictfp super switch synchronized this throw throws transient " +
+            "try void volatile while String Int"),
+        builtin:words("readString echo println readBoolean readInteger"),
+        blockKeywords: words("catch class do else finally for if switch try while"),
+        atoms: words("true false null"),
+        hooks: {
+            "@": function(stream, state) {
+                stream.eatWhile(/[\w\$_]/);
+                return "meta";
+            }
+        }
+    });
+})()
