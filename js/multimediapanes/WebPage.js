@@ -53,7 +53,6 @@ javascool.multimediaPanes.WebPage=function(){
             var proglet=file.substring(0,file.indexOf("/"));
             $(data).find("img").each(function(elem){
                 $(this).attr("src",javascool.location+"/proglets/"+proglet+"/"+$(this).attr("src"));
-                console.log(this);
             })
         }
         $ContentDiv.html(data);
@@ -66,6 +65,7 @@ javascool.multimediaPanes.WebPage=function(){
             '</div>' +
             '<div class="content"></div> ');
         this.$.children(".content").on("click", "a", function(event){
+
             event.preventDefault();
         });
         this.title=title||this.title;

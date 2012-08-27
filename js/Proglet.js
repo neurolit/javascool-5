@@ -34,6 +34,14 @@ javascool.Proglet=function(namespace) {
      * @type {String}
      */
     this.logo = "img/proglet.png";
+    /**
+     * Dit si la proglet contient un Jar à son nom.
+     * <p><i>Ex.: <chemin vers la proglet>/<namespace de la proglet>.jar</i><br>
+     *     Ce JAR est à inclure lors des compilations et execution.</p>
+     * @type {Boolean}
+     * @default false
+     */
+    this.hasJar=false;
 
     /**
      * Emplacement de la proglet
@@ -47,6 +55,8 @@ javascool.Proglet=function(namespace) {
         var proglet=config.proglet;
         this.logo="proglets/"+namespace+"/"+proglet.icon;
         this.title=proglet.name||this.namespace;
+        this.hasJar=javascool.PolyFileWriter.exists(location+"/"+namespace+".jar");
+        this.hasPanel=config.hasPanel;
     }
     
     /**

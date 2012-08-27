@@ -240,6 +240,8 @@ javascool.init = function () {
 
     function runOnlyWhenAppletsAreReady() {
         try{
+            if(typeof javascool.PolyFileWriter.isActive == "undefined")
+            throw 0;
             if ( javascool.PolyFileWriter.isActive() && javascool.WebJavac.isActive() ) {
                 javascool.GUI.loading.update(30,"Chargement des proglets ...")
                 javascool.ProgletsManager.init();
@@ -253,7 +255,6 @@ javascool.init = function () {
             }
         }catch(E){
             if(E==0){
-                console.log("Applets not ready");
                 setTimeout(runOnlyWhenAppletsAreReady,100);
             } else {
                 throw E;
