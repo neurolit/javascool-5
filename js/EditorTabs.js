@@ -14,7 +14,6 @@ javascool.EditorTabs=function() {
      */
     var that=this;
 
-    this.editorClass="JVSEditor";
     this.openedFiles=new Array();
     this.openedEditors=new Array();
 
@@ -40,11 +39,7 @@ javascool.EditorTabs=function() {
         // Création de l'instance du nouveau fichier et celle de l'editeur
         var file = new javascool.File();
         if(typeof fileUrl == "object"){ // Le fichier est déjà en argument
-            console.log("OK")
             file=fileUrl;
-            // NOTE : Pourquoi l'url ne peut pas être nulle ?
-            //if(file.url=="")
-            //    return;
         }else if (typeof fileUrl == "string") { // Open a file by url
             file.url = fileUrl;
             file.load();
@@ -137,9 +132,6 @@ javascool.EditorTabs=function() {
         var id = this.tabs.idOfTabShown, code = this.openedEditors[id].getText();
         javascool.Webconsole.clear();
         javascool.ProgletsManager.currentProglet.compile(code);
-//        var progletJar=javascool.location+"/proglets/"+javascool.ProgletsManager.currentProglet.namespace;
-//        progletJar+="/"+javascool.ProgletsManager.currentProglet.namespace+".jar";
-//        javascool.WebJavac.compile(code,"[\""+progletJar.replace('"','\\"')+"\"]",javascool.ProgletsManager.currentProglet.namespace);
     };
     var amIOnScreen=function () {
         try{

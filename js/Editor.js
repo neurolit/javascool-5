@@ -112,7 +112,7 @@ if(typeof javascool.RessourceLoader!=undefined){
             "instanceof int interface long native new package private protected public " +
             "return short static strictfp super switch synchronized this throw throws transient " +
             "try void volatile while String Int"),
-        builtin:words("readString echo println readBoolean readInteger"),
+        builtin:words("readString echo sleep println readBoolean readInteger"),
         blockKeywords: words("catch class do else finally for if switch try while"),
         atoms: words("true false null"),
         hooks: {

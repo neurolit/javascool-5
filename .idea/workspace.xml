@@ -2,19 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9007fa89-e713-48d0-86f0-760a526dbe0a" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/css/common.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/css/prettify.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/files.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/img/class.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/img/classicons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/img/glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/img/glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/img/interface.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/img/namespace.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/js/accordion.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/js/jquery-1.7.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/js/prettify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/_global_.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/javascool.Editor.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/javascool.EditorTabs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/javascool.File.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/javascool.GUI.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/javascool.GUI.loading.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/javascool.MultimediaTabs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/javascool.PolyFileWriter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/javascool.Proglet.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/javascool.ProgletApplet.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/javascool.Proglets.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/javascool.RessourceLoader.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/javascool.ShortcutsPane.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/javascool.Tabs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/javascool.WebJavac.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/javascool.Webconsole.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/javascool.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/javascool.multimediaPanes.Console.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/javascool.multimediaPanes.WebPage.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/javascool.multimediaPanes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/src/_user_pvienne_home_javascool_javascool-5_js_Editor.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/src/_user_pvienne_home_javascool_javascool-5_js_EditorTabs.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/src/_user_pvienne_home_javascool_javascool-5_js_File.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/src/_user_pvienne_home_javascool_javascool-5_js_MultimediaTabs.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/src/_user_pvienne_home_javascool_javascool-5_js_PolyFileWriter.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/src/_user_pvienne_home_javascool_javascool-5_js_Proglet.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/src/_user_pvienne_home_javascool_javascool-5_js_ProgletApplet.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/src/_user_pvienne_home_javascool_javascool-5_js_Proglets.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/src/_user_pvienne_home_javascool_javascool-5_js_ShortcutsPane.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/src/_user_pvienne_home_javascool_javascool-5_js_Tabs.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/src/_user_pvienne_home_javascool_javascool-5_js_WebJavac.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/src/_user_pvienne_home_javascool_javascool-5_js_javascool.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/src/_user_pvienne_home_javascool_javascool-5_js_multimediapanes_Console.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/symbols/src/_user_pvienne_home_javascool_javascool-5_js_multimediapanes_WebPage.js.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Editor.js" afterPath="$PROJECT_DIR$/js/Editor.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/EditorTabs.js" afterPath="$PROJECT_DIR$/js/EditorTabs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/File.js" afterPath="$PROJECT_DIR$/js/File.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/MultimediaTabs.js" afterPath="$PROJECT_DIR$/js/MultimediaTabs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Proglet.js" afterPath="$PROJECT_DIR$/js/Proglet.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ProgletApplet.html" afterPath="$PROJECT_DIR$/js/ProgletApplet.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ProgletApplet.js" afterPath="$PROJECT_DIR$/js/ProgletApplet.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Tabs.js" afterPath="$PROJECT_DIR$/js/Tabs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/javascool.js" afterPath="$PROJECT_DIR$/js/javascool.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/multimediapanes/WebPage.js" afterPath="$PROJECT_DIR$/js/multimediapanes/WebPage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
     </list>
     <ignored path="javascool-5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,7 +116,7 @@
       <file leaf-file-name="WebPage.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/multimediapanes/WebPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="128" column="49" selection-start="4779" selection-end="4779" vertical-scroll-proportion="0.0">
+            <state line="50" column="24" selection-start="1122" selection-end="1122" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -99,19 +140,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProgletApplet.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ProgletApplet.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/ProgletApplet.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="52" selection-start="1470" selection-end="1470" vertical-scroll-proportion="0.0">
+            <state line="22" column="40" selection-start="1265" selection-end="1265" vertical-scroll-proportion="0.37757438">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProgletApplet.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ProgletApplet.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/ProgletApplet.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="44" selection-start="493" selection-end="493" vertical-scroll-proportion="0.31752577">
+            <state line="59" column="6" selection-start="1522" selection-end="1522" vertical-scroll-proportion="-36.875">
               <folding />
             </state>
           </provider>
@@ -120,7 +161,7 @@
       <file leaf-file-name="Editor.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Editor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="32" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.0">
+            <state line="49" column="66" selection-start="1273" selection-end="1327" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -129,7 +170,7 @@
       <file leaf-file-name="EditorTabs.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/EditorTabs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="18" selection-start="2955" selection-end="2955" vertical-scroll-proportion="0.0">
+            <state line="15" column="0" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -148,9 +189,7 @@
         <entry file="file://$PROJECT_DIR$/js/javascool.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="364" column="17" selection-start="11518" selection-end="11518" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -158,7 +197,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="29" selection-start="1716" selection-end="1716" vertical-scroll-proportion="-21.875">
+            <state line="35" column="29" selection-start="1716" selection-end="1716" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -185,14 +224,14 @@
         <option value="$PROJECT_DIR$/js/Tabs.js" />
         <option value="$PROJECT_DIR$/js/Proglet.js" />
         <option value="$PROJECT_DIR$/js/MultimediaTabs.js" />
-        <option value="$PROJECT_DIR$/js/multimediapanes/WebPage.js" />
-        <option value="$PROJECT_DIR$/js/EditorTabs.js" />
         <option value="$PROJECT_DIR$/js/File.js" />
-        <option value="$PROJECT_DIR$/js/Editor.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/ProgletApplet.js" />
         <option value="$PROJECT_DIR$/js/javascool.js" />
+        <option value="$PROJECT_DIR$/js/EditorTabs.js" />
+        <option value="$PROJECT_DIR$/js/Editor.js" />
+        <option value="$PROJECT_DIR$/js/multimediapanes/WebPage.js" />
         <option value="$PROJECT_DIR$/js/ProgletApplet.html" />
+        <option value="$PROJECT_DIR$/js/ProgletApplet.js" />
       </list>
     </option>
   </component>
@@ -200,7 +239,7 @@
     <option name="x" value="-1" />
     <option name="y" value="26" />
     <option name="width" value="1922" />
-    <option name="height" value="1176" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -230,6 +269,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -322,6 +371,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascool-5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascool-5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -345,9 +412,6 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files" />
       </pane>
       <pane id="PackagesPane">
         <subPane />
@@ -432,13 +496,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="26" width="1922" height="1176" extended-state="6" />
-    <editor active="false" />
+    <frame x="-1" y="26" width="1922" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14602003" sideWeight="0.50490195" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14602003" sideWeight="0.4882353" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14549288" sideWeight="0.52" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14549288" sideWeight="0.4722222" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -543,72 +607,56 @@
         <state line="47" column="26" selection-start="1479" selection-end="1479" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/multimediapanes/WebPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="24" selection-start="1122" selection-end="1122" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/Proglets.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="26" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/EditorTabs.js">
+    <entry file="file://$PROJECT_DIR$/js/Proglet.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="18" selection-start="2955" selection-end="2955" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/File.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="231" column="21" selection-start="7762" selection-end="7775" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="43" column="4" selection-start="2018" selection-end="2018" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Editor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="32" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="49" column="66" selection-start="1273" selection-end="1327" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/multimediapanes/WebPage.js">
+    <entry file="file://$PROJECT_DIR$/js/EditorTabs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="49" selection-start="4779" selection-end="4779" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="15" column="0" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/File.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="231" column="21" selection-start="7762" selection-end="7775" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/javascool.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="364" column="17" selection-start="11518" selection-end="11518" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="29" selection-start="1716" selection-end="1716" vertical-scroll-proportion="-21.875">
+        <state line="35" column="29" selection-start="1716" selection-end="1716" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ProgletApplet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="6" selection-start="1522" selection-end="1522" vertical-scroll-proportion="-36.875">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/ProgletApplet.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="52" selection-start="1470" selection-end="1470" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Proglet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="4" selection-start="2018" selection-end="2018" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/javascool.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="364" column="17" selection-start="11518" selection-end="11518" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/ProgletApplet.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="44" selection-start="493" selection-end="493" vertical-scroll-proportion="0.31752577">
+        <state line="22" column="40" selection-start="1265" selection-end="1265" vertical-scroll-proportion="0.37757438">
           <folding />
         </state>
       </provider>

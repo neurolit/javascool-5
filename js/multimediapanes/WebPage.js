@@ -45,6 +45,14 @@ javascool.multimediaPanes.WebPage=function(){
     }
 
     /**
+     * Met à jour le titre de l'onglet
+     */
+    var updateName=function(name){
+        that.title=name;
+        that.$.trigger("setTitle",{title:name});
+    }
+
+    /**
      * Cette fonction calcule les propriétés CSS du WebPage.
      * Elle doit être appelé à chaque fois que la taille du WebPage peut avoir changé
      */
@@ -92,6 +100,10 @@ javascool.multimediaPanes.WebPage=function(){
                 $(this).attr("src",javascool.location+"/proglets/"+proglet+"/"+$(this).attr("src"));
             })
         }
+        var title=data.find("title").html();
+        if(title!=""){
+            updateName(title)
+        }
         // On affiche le contenu à l'écran
         $ContentDiv.html(data.html());
     };
@@ -135,6 +147,7 @@ javascool.multimediaPanes.WebPage=function(){
             return false;
         });
         this.title=title||this.title;
+        updateName("Toto");
         this.load(url);
         $(window).bind("resize",function(){
             that.validate();
