@@ -36,16 +36,10 @@
             return;
         }
         var w_newWidth, w_newHeight;
-        var w_maxWidth = 1600, w_maxHeight = 1200;
 
         var netscapeScrollWidth = 0;
         w_newWidth = window.innerWidth - netscapeScrollWidth;
         w_newHeight = window.innerHeight - netscapeScrollWidth;
-
-        if (w_newWidth > w_maxWidth)
-            w_newWidth = w_maxWidth;
-        if (w_newHeight > w_maxHeight)
-            w_newHeight = w_maxHeight;
 
         var appletDiv = document.getElementById('appletDiv');
         if (appletDiv != null) {
