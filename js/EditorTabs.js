@@ -42,8 +42,9 @@ javascool.EditorTabs=function() {
         if(typeof fileUrl == "object"){ // Le fichier est déjà en argument
             console.log("OK")
             file=fileUrl;
-            if(file.url=="")
-                return;
+            // NOTE : Pourquoi l'url ne peut pas être nulle ?
+            //if(file.url=="")
+            //    return;
         }else if (typeof fileUrl == "string") { // Open a file by url
             file.url = fileUrl;
             file.load();

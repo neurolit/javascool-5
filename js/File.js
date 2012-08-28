@@ -134,11 +134,22 @@ javascool.File=function() {
         if((this.url==""||this.url.substr(0,4)=="http")&&!confirm){ // Si le fichier est sur le web ou temporaire, alors
             this.saveAs();                                          // on enregistre sous
         }else if(confirm){ // Si on doit demander confirmation à l'utilisateur avant d'enregistrer
-            bootbox.confirm("Voulez-vous sauvegarder "+this.name+" ?",function(r){
-                if(r){
+            bootbox.dialog("Voulez-vous sauvegarder "+this.name+" ?", [{
+                "label" : "Non",
+                "class" : "btn-danger",
+                "callback": function() {
+                    trigger(that.events.SAVE);
+                }
+            }, {
+                "label" : "Annuler",
+                "class" : "btn-primary"
+            },{
+                "label" : "Oui",
+                "class" : "btn-success",
+                "callback": function() {
                     that.save(false);
                 }
-            })
+            }]);
         }else{ // En dernier recours, on enregistre juste le fichier.
             javascool.PolyFileWriter.save(this.url,this.content)
             this.contentAtOpen=this.content;

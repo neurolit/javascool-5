@@ -7,13 +7,17 @@ if(javascool==undefined){
  * @class
  */
 javascool.Tabs=function(domElem) {
+    var that=this;
     this.$ = $(domElem);
     this.id=Math.uuid(5,16);
     this.$.addClass("jvstabs");
-    $(document).resize(this._reformatDivSizes);
+    $(window).bind("resize",function(){
+        that._reformatDivSizes();
+    });
 
     this._reformatDivSizes=function(){
-        //this.$.children('.tab-content').height((this.$.height()-this.$.children('.nav').outerHeight()))
+        console.log("Resize of tab")
+        that.$.children('.tab-content').height((that.$.innerHeight()-that.$.children('.nav').outerHeight())-1)
     }
     
     this.$.html('<ul class="nav nav-pills"></ul><div class="tab-content"></div>');
@@ -39,6 +43,7 @@ javascool.Tabs=function(domElem) {
     * @param {string} [content=""] Le contenu à ajouter par défaut.
     * @param {boolean} [donotshow=false] Indique si on ne doit pas montrer cet onglet après sa création.
     * @param {boolean} [canbeclosed=true] Indique si l'onglet peut être fermer.
+     * @return L'ID de ce tab.
     */
     this.addTab=function (title, content, donotshow, canbeclosed) {
         title=title||"Onglet";

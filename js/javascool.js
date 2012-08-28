@@ -17,7 +17,7 @@ var javascool = function () {
  * @type {string}
  * @public
  */
-javascool.location=window.location.pathname.replace("/index.html","");
+javascool.location = window.location.pathname.replace("/index.html", "");
 
 /**
  * Dernier résultat de compilation
@@ -68,20 +68,34 @@ javascool.execUserCode = function () {
         return;
     }
     var classToRun = this._lastCompileResult.compiledClass;
-    var popup=new javascool.ProgletApplet(javascool.ProgletsManager.currentProglet);
+    var popup = new javascool.ProgletApplet(javascool.ProgletsManager.currentProglet);
     popup.openUserProgram(classToRun);
-    //javascool.WebJavac.exec(classToRun);
-//    $("#compileButton, #runButton").attr("disabled", true);
-//    $("#stopButton").attr("disabled", false);
 };
 
 /**
- * Arrête d'urgence l'execution du code.
+ * Ouvre un lien specifique à Java's Cool.
+ *  <p>Les liens existants dans Java's Cool sont :
+ *      <ul>
+ *          <li>proglet://{nom de la proglet}/{document} : Permet de faire un lien au sein de la proglet, avec des fichiers HTML</li>
+ *          <li>editor://{file} : Ouvre un fichier en resource dans la proglet</li>
+ *          <li>newtab://{document} : C'est comme écrire proglet://{proglet en cours d'execution}/{document}</li>
+ *      </ul>
+ *  </p>
+ * @param {string} url L'adresse à ouvrir
  */
-javascool.haltUserCode = function () {
-    javascool.WebJavac.execStop();
-    $("#compileButton, #runButton").attr("disabled", false);
-    $("#stopButton").attr("disabled", true);
+javascool.openLink=function(url){
+    var protocole=(url.split("://",1))[0];
+    switch(protocole){
+        case "editor":
+            var file = new javascool.File();
+            var url=javascool.location+"/proglets/"+javascool.ProgletsManager.currentProglet.namespace+"/"+(url.split("://",2))[1];
+            file.content=javascool.PolyFileWriter.load(url);
+            javascool.EditorTabsManager.openFile(file);
+            break;
+        default:
+            javascool.debug("Can not open the link :",url);
+            break;
+    }
 };
 
 /**
@@ -108,19 +122,33 @@ javascool.saveFile = function () {
     file.save();
 };
 
+var debugEnable = true, debugEnableOnJavascool = false;
+
 /**
  * Envoie un message de Debug à la console du navigateur
  */
-javascool.debug=function(){
-    //console.log.apply(window,arguments);
+javascool.debug = function () {
+    if (debugEnable) {
+        for (var i = 0; i < arguments.length; i++) {
+            console.log(arguments[i]);
+            if (debugEnableOnJavascool) {
+                if (typeof arguments[i] != "object") {
+                    javascool.Webconsole.print("Debug JS > " + arguments[i]);
+                } else {
+                    javascool.Webconsole.print("Debug JS > [Object] <i>see the browser debug output</i>");
+                }
+                javascool.Webconsole.print("\n");
+            }
+        }
+    }
 }
 
 /**
  * Ajoute un fichier JS à la page pour le charger
  * @param {string} file L'addresse du fichier dans le dossier lib
  */
-javascool.addJSLibrary=function(file){
-    var code='<script type="text/javascript" src="lib/'+file+'"></script>';
+javascool.addJSLibrary = function (file) {
+    var code = '<script type="text/javascript" src="lib/' + file + '"></script>';
     if (document.readyState == "complete") {
         $("body").append(code);
     } else {
@@ -132,29 +160,29 @@ javascool.addJSLibrary=function(file){
  * C'est une petite librairie pour gérer l'inclusion de fichier JS et CSS
  * @namespace
  */
-javascool.RessourceLoader={
+javascool.RessourceLoader = {
     /**
      * Ajoute le noeud pour charger le fichier.
      * @param filename Le fichier à inclure
      * @param filetype Le type du fichier "js" ou "css"
      * @private
      */
-    _loadjscssfile:function(filename, filetype){
-        if(this._checkIfItWasLoaded(filename))
+    _loadjscssfile:function (filename, filetype) {
+        if (this._checkIfItWasLoaded(filename))
             return;
-        var fileref=null;
-        if (filetype=="js"){ //if filename is a external JavaScript file
-            fileref=document.createElement('script')
-            fileref.setAttribute("type","text/javascript")
+        var fileref = null;
+        if (filetype == "js") { //if filename is a external JavaScript file
+            fileref = document.createElement('script')
+            fileref.setAttribute("type", "text/javascript")
             fileref.setAttribute("src", filename)
         }
-        else if (filetype=="css"){ //if filename is an external CSS file
-            fileref=document.createElement("link")
+        else if (filetype == "css") { //if filename is an external CSS file
+            fileref = document.createElement("link")
             fileref.setAttribute("rel", "stylesheet")
             fileref.setAttribute("type", "text/css")
             fileref.setAttribute("href", filename)
         }
-        if (fileref!==null){
+        if (fileref !== null) {
             if (document.readyState == "complete") {
                 $("body").append(fileref);
             } else {
@@ -167,25 +195,24 @@ javascool.RessourceLoader={
      * Ajoute un fichier JS à la page pour le charger
      * @param {string} file L'addresse du fichier dans le dossier lib
      */
-    addJSLibrary:function(file){
-        javascool.RessourceLoader._loadjscssfile("lib/"+file,"js");
+    addJSLibrary:function (file) {
+        javascool.RessourceLoader._loadjscssfile("lib/" + file, "js");
     },
     /**
      * Ajoute un fichier CSS à la page pour le charger
      * @param {string} file L'addresse du fichier dans le dossier lib
      */
-    addCSSLibrary:function(file){
-        javascool.RessourceLoader._loadjscssfile("lib/"+file,"css");
+    addCSSLibrary:function (file) {
+        javascool.RessourceLoader._loadjscssfile("lib/" + file, "css");
     },
-    _checkIfItWasLoaded:function(file){
-        for(var i=0;i<this._loaded.length;i++){
-            if(file==this._loaded[i])
+    _checkIfItWasLoaded:function (file) {
+        for (var i = 0; i < this._loaded.length; i++) {
+            if (file == this._loaded[i])
                 return true;
         }
         return false;
     }
 }
-
 
 
 /**
@@ -196,7 +223,8 @@ javascool.init = function () {
 
     function computeAllSizes() {
         var w = $(window).width(), h = $(window).height();
-        $("body").height(h - $("#MenuBar").outerHeight() + "px");
+        //$("body").height(h - $("#MenuBar").outerHeight() + "px");
+        $("#viewport").height(h - $("#MenuBar").outerHeight() + "px");
         $("#RightTabsPane, #LeftTabsPane").width(((w / 2) - 2) + 'px');
         $("#splitPart").css({
             position:'absolute',
@@ -208,7 +236,7 @@ javascool.init = function () {
     }
 
     // Setup Resize listeners
-    $(window).resize(computeAllSizes);
+    $(window).bind("resize", computeAllSizes);
     // Check now
     computeAllSizes();
 
@@ -219,9 +247,9 @@ javascool.init = function () {
     });
 
     $(document).bind("javascool.compiled", function (event, result) {
-        console.log("Java's Cool compilation result (debug use)");
-        console.log(result);
+        javascool.debug("Java's Cool compilation result",result.console);
         javascool._lastCompileResult = result;
+        javascool.Webconsole.print(result.console);
         if (result.success) {
             javascool.Webconsole.print("<i class='icon-ok icon-white'></i> Compilation Réussie");
             $("#runButton").attr("disabled", false);
@@ -239,29 +267,31 @@ javascool.init = function () {
     });
 
     function runOnlyWhenAppletsAreReady() {
-        try{
-            if(typeof javascool.PolyFileWriter.isActive == "undefined")
-            throw 0;
-            if ( javascool.PolyFileWriter.isActive() && javascool.WebJavac.isActive() ) {
-                javascool.GUI.loading.update(30,"Chargement des proglets ...")
+        try {
+            if (typeof javascool.PolyFileWriter.isActive == "undefined")
+                throw 0;
+            if (javascool.PolyFileWriter.isActive() && javascool.WebJavac.isActive()) {
+                javascool.GUI.loading.update(30, "Chargement des proglets ...")
                 javascool.ProgletsManager.init();
                 javascool.ShortcutsPaneManager.setup();
-                javascool.GUI.loading.update(80,"Lançement du panneau des Proglets")
-                javascool.GUI.loading.hide(function(){
+                javascool.GUI.loading.update(80, "Lançement du panneau des Proglets")
+                javascool.GUI.loading.hide(function () {
                     javascool.ShortcutsPaneManager.$.show();
                 });
             } else {
                 throw 0;
             }
-        }catch(E){
-            if(E==0){
-                setTimeout(runOnlyWhenAppletsAreReady,100);
+        } catch (E) {
+            if (E == 0) {
+                setTimeout(runOnlyWhenAppletsAreReady, 10);
+                javascool.debug("Attente des librairies Java ...")
             } else {
                 throw E;
             }
         }
     }
-    javascool.GUI.loading.update(20,"Recherche des librairies Java")
+
+    javascool.GUI.loading.update(20, "Recherche des librairies Java")
     runOnlyWhenAppletsAreReady();
 }
 
@@ -269,7 +299,7 @@ javascool.init = function () {
  * Fonctions et utilitaires pour l' interface utilisateur.
  * @namespace
  */
-javascool.GUI={
+javascool.GUI = {
     /**
      * Gestion simplifié du panneau de chargement.
      * @class
@@ -280,32 +310,56 @@ javascool.GUI={
          * Affiche le composant de chargement.
          * @param callback La fonction à appeler à la fin de l'animation
          */
-        show:function(callback){
-            if(typeof callback != "function"){
-                callback=function(){};
+        show:function (callback) {
+            var c;
+            if (typeof callback != "function") {
+                c = null;
+            } else {
+                c = callback;
             }
-            $("#"+javascool.GUI.loading.id).fadeIn("fast",callback);
+            $("#" + javascool.GUI.loading.id).fadeIn("fast", c);
         },
         /**
          * Masque le composant de chargement.
          * @param callback La fonction à appeler à la fin de l'animation
          */
-        hide:function(callback){
-            if(typeof callback != "function"){
-                callback=function(){};
+        hide:function (callback) {
+            var c;
+            if (typeof callback != "function") {
+                c = null;
+            } else {
+                c = callback;
             }
-            $("#"+javascool.GUI.loading.id).fadeOut("fast",callback);
+            $("#" + javascool.GUI.loading.id).fadeOut("fast", c);
         },
         /**
          * Met à jour le statut de la progression.
          * @param {Number} progress Pourcentage de la progression (0-100)
          * @param {string} [message="Chargement en cours ..."] Message de progression à destination de l'utilisateur
          */
-        update:function(progress,message){
-            $("#"+javascool.GUI.loading.id+" .bar").width(progress+"%");
-            $("#"+javascool.GUI.loading.id+" .foo").html(message);
+        update:function (progress, message) {
+            $("#" + javascool.GUI.loading.id + " .bar").width(progress + "%");
+            $("#" + javascool.GUI.loading.id + " .foo").html(message);
         }
     }
 };
+
+/**
+ *
+ * @class
+ */
+javascool.stateManagment = {
+    data:{},
+    saveState:function (id, data) {
+    },
+    askState:function (id, data) {
+    },
+    load:function () {
+
+    },
+    save:function () {
+
+    }
+}
 
 $(document).ready(javascool.init);

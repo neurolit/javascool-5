@@ -56,6 +56,7 @@ javascool.Proglet=function(namespace) {
         this.logo="proglets/"+namespace+"/"+proglet.icon;
         this.title=proglet.name||this.namespace;
         this.hasJar=javascool.PolyFileWriter.exists(location+"/"+namespace+".jar");
+        this.hasHelp=javascool.PolyFileWriter.exists(location+"/help.html");
         this.hasPanel=config.hasPanel;
     }
     

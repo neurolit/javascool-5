@@ -34,15 +34,27 @@ javascool.MultimediaTabs=function() {
      */
     this.$=null;
     /**
-     * Le lastID est utilisé pour numéroter de façon incrémental les div.
-     */
-    this.lastID=0;
-    /**
      * Ouvre un MultimediaPane.
      * @param multimediapane L'objet du MultimediaPane ou son type sous forme de {string}
      */
-    this.open=function (multimediapane,options) {
-        var pane=(typeof multimediapane=="string")?eval("new "+multimediapane+"()"):multimediapane, id=this.tabs.addTab();
+    this.open=function (multimediapane,options,closable) {
+        if(typeof multimediapane=="object"){
+            var isOpen=false;
+            $.each(that.openedMultimediaPanes, function(index, value) {
+                if(multimediapane===value){
+                    isOpen=true;
+                    return false;
+                }
+            });
+            if(isOpen)return;
+        }
+        options=options||[];
+        closable=closable===null||closable===undefined?false:closable;
+        var pane=(typeof multimediapane=="string")?eval("new javascool.multimediaPanes."+multimediapane+"()"):multimediapane, id=this.tabs.addTab(pane.title||"Sans titre",null,false,closable);
+        if(typeof pane.setup != "function")return;
+        var args=[document.getElementById(that.tabs.idForContent(id))];
+        pane.setup.apply(pane,args.concat(options));
+        that.openedMultimediaPanes[id]=pane;
     };
     /**
      * Ferme un MultimediaPane ouvert.
@@ -50,6 +62,13 @@ javascool.MultimediaTabs=function() {
      * @return {Boolean} Vrai si l'onglet est correctement fermé
      */
     this.closeTab=function (multimediapane) {
+        var id=null;
+        $.each(that.openedMultimediaPanes, function(index, value) {
+            if(multimediapane===value){
+                id=index;
+            }
+        });
+        that.tabs.removeTab(id);
     };
     /**
      * Supprime le DIV des MultimediaPane de l'Ecran
@@ -91,12 +110,12 @@ javascool.MultimediaTabs=function() {
      *      Un Proglet Panel s'il est disponible
      */
     this.addDefaultWidgets=function(){
-        var console=new javascool.multimediaPanes.Console(), consoleId=this.tabs.addTab(null,null,null,false);
-        console.setup(document.getElementById(this.tabs.idForContent(consoleId)));
-        this.tabs.setTitle(consoleId,console.title)
-        var webDemo=new javascool.multimediaPanes.WebPage(), webId=this.tabs.addTab(null,null,null,false);
+        this.open("Console");
+        if(javascool.ProgletsManager.currentProglet.hasHelp)
+            this.open("WebPage",["proglet://"+javascool.ProgletsManager.currentProglet.namespace+"/help.html"]);
+        /*var webDemo=new javascool.multimediaPanes.WebPage(), webId=this.tabs.addTab(null,null,null,false);
         webDemo.setup.apply(webDemo,[document.getElementById(this.tabs.idForContent(webId)),"proglet://abcdAlgos/tutoriel.html"])
-        this.tabs.setTitle(webId,webDemo.title)
+        this.tabs.setTitle(webId,webDemo.title)*/
     };
     var setupListenersOnEditorTabs=function () {
         assertIfAmIOnScreen();

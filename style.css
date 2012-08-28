@@ -6,10 +6,9 @@ html, body {
 }
 
 body {
-    position: relative;
     background-color: white;
-    /* Propriété pour les futur navigateur pour éviter la scrollbar */
-    overflow-style: move;
+    height: 100%;
+    overflow: hidden;
 }
 
 .navbar a{
@@ -187,7 +186,7 @@ body {
 
 }
 .MultimediaTabsPane .toolbar .right-tools{
-
+    float: right;
 }
 
 .MultimediaTabsPane .console{
@@ -208,4 +207,19 @@ body {
     background-color: #000000;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
+}
+
+
+/*****************************************************************************
+                WebPage
+******************************************************************************/
+
+.webpage{
+    overflow: hidden;
+}
+.webpage .content{
+    overflow: auto;
+    padding: 2px;
+}
+.webpage .toolbar{
 }

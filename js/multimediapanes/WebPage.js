@@ -14,11 +14,18 @@ javascool.multimediaPanes.WebPage=function(){
     var history=[];
     var historyPos=-1;
     var currentUrl='';
+    var lastProglet="";
     /**
      * @type {jQuery}
      */
     this.$=null;
     this.title='WebTab';
+
+    /**
+     *
+     * @type {javascool.multimediaPanes.WebPage}
+     */
+    var that=this;
 
     var startWith=function(str,prefix){
         if(str.indexOf(prefix)==0)
@@ -38,37 +45,100 @@ javascool.multimediaPanes.WebPage=function(){
     }
 
     /**
+     * Cette fonction calcule les propriétés CSS du WebPage.
+     * Elle doit être appelé à chaque fois que la taille du WebPage peut avoir changé
+     */
+    this.validate=function(){
+        if(this.$==null)
+            return;
+        var toolbar=this.$.children(".toolbar"), content=this.$.children(".content"), h=this.$.height(), w=this.$.width();
+        content.css({
+            height:(h-toolbar.outerHeight(true)-8)+"px",
+            padding:"4px"
+        })
+    }
+
+    /**
+     * Charge une page Web dans le composant.
      *
-     * @param {string} url
+     * @param {string} url L'adresse à charger, elle peux avoir les formes suivantes :
+     *          <ul>
+     *              <li><i>proglet://{nom de la proglet}/{document}</i></li>
+     *              <li><i>file://{adresse du fichier à charger}</i></li>
+     *              <li><b>À éviter : (faille XSS)</b> http://{adresse web}</li>
+     *          </ul>
      */
     this.load=function(url){
+        if(currentUrl==url) // On ne charge pas deux fois le même fichier
+            return;
         var $ContentDiv=this.$.children('.content');
         console.log("load ",parseURL(url))
+        if(javascool.PolyFileWriter.exists(parseURL(url))==false) // On verifie que le fichier existe
+            return;
+        // On charge les donnés
+        // TODO : Il faut que le chargement soit plus propre qu ça
         var data=$(javascool.PolyFileWriter.load(parseURL(url))).find(".container").last();
+        // On ajoute l'URL dans l'historique
         currentUrl=url;
         history.push(url);
-        historyPos
+        historyPos++;
+        // On corrige certaines chose si on viens de charger le document d'une proglet
+        // EX.: Les adresse des images ...
         if(startWith(url,"proglet://")){
             var file=url.substring("proglet://".length,url.length);
             var proglet=file.substring(0,file.indexOf("/"));
+            that.lastProglet=proglet;
             $(data).find("img").each(function(elem){
                 $(this).attr("src",javascool.location+"/proglets/"+proglet+"/"+$(this).attr("src"));
             })
         }
-        $ContentDiv.html(data);
+        // On affiche le contenu à l'écran
+        $ContentDiv.html(data.html());
     };
+
+    /**
+     * Configure le WebPage.
+     * C'est une sorte de constructeur alternatif.
+     * @param {*} dom L'objet du dom où le navigateur sera installé. Il est pris en charge par jQuery.
+     * @param {String} [url=null] L'url à charger, voir {@link javascool.multimediaPanes.WebPage#load}
+     * @param {String} [title="WebTab"] Le titre à donner au WebPage.
+     */
     this.setup=function(dom,url,title){
+        if(this.$!==null)
+            return;
         this.$=$(dom);
         this.$.html('<div class="toolbar">' +
             '<div class="left-tools"><button class="btn"><i class="icon-chevron-left"></i>&nbsp;Précédent</button></div>' +
             '<div class="right-tools"><button class="btn">Suivant&nbsp;<i class="icon-chevron-right"></i></button></div> ' +
             '</div>' +
             '<div class="content"></div> ');
+        this.$.addClass("webpage");
         this.$.children(".content").on("click", "a", function(event){
-
             event.preventDefault();
+            try{
+                var link=$(this).attr("href");
+                if(startWith(link,"http://editor?")){
+                    link=link.replace("http://editor?","editor://");
+                } else if (startWith(link,"http://newtab?")){
+                    link=link.replace("http://newtab?","newtab://");
+                }
+                if(link.match(/^(http|mailto):\/\//)){
+                    window.open(link, '_blank');
+                } else {
+                    if(link.match(/^[a-z]+:\/\//i)){ // On a un protocole specifique à Java's Cool
+                        javascool.openLink(link);
+                    } else if(link.match(/[a-z\-_"'éèàâî\.]+/i)){
+                        that.load("proglet://"+that.lastProglet+"/"+link)
+                    }
+                }
+            }catch(E){console.error(E)}
+            return false;
         });
         this.title=title||this.title;
-        this.load(url)
+        this.load(url);
+        $(window).bind("resize",function(){
+            that.validate();
+        });
+        this.validate();
     }
 };

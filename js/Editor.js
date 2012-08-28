@@ -57,7 +57,7 @@ javascool.Editor=function() {
                 mode:"text/x-javascool",
                 theme:"eclipse",
                 lineNumbers:true,
-                fixedGutter:false,
+                fixedGutter:true,
                 gutter:true,
                 onChange:function(editor){
                     file.content=editor.getValue();
@@ -70,8 +70,8 @@ javascool.Editor=function() {
                     editor.refresh();
                 });
                 var resizer = function () {
-                    var availibleHeight=$("body").height()-javascool.EditorTabsManager.tabs.$.children(".nav").outerHeight();
-                    $(editor.getScrollerElement()).height(availibleHeight);
+                    var availibleHeight=parseInt(javascool.EditorTabsManager.tabs.$.innerHeight()-parseInt(javascool.EditorTabsManager.tabs.$.children(".nav").outerHeight()));
+                    $(editor.getScrollerElement()).height(availibleHeight-1);
                     javascool.debug("Taille de la div ",availibleHeight);
                     editor.refresh();
                 };
