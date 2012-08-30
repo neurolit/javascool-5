@@ -117,6 +117,12 @@ javascool.MultimediaTabs=function() {
         webDemo.setup.apply(webDemo,[document.getElementById(this.tabs.idForContent(webId)),"proglet://abcdAlgos/tutoriel.html"])
         this.tabs.setTitle(webId,webDemo.title)*/
     };
+    /**
+     * Effectue un focus sur le premier onglet qui est la Console.
+     */
+        this.focusOnConsole=function(){
+            that.tabs.showTab(0);
+        }
     var setupListenersOnEditorTabs=function () {
         assertIfAmIOnScreen();
         if (that.$.data('loaded'))

@@ -120,8 +120,38 @@ javascool.EditorTabs=function() {
         // On initialise le système d'onglets
         this.tabs = new javascool.Tabs(this.$[0]);
 
-        // On ouvre un nouveau fichier
-        this.openFile();
+        var lastState=$.jStorage.get("javascool.EditorTabs");
+
+        if(lastState.length!=0){
+            $.each(lastState,function(index,value){
+                // Création de l'onglet
+                var tabTitle = "title", id = that.tabs.addTab(tabTitle);
+
+                var editor = new javascool.Editor();
+                editor.setState(that.tabs.idForContent(id),value);
+
+                // On les références dans les tableaux de l'objet
+                that.openedFiles[id] = editor.getFile();
+                that.openedEditors[id] = editor;
+
+                // On ajoute les listeners sur la fermeture du fichier
+                $('#' + that.tabs.idForContent(id)).bind('wantToClose', function (e) {
+                    that.closeFile(editor.getFile());
+                });
+            })
+        }
+
+        setInterval(function(){
+            var data=[];
+            $.jStorage.set("javascool.EditorTabs",data);
+            $.each(that.openedEditors,function(index,value){
+                if(value!=undefined)
+                data[data.length]=value.getState();
+            })
+            $.jStorage.set("javascool.EditorTabs",data);
+        },500)
+
+        keepNotEmpty();
     };
 
     /**
@@ -151,6 +181,23 @@ javascool.EditorTabs=function() {
         if(that.tabs.count()<=0){
             that.openFile();
         }
+    }
+
+    /**
+     * Permet de restaurer l'état du composant à partir de son state.
+     * @param {*} dom L'objet du dom où le composant sera installé. Il est pris en charge par jQuery.
+     * @param {string} state L'état du composant
+     */
+    this.restore=function(dom,state){
+
+    }
+
+    /**
+     * Décrit l'état du composant sous la forme d'une chaîne de caractère.
+     * @return L'état du composant
+     */
+    this.getState=function(){
+
     }
 };
 /**

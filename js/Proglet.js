@@ -10,8 +10,6 @@ if(javascool==undefined){
  * n'existe pas, alors on estimera que la proglet n'est pas installé sur l'ordinateur</p>
  * <p>A la fin du chargement, la Proglet doit s'enregistrer auprès de la classe {@link javascool.Proglets} afin d'être
  * reconnu par le reste de Java's Cool. Mais cela n'empêche pas l'utilisation de cette classe en Stand-Alone.</p>
- * <p><i>NB : La fonction utilisé pour le chargement est {@link jQuery.getJSON}, ce qui fait que cette classe est
- * prête pour tourner sur un site web en ligne</i></p>
  * @param {String} [namespace="ABCDAlgo"] Le nom de la proglet à chargé dans le répertoire `proglets`
  * @class
  */
@@ -66,7 +64,8 @@ javascool.Proglet=function(namespace) {
     this.compile=function(code){
         var compiler=javascool.WebJavac;
         if(compiler==null)return;
-        var code=code||"",
+        code=code||"";
+        var 
             libs=[
                 javascool.location+"/lib/javascool/javascool.jar",
                 javascool.location+"/proglets/"+this.namespace+"/"+this.namespace+".jar"

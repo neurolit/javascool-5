@@ -10,8 +10,6 @@ if(javascool==undefined){
  * <p>Il va lancer la création d'instance de {@link javascool.Proglet} pour tenter le chargement. C'est à la charge de
  * la proglet de venir ensuite s'enregistrer dans le gestionnaire. Il va ensuite l'ajouter au
  * {@link javascool.ShortcutsPane} si il est disponible.</p>
- * <p><i>NB : La fonction utilisé pour le chargement est {@link jQuery.getJSON}, ce qui fait que cette classe est
- * prête pour tourner sur un site web en ligne</i></p>
  * @class
  */
 javascool.Proglets=function() {

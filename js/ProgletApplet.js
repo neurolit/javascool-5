@@ -18,10 +18,9 @@ javascool.ProgletApplet=function(proglet) {
             return;
         }
         var code=javascool.ProgletApplet.model;
-        code=code.replace("@w",400).replace("@h",600).replace("@jars", /*proglet.hasJar?", proglets/"+proglet.namespace+"/"+proglet.namespace+".jar":*/"").replace(/@id/g,"ProgPane");
+        code=code.replace("@w",400).replace("@h",600).replace("@jars", proglet.hasJar?", proglets/"+proglet.namespace+"/"+proglet.namespace+".jar":"").replace(/@id/g,"ProgPane");
         code=code.replace("@label",proglet.title).replace("@proglet",proglet.hasPanel?"org.javascool.proglets."+proglet.namespace+".Panel":"").replace("@runnable",program);
         code=code.replace("@codebase",".");
-        console.log(code);
         javascool.ProgletApplet.openedPopup=window.open('','name','height=620,width=420');
         var tmp = javascool.ProgletApplet.openedPopup.document;
         tmp.write(code);

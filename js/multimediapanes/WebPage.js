@@ -49,7 +49,7 @@ javascool.multimediaPanes.WebPage=function(){
      */
     var updateName=function(name){
         that.title=name;
-        that.$.trigger("setTitle",{title:name});
+        that.$.trigger("setTitle",name);
     }
 
     /**
@@ -80,7 +80,6 @@ javascool.multimediaPanes.WebPage=function(){
         if(currentUrl==url) // On ne charge pas deux fois le même fichier
             return;
         var $ContentDiv=this.$.children('.content');
-        console.log("load ",parseURL(url))
         if(javascool.PolyFileWriter.exists(parseURL(url))==false) // On verifie que le fichier existe
             return;
         // On charge les donnés
@@ -153,5 +152,22 @@ javascool.multimediaPanes.WebPage=function(){
             that.validate();
         });
         this.validate();
+    }
+
+    /**
+     * Permet de restaurer l'état du composant à partir de son state.
+     * @param {*} dom L'objet du dom où le composant sera installé. Il est pris en charge par jQuery.
+     * @param {string} state L'état du composant
+     */
+    this.restore=function(dom,state){
+
+    }
+
+    /**
+     * Décrit l'état du composant sous la forme d'une chaîne de caractère.
+     * @return L'état du composant
+     */
+    this.getState=function(){
+
     }
 };

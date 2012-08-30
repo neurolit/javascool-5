@@ -93,7 +93,7 @@ javascool.File=function() {
     /**
      * Charge le contenu du fichier depuis l'URL de l'instance.
      * @see {JVSFile.url}
-     * @return {String|Boolean} Le contenu du fichier ou Faux en cas d'erreur.
+     * @return {*} Le contenu du fichier ou Faux en cas d'erreur.
      */
     this.load=function(){
         if(javascool.PolyFileWriter==null){ // Il nous faut la librarie PolyFileWriter pour lire un fichier
@@ -174,8 +174,11 @@ javascool.File=function() {
 
     // Se réfère à la methode {JVSFile.saveAs}
     $(document).bind(polyfilewriterSaveAsEventName,function(e,selectedFile){
-        if(selectedFile===null){
+        if(selectedFile===null||selectedFile===undefined){
             return;
+        }
+        if(!selectedFile.match(/.*\.jvs$/i)){
+            selectedFile=selectedFile+".jvs";
         }
         that.url=selectedFile;
         setNameFromURL();
@@ -205,6 +208,34 @@ javascool.File=function() {
         that.load();
         trigger(that.events.OPEN);
     });
+
+
+    /**
+     * Permet de restaurer l'état du fichier à partir de son state.
+     * @param {string} state L'état du composant
+     */
+    this.setState=function(state){
+        var s=JSON.parse(state);
+        that.url= s.url;
+        that.content= s.content;
+        that.contentAtOpen= s.contentAtOpen;
+        that.name= s.name;
+        that.id= s.id;
+    }
+
+    /**
+     * Décrit l'état du fichier sous la forme d'une chaîne de caractère.
+     * @return L'état du fichier
+     */
+    this.getState=function(){
+        return JSON.stringify({
+            url:that.url,
+            content:that.content,
+            contentAtOpen:that.contentAtOpen,
+            name:that.name,
+            id:that.id
+        });
+    }
     /**
      * Liste des événements possible dans le {JVSFile}.
      * @type {Object}

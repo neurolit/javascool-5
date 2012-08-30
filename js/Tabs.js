@@ -16,7 +16,6 @@ javascool.Tabs=function(domElem) {
     });
 
     this._reformatDivSizes=function(){
-        console.log("Resize of tab")
         that.$.children('.tab-content').height((that.$.innerHeight()-that.$.children('.nav').outerHeight())-1)
     }
     
@@ -62,8 +61,8 @@ javascool.Tabs=function(domElem) {
             e.data.tabs.showTab(e.data.id);
         });
         this.$.children('.tab-content').append('<div id="'+this.idForContent(id)+'" class="tab-pane">'+content+'</div>');
-        $("#"+this.idForContent(id)).bind("setTitle",{tabs:this,id:id},function(e){
-            e.data.tabs.setTitle(e.data.id,e.data.title);
+        $("#"+this.idForContent(id)).bind("setTitle",{tabs:this,id:id},function(e,title){
+            e.data.tabs.setTitle(e.data.id,title);
         })
         this._reformatDivSizes();
         donotshow?null:this.showTab(id);

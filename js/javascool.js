@@ -88,7 +88,7 @@ javascool.openLink=function(url){
     switch(protocole){
         case "editor":
             var file = new javascool.File();
-            var url=javascool.location+"/proglets/"+javascool.ProgletsManager.currentProglet.namespace+"/"+(url.split("://",2))[1];
+            url=javascool.location+"/proglets/"+javascool.ProgletsManager.currentProglet.namespace+"/"+(url.split("://",2))[1];
             file.content=javascool.PolyFileWriter.load(url);
             javascool.EditorTabsManager.openFile(file);
             break;
@@ -122,7 +122,7 @@ javascool.saveFile = function () {
     file.save();
 };
 
-var debugEnable = true, debugEnableOnJavascool = false;
+var debugEnable = 1, debugEnableOnJavascool = 0;
 
 /**
  * Envoie un message de Debug à la console du navigateur
@@ -247,7 +247,7 @@ javascool.init = function () {
     });
 
     $(document).bind("javascool.compiled", function (event, result) {
-        javascool.debug("Java's Cool compilation result",result.console);
+        javascool.MultimediaTabsManager.focusOnConsole();
         javascool._lastCompileResult = result;
         javascool.Webconsole.print(result.console);
         if (result.success) {
