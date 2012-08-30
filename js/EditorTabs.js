@@ -119,10 +119,10 @@ javascool.EditorTabs=function() {
 
         // On initialise le système d'onglets
         this.tabs = new javascool.Tabs(this.$[0]);
-
+        try{
         var lastState=$.jStorage.get("javascool.EditorTabs");
 
-        if(lastState.length!=0){
+        if(lastState!=null&&lastState.length!=0){
             $.each(lastState,function(index,value){
                 // Création de l'onglet
                 var tabTitle = "title", id = that.tabs.addTab(tabTitle);
@@ -140,7 +140,7 @@ javascool.EditorTabs=function() {
                 });
             })
         }
-
+        }catch(e){}
         setInterval(function(){
             var data=[];
             $.jStorage.set("javascool.EditorTabs",data);
