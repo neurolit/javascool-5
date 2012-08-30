@@ -106,6 +106,9 @@ javascool.Editor = function () {
                 },
                 "Ctrl-S":function(){
                     file.save();
+                },
+                "Maj-Ctrl-S":function(){
+                    file.saveAs();
                 }
             }
         });
@@ -168,7 +171,9 @@ javascool.Editor = function () {
 if (typeof javascool.RessourceLoader != undefined) {
     javascool.RessourceLoader.addJSLibrary("codemirror/mode/clike/clike.js");
     javascool.RessourceLoader.addCSSLibrary("codemirror/theme/eclipse.css");
+    javascool.RessourceLoader.addCSSLibrary("codemirror/util/simple-hint.css");
     javascool.RessourceLoader.addJSLibrary("codemirror/util/formatting.js");
+    javascool.RessourceLoader.addJSLibrary("codemirror/util/simple-hint.js");
 }
 (function () {
     if (!CodeMirror.modeExtensions) CodeMirror.modeExtensions = {};

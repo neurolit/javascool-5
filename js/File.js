@@ -209,7 +209,6 @@ javascool.File=function() {
         trigger(that.events.OPEN);
     });
 
-
     /**
      * Permet de restaurer l'état du fichier à partir de son state.
      * @param {string} state L'état du composant
