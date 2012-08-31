@@ -72,7 +72,7 @@
       <file leaf-file-name="Editor.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/Editor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="413" column="0" selection-start="15086" selection-end="15086" vertical-scroll-proportion="0.9698189">
+            <state line="388" column="26" selection-start="14020" selection-end="14020" vertical-scroll-proportion="1.5885311">
               <folding />
             </state>
           </provider>
@@ -483,13 +483,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1919" y="26" width="1922" height="1176" extended-state="7" />
-    <editor active="false" />
+    <frame x="1919" y="26" width="1922" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14496574" sideWeight="0.5323529" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14496574" sideWeight="0.46078432" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14496574" sideWeight="0.46078432" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -638,7 +638,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Editor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="413" column="0" selection-start="15086" selection-end="15086" vertical-scroll-proportion="0.9698189">
+        <state line="388" column="26" selection-start="14020" selection-end="14020" vertical-scroll-proportion="1.5885311">
           <folding />
         </state>
       </provider>
