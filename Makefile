@@ -22,7 +22,7 @@ lib/javascool/javascool.jar : $(wildcard ../javascool-framework/js/*.js) $(wildc
 	@cp  ../javascool-framework/*.jar ./lib/javascool
 
 clean:
-	@rm -rf lib/javascool/javascool.jar doc
+	@rm -rf lib/javascool/javascool.jar doc proglets/*
 
 # Construction des docs javascript de l'application Web
 
