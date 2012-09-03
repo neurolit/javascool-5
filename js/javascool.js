@@ -92,6 +92,9 @@ javascool.openLink=function(url){
             file.content=javascool.PolyFileWriter.load(url);
             javascool.EditorTabsManager.openFile(file);
             break;
+        case "newtab":
+            javascool.MultimediaTabsManager.open("WebPage",["proglet://"+javascool.ProgletsManager.currentProglet.namespace+"/"+(url.split("://",2))[1]],true);
+            break;
         default:
             javascool.debug("Can not open the link :",url);
             break;

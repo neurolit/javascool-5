@@ -66,6 +66,14 @@ javascool.multimediaPanes.WebPage=function(){
         })
     }
 
+    function pushURLToStack(url){
+        historyPos++;
+        while(history.length>historyPos){
+            history.pop();
+        }
+        history.push(url)
+    }
+
     /**
      * Charge une page Web dans le composant.
      *
@@ -79,32 +87,78 @@ javascool.multimediaPanes.WebPage=function(){
     this.load=function(url){
         if(currentUrl==url) // On ne charge pas deux fois le même fichier
             return;
-        var $ContentDiv=this.$.children('.content');
         if(javascool.PolyFileWriter.exists(parseURL(url))==false) // On verifie que le fichier existe
             return;
-        // On charge les donnés
-        // TODO : Il faut que le chargement soit plus propre qu ça
-        var data=$(javascool.PolyFileWriter.load(parseURL(url))).find(".container").last();
         // On ajoute l'URL dans l'historique
+        pushURLToStack(url);
+        // On charge la page
+        this._showUrl(url);
+    };
+
+    /**
+     * Réactualise le nom du composant à partir de l'url actuel.
+     * @private
+     * @see updateName
+     * @see currentUrl
+     */
+    this._refreshName=function(){
+        if(currentUrl!=null){
+            var title=currentUrl.split("/").pop();
+            title=title.split(".").shift();
+            title=title.charAt(0).toUpperCase() + title.slice(1);
+            if(title!=""){
+                updateName(title)
+            }
+        }
+    };
+
+    /**
+     * Affiche une page web.
+     * @param url
+     * @private
+     */
+    this._showUrl=function(url){
         currentUrl=url;
-        history.push(url);
-        historyPos++;
-        // On corrige certaines chose si on viens de charger le document d'une proglet
-        // EX.: Les adresse des images ...
-        if(startWith(url,"proglet://")){
-            var file=url.substring("proglet://".length,url.length);
-            var proglet=file.substring(0,file.indexOf("/"));
-            that.lastProglet=proglet;
-            $(data).find("img").each(function(elem){
-                $(this).attr("src",javascool.location+"/proglets/"+proglet+"/"+$(this).attr("src"));
-            })
+        this.$.children(".content").html(this._progletHelpParse(javascool.PolyFileWriter.load(parseURL(url))));
+        this._refreshName();
+    };
+
+    /**
+     * Corrige les defauts des pages web des proglets tel que les liens vers les images.
+     * @param data Les donnés à editer.
+     * @return {string} Le code à écrire dans la page
+     * @private
+     */
+    this._progletHelpParse=function(data){
+        var page=$(data), url=currentUrl;
+        if(!startWith(url,"proglet://"))return data;
+        var file=url.substring("proglet://".length,url.length);
+        var proglet=file.substring(0,file.indexOf("/"));
+        that.lastProglet=proglet;
+        page.find("img").each(function(elem){
+            $(this).attr("src",javascool.location+"/proglets/"+proglet+"/"+$(this).attr("src"));
+        });
+        return page;
+    }
+
+    /**
+     * Affiche la page suivante si elle est disponible.
+     */
+    this.nextPage=function(){
+        if(history.length>(historyPos+1)){
+            historyPos++;
+            this._showUrl(history[historyPos]);
         }
-        var title=data.find("title").html();
-        if(title!=""){
-            updateName(title)
+    };
+
+    /**
+     * Affiche la page précédante si elle est disponible.
+     */
+    this.previousPage=function(){
+        if(history.length>0&&historyPos>0){
+            historyPos--;
+            this._showUrl(history[historyPos]);
         }
-        // On affiche le contenu à l'écran
-        $ContentDiv.html(data.html());
     };
 
     /**
@@ -119,11 +173,17 @@ javascool.multimediaPanes.WebPage=function(){
             return;
         this.$=$(dom);
         this.$.html('<div class="toolbar">' +
-            '<div class="left-tools"><button class="btn"><i class="icon-chevron-left"></i>&nbsp;Précédent</button></div>' +
-            '<div class="right-tools"><button class="btn">Suivant&nbsp;<i class="icon-chevron-right"></i></button></div> ' +
+            '<div class="left-tools"><button class="btn previous"><i class="icon-chevron-left"></i>&nbsp;Précédent</button></div>' +
+            '<div class="right-tools"><button class="btn next">Suivant&nbsp;<i class="icon-chevron-right"></i></button></div> ' +
             '</div>' +
             '<div class="content"></div> ');
         this.$.addClass("webpage");
+        this.$.find(".previous").click(function(event){
+            that.previousPage();
+        });
+        this.$.find(".next").click(function(event){
+            that.nextPage();
+        });
         this.$.children(".content").on("click", "a", function(event){
             event.preventDefault();
             try{

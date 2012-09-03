@@ -66,8 +66,13 @@ javascool.EditorTabs=function() {
         this.openedEditors[id] = editor;
 
         // On ajoute les listeners sur la fermeture du fichier
-        $('#' + this.tabs.idForContent(id)).bind('wantToClose', function (e) {
-            that.closeFile(file);
+        $('#' + this.tabs.idForContent(id)).bind(this.tabs.events.CLOSING, function (e) {
+            if(that.openedFiles[id]){
+                e.preventDefault();
+                e.stopPropagation();
+                that.closeFile(file);
+                return false;
+            }
         });
 
         // On passe la main à l'éditeur pour sa construction

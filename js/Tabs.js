@@ -53,7 +53,7 @@ javascool.Tabs=function(domElem) {
         this.$.children('.nav').append('<li id="'+this.idForTab(id)+'"><a class="link"><span class="tabtitle">'+title+'</span>'+(canbeclosed?'<span class="icon-remove-circle closeIcon"></span>':'')+'</a></li>');
         if(canbeclosed){
             $('#'+this.idForTab(id)+' a .closeIcon').click({tabs:this,id:id},function(e){
-                e.data.tabs.propagateCloseOnTab(e.data.id);
+                that.removeTab(id);
                 return false;
             });
         }

@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9007fa89-e713-48d0-86f0-760a526dbe0a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Editor.js" afterPath="$PROJECT_DIR$/js/Editor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/EditorTabs.js" afterPath="$PROJECT_DIR$/js/EditorTabs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Tabs.js" afterPath="$PROJECT_DIR$/js/Tabs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/javascool.js" afterPath="$PROJECT_DIR$/js/javascool.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/multimediapanes/WebPage.js" afterPath="$PROJECT_DIR$/js/multimediapanes/WebPage.js" />
     </list>
     <ignored path="javascool-5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,91 +64,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProgletApplet.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/ProgletApplet.js">
+      <file leaf-file-name="WebPage.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/multimediapanes/WebPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="43" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.0">
+            <state line="147" column="40" selection-start="4217" selection-end="4217" vertical-scroll-proportion="0.6185567">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Editor.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/Editor.js">
+      <file leaf-file-name="help.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proglets/abcdAlgos/help.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="388" column="26" selection-start="14020" selection-end="14020" vertical-scroll-proportion="1.5885311">
+            <state line="38" column="67" selection-start="1574" selection-end="1574" vertical-scroll-proportion="-23.75">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="javascript-hint.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/codemirror/util/javascript-hint.js">
+      <file leaf-file-name="tutoriel.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proglets/abcdAlgos/tutoriel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="0" selection-start="0" selection-end="5388" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="formatting.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/codemirror/util/formatting.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="131" selection-end="194" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/jquery/jquery.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="688" column="12" selection-start="25454" selection-end="25454" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tabs.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/Tabs.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="9" selection-start="4079" selection-end="4079" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditorTabs.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/EditorTabs.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="36" selection-start="4654" selection-end="4654" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="javascool.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/javascool.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="249" column="57" selection-start="7823" selection-end="7823" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MultimediaTabs.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/MultimediaTabs.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="123" column="25" selection-start="4301" selection-end="4301" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="File.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/File.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="217" column="24" selection-start="7410" selection-end="7410" vertical-scroll-proportion="0.0">
+            <state line="18" column="51" selection-start="759" selection-end="759" vertical-scroll-proportion="-9.375">
               <folding />
             </state>
           </provider>
@@ -163,8 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/js/Java.js" />
-        <option value="$PROJECT_DIR$/lib/codemirror/lib/codemirror.js" />
         <option value="$PROJECT_DIR$/lib/codemirror/mode/javascool/javascool.js" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/js/ProgletApplet.html" />
@@ -172,21 +111,22 @@
         <option value="$PROJECT_DIR$/js/Proglets.js" />
         <option value="$PROJECT_DIR$/js/ProgletApplet.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/Tabs.js" />
-        <option value="$PROJECT_DIR$/js/multimediapanes/WebPage.js" />
-        <option value="$PROJECT_DIR$/js/EditorTabs.js" />
         <option value="$PROJECT_DIR$/js/MultimediaTabs.js" />
-        <option value="$PROJECT_DIR$/js/javascool.js" />
         <option value="$PROJECT_DIR$/js/File.js" />
         <option value="$PROJECT_DIR$/js/Editor.js" />
+        <option value="$PROJECT_DIR$/js/javascool.js" />
+        <option value="$PROJECT_DIR$/js/Tabs.js" />
+        <option value="$PROJECT_DIR$/js/EditorTabs.js" />
+        <option value="$PROJECT_DIR$/proglets/abcdAlgos/help.html" />
+        <option value="$PROJECT_DIR$/proglets/abcdAlgos/tutoriel.html" />
+        <option value="$PROJECT_DIR$/js/multimediapanes/WebPage.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1919" />
     <option name="y" value="26" />
-    <option name="width" value="1922" />
-    <option name="height" value="1176" />
+    <option name="width" value="1920" />
+    <option name="height" value="1054" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -216,6 +156,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -234,170 +184,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascool-5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascool-5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proglets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascool-5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascool-5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proglets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="algoDeMaths" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascool-5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascool-5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proglets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="abcdAlgos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascool-5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascool-5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascool-5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascool-5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascool-5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascool-5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codemirror" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascool-5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascool-5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codemirror" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascool-5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascool-5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascool-5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascool-5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="multimediapanes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane">
@@ -410,14 +196,14 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="MemberChooser.showClasses" value="true" />
-    <property name="DefaultHtmlFileTemplate" value="Html" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="DefaultHtmlFileTemplate" value="Html" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -483,13 +269,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1919" y="26" width="1922" height="1176" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="26" width="1920" height="1054" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14496574" sideWeight="0.5323529" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14496574" sideWeight="0.46078432" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14459103" sideWeight="0.5411111" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14459103" sideWeight="0.4511111" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -564,11 +350,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/ProgletApplet.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="6" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="76" column="0" selection-start="3106" selection-end="3106" vertical-scroll-proportion="-19.166666" />
@@ -582,11 +363,6 @@
     <entry file="file://$PROJECT_DIR$/js/Proglets.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="60" selection-start="663" selection-end="663" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/multimediapanes/WebPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="38" selection-start="1161" selection-end="1161" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/ProgletApplet.js">
@@ -604,26 +380,6 @@
         <state line="688" column="12" selection-start="25454" selection-end="25454" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Tabs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="9" selection-start="4079" selection-end="4079" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/EditorTabs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="36" selection-start="4654" selection-end="4654" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/javascool.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="249" column="57" selection-start="7823" selection-end="7823" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/MultimediaTabs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="25" selection-start="4301" selection-end="4301" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/File.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="217" column="24" selection-start="7410" selection-end="7410" vertical-scroll-proportion="0.0" />
@@ -631,14 +387,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/codemirror/util/javascript-hint.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="0" selection-start="0" selection-end="5388" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="134" column="0" selection-start="0" selection-end="5388" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Editor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="388" column="26" selection-start="14020" selection-end="14020" vertical-scroll-proportion="1.5885311">
+        <state line="327" column="32" selection-start="11071" selection-end="11071" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/javascool.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="58" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/MultimediaTabs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="25" selection-start="4301" selection-end="4301" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/EditorTabs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="29" selection-start="2110" selection-end="2110" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Tabs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="24" selection-start="1965" selection-end="1965" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proglets/abcdAlgos/help.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="67" selection-start="1574" selection-end="1574" vertical-scroll-proportion="-23.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proglets/abcdAlgos/tutoriel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="51" selection-start="759" selection-end="759" vertical-scroll-proportion="-9.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/multimediapanes/WebPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="147" column="40" selection-start="4217" selection-end="4217" vertical-scroll-proportion="0.6185567">
           <folding />
         </state>
       </provider>
