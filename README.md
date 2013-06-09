@@ -1,21 +1,21 @@
 # Java's Cool 5
-Ce dépot et ce readme sont à destination des développeurs internes de JVS (Java's Cool) afin d'expliquer le fonctionnement de ces derniers.
-## L'organisation des dossiers
-A l'origine du dépot, vous trouvez un index.html. Ce dernier est le point d'entré de l'application. Ensuite, on retrouve
-différents répertoires :
-* img : Il est chargé de conserver les images necessaire à l'application (hormis ceux des librairies)
-* libs : Il contient toutes les librairies CSS et JS necessaire à l'application.
-* js : Ce dossier est le point le plus important car il contient tous le code JavaScript de JVS.
-    * Les partie de l'application necessaire mais non graphiques (ex.: Gestion des proglets, Accès aux fichiers ...)
-    * Tous les codes à visé graphique (ex.: Gestionnaire des Onglets d'Edition)
+Le projet est désormait un projet construit en Java à partir d'une architecture Maven. 
+Ce projet dépend du javascool-core qui est la librairie minimal de Java's Cool.
 
-## Tâches du MakeFile
-* doc : Construit (ou met à jour) la doc de Java's Cool 5 et l'affiche dans Firefox
-* publishDoc : Permet de publier la documentation en ligne (La crée au besoin)
-* gweb : Ouvre Java's Cool 5 dans Google® Chrome® avec un profil dédié
-* fweb : Ouvre Java's Cool 5 dans Mozilla® Firefox avec un profil dédié
-* clean : Nettoie tous les fichiers temporaire de Java's Cool (5 et framework)
-* lib/javascool/javascool.jar : Construit la librairie minimal pour Java's Cool depuis le framework
+La version Web de Java's Cool est abandoné en raison d'une infaisabilité pour des raison 
+de sécurité sur la platforme client.
+
+Le développement de Java's Cool 5 commence et a pour objectif d'implémenter toutes les demandes en attente :
+  - De l'HTML5 pour l'affichage de la documentation
+  - Des proglet qui ne font pas du Java (exemple : IOI)
+  - La possibilité d'avoir un débugger
+  - L'exportation vers des formats différent pour que l'élève puisse transporter son programme sur un ordinateur
+  n'ayant pas Java's Cool
+  - Un système de dépendance qui se rapprocherait d'éclipse et qui permettrait aux proglet de demander des 
+  librairies native
+  - L'arrivée de Maven comme standard de projet pour les proglets ce qui permet de faciliter le processus de
+  validation des proglets et donc l'ouverture plus rapide à une communauté de développeurs
+  - Utilisation de org.eclipse.jdt.core pour le compilateur et la gestion de code Java
 
 ## Contacte
 http://javascool.github.com/wpages/contact.html pour toute demande
